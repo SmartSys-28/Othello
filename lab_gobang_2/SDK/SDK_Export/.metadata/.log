@@ -1,0 +1,12 @@
+!SESSION 2012-12-11 19:49:11.647 -----------------------------------------------
+eclipse.buildId=Release 13.2 Build SDK_O.61xd
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-12-11 19:50:07.920
+!MESSAGE Indexed 'standalone_bsp_0' (0 sources, 8 headers) in 0.23 sec: 0 declarations; 0 references; 8 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-12-11 19:51:55.989
+!MESSAGE Indexed 'lab_gobang_2' (0 sources, 21 headers) in 0.23 sec: 153 declarations; 291 references; 3 unresolved inclusions; 0 syntax errors; 1 unresolved names (0.22%)

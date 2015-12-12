@@ -1,0 +1,7 @@
+INFILE=F:\xps\Othello-28\lab_gobang_2\implementation\system.ncd
+OUTFILE=F:\xps\Othello-28\lab_gobang_2\implementation\system.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=F:\xps\Othello-28\lab_gobang_2\implementation
+LICENSE=WebPack
+USER_INFO=__0_0_0
