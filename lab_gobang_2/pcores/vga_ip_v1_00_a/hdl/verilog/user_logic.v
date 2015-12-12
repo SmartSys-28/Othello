@@ -85,7 +85,8 @@ parameter chesscolor2 = 8'b00000000;
 parameter boardcolor  = 8'b11101100;
 parameter cursorcolor = 8'b11100000;
 parameter linecolor   = 8'b00000000;
-parameter prechesscolor = 8'b10000011;
+parameter menulinecolor = 8'b11100000;
+parameter menucolor = 8'b10010010;
 // -- ADD USER PARAMETERS ABOVE THIS LINE ------------
 
 // -- DO NOT EDIT BELOW THIS LINE --------------------
@@ -216,6 +217,7 @@ output                                    IP2Bus_Error;
   always@(*)
   begin
     if (vga_ena == 1 && x_cor < 480 && y_cor < 480)
+	 // 开始绘制屏幕左边480*480的board部分==========================================================
 	   begin
 		  if ((x_cor >= 40 && x_cor <= 440 && y_cor >= 40 && y_cor <= 440))
 	       begin
@@ -231,14 +233,14 @@ output                                    IP2Bus_Error;
 				  y_center <= y_pos * 50 + 40 + 25;    // 绘制特定旗子的圆心y坐标
 				  if (board[board_pos] == 3'b100 ) // 第三个if，来判断现在是否是绘制白色小旗子（位置判断）
 					 begin 
-						if ((x_cor - x_center) * (x_cor - x_center) + (y_cor - y_center) * (y_cor - y_center) <= 64) // 给白色小旗子绘制圆
+						if ((x_cor - x_center) * (x_cor - x_center) + (y_cor - y_center) * (y_cor - y_center) <= 36) // 给白色小旗子绘制圆
 						  vga_data <= chesscolor1;
 						else
 						  vga_data <= boardcolor;
 				    end
 				  else if (board[board_pos] == 3'b101 ) // 第三个if，来判断现在是否是绘制黑色小旗子（位置判断）
 					 begin 
-						if ((x_cor - x_center) * (x_cor - x_center) + (y_cor - y_center) * (y_cor - y_center) <= 64) // 给黑色小旗子绘制圆
+						if ((x_cor - x_center) * (x_cor - x_center) + (y_cor - y_center) * (y_cor - y_center) <= 36) // 给黑色小旗子绘制圆
 						  vga_data <= chesscolor2;
 						else
 						  vga_data <= boardcolor;
@@ -252,8 +254,18 @@ output                                    IP2Bus_Error;
 		  else
 		    vga_data <= boardcolor;
 		end
+		// board部分的绘制结束=========================================================================
+	 else if (vga_ena == 1 && x_cor >= 480 && x_cor <= 640 && y_cor < 480)
+	 // 开始绘制右边160*480的menu部分==================================================================
+	   begin
+		  if (y_cor <= 15 || (y_cor >= 155 && y_cor <= 170) || (y_cor >= 310 && y_cor <= 325) || y_cor >= 465)
+		    vga_data <= menulinecolor;
+		  else
+		    vga_data <= menucolor;
+		end
+		// menu部分的绘制结束==========================================================================
 	 else
-		vga_data <= 0;
+	   vga_data <= 0;
   end
   
   // ----------------------棋盘绘制和旗子绘制部分：结束-----------------------------------------------------------
