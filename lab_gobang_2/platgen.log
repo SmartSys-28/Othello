@@ -181,6 +181,44 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
+IPNAME:microblaze INSTANCE:microblaze_0 -
+F:\xps\Othello-28\lab_gobang_2\system.mhs line 45 - Copying cache implementation
+netlist
+IPNAME:plb_v46 INSTANCE:mb_plb - F:\xps\Othello-28\lab_gobang_2\system.mhs line
+58 - Copying cache implementation netlist
+IPNAME:lmb_v10 INSTANCE:ilmb - F:\xps\Othello-28\lab_gobang_2\system.mhs line 65
+- Copying cache implementation netlist
+IPNAME:lmb_v10 INSTANCE:dlmb - F:\xps\Othello-28\lab_gobang_2\system.mhs line 72
+- Copying cache implementation netlist
+IPNAME:lmb_bram_if_cntlr INSTANCE:dlmb_cntlr -
+F:\xps\Othello-28\lab_gobang_2\system.mhs line 79 - Copying cache implementation
+netlist
+IPNAME:lmb_bram_if_cntlr INSTANCE:ilmb_cntlr -
+F:\xps\Othello-28\lab_gobang_2\system.mhs line 88 - Copying cache implementation
+netlist
+IPNAME:bram_block INSTANCE:lmb_bram - F:\xps\Othello-28\lab_gobang_2\system.mhs
+line 97 - Copying cache implementation netlist
+IPNAME:xps_uartlite INSTANCE:rs232_uart_1 -
+F:\xps\Othello-28\lab_gobang_2\system.mhs line 104 - Copying cache
+implementation netlist
+IPNAME:xps_gpio INSTANCE:dip_switches_8bits -
+F:\xps\Othello-28\lab_gobang_2\system.mhs line 118 - Copying cache
+implementation netlist
+IPNAME:xps_mch_emc INSTANCE:micron_ram -
+F:\xps\Othello-28\lab_gobang_2\system.mhs line 131 - Copying cache
+implementation netlist
+IPNAME:mem_bus_mux INSTANCE:mem_bus_mux_0 -
+F:\xps\Othello-28\lab_gobang_2\system.mhs line 161 - Copying cache
+implementation netlist
+IPNAME:mdm INSTANCE:mdm_0 - F:\xps\Othello-28\lab_gobang_2\system.mhs line 203 -
+Copying cache implementation netlist
+IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
+F:\xps\Othello-28\lab_gobang_2\system.mhs line 215 - Copying cache
+implementation netlist
+IPNAME:vga_ip INSTANCE:vga_ip_0 - F:\xps\Othello-28\lab_gobang_2\system.mhs line
+228 - Copying cache implementation netlist
+IPNAME:xps_ps2 INSTANCE:xps_ps2_0 - F:\xps\Othello-28\lab_gobang_2\system.mhs
+line 243 - Copying cache implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram - F:\xps\Othello-28\lab_gobang_2\system.mhs
@@ -210,46 +248,12 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:microblaze_0 - F:\xps\Othello-28\lab_gobang_2\system.mhs line 45 -
-Running XST synthesis
-INSTANCE:mb_plb - F:\xps\Othello-28\lab_gobang_2\system.mhs line 58 - Running
-XST synthesis
-INSTANCE:ilmb - F:\xps\Othello-28\lab_gobang_2\system.mhs line 65 - Running XST
-synthesis
-INSTANCE:dlmb - F:\xps\Othello-28\lab_gobang_2\system.mhs line 72 - Running XST
-synthesis
-INSTANCE:dlmb_cntlr - F:\xps\Othello-28\lab_gobang_2\system.mhs line 79 -
-Running XST synthesis
-INSTANCE:ilmb_cntlr - F:\xps\Othello-28\lab_gobang_2\system.mhs line 88 -
-Running XST synthesis
-INSTANCE:lmb_bram - F:\xps\Othello-28\lab_gobang_2\system.mhs line 97 - Running
-XST synthesis
-INSTANCE:rs232_uart_1 - F:\xps\Othello-28\lab_gobang_2\system.mhs line 104 -
-Running XST synthesis
-INSTANCE:dip_switches_8bits - F:\xps\Othello-28\lab_gobang_2\system.mhs line 118
-- Running XST synthesis
-INSTANCE:micron_ram - F:\xps\Othello-28\lab_gobang_2\system.mhs line 131 -
-Running XST synthesis
-INSTANCE:mem_bus_mux_0 - F:\xps\Othello-28\lab_gobang_2\system.mhs line 161 -
-Running XST synthesis
 INSTANCE:clock_generator_0 - F:\xps\Othello-28\lab_gobang_2\system.mhs line 186
 - Running XST synthesis
-INSTANCE:mdm_0 - F:\xps\Othello-28\lab_gobang_2\system.mhs line 203 - Running
-XST synthesis
-INSTANCE:proc_sys_reset_0 - F:\xps\Othello-28\lab_gobang_2\system.mhs line 215 -
-Running XST synthesis
 INSTANCE:vga_ip_0 - F:\xps\Othello-28\lab_gobang_2\system.mhs line 228 - Running
 XST synthesis
-INSTANCE:xps_ps2_0 - F:\xps\Othello-28\lab_gobang_2\system.mhs line 243 -
-Running XST synthesis
 
 Running NGCBUILD ...
-IPNAME:system_microblaze_0_wrapper INSTANCE:microblaze_0 -
-F:\xps\Othello-28\lab_gobang_2\system.mhs line 45 - Running NGCBUILD
-IPNAME:system_ilmb_wrapper INSTANCE:ilmb -
-F:\xps\Othello-28\lab_gobang_2\system.mhs line 65 - Running NGCBUILD
-IPNAME:system_dlmb_wrapper INSTANCE:dlmb -
-F:\xps\Othello-28\lab_gobang_2\system.mhs line 72 - Running NGCBUILD
 IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
 F:\xps\Othello-28\lab_gobang_2\system.mhs line 186 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
@@ -258,4 +262,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 241.00 seconds
+Total run time: 58.00 seconds

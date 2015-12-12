@@ -3,8 +3,8 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to F:\xps\Othello-28\lab_gobang_2\synthesis\xst_temp_dir\
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> 
 TABLE OF CONTENTS
@@ -958,15 +958,15 @@ Top Level Output File Name         : system.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 8030
+# BELS                             : 8042
 #      GND                         : 16
 #      INV                         : 51
 #      LUT1                        : 129
-#      LUT2                        : 403
+#      LUT2                        : 402
 #      LUT3                        : 1004
 #      LUT4                        : 776
-#      LUT5                        : 1474
-#      LUT6                        : 1426
+#      LUT5                        : 1480
+#      LUT6                        : 1433
 #      LUT6_2                      : 79
 #      MULT_AND                    : 36
 #      MUXCY                       : 1159
@@ -1016,17 +1016,17 @@ Selected Device : 6slx16csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:            3513  out of  18224    19%  
- Number of Slice LUTs:                 5579  out of   9112    61%  
-    Number used as Logic:              5342  out of   9112    58%  
+ Number of Slice LUTs:                 5591  out of   9112    61%  
+    Number used as Logic:              5354  out of   9112    58%  
     Number used as Memory:              237  out of   2176    10%  
        Number used as RAM:               64
        Number used as SRL:              173
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   7365
-   Number with an unused Flip Flop:    3852  out of   7365    52%  
-   Number with an unused LUT:          1786  out of   7365    24%  
-   Number of fully used LUT-FF pairs:  1727  out of   7365    23%  
+ Number of LUT Flip Flop pairs used:   7377
+   Number with an unused Flip Flop:    3864  out of   7377    52%  
+   Number with an unused LUT:          1786  out of   7377    24%  
+   Number of fully used LUT-FF pairs:  1727  out of   7377    23%  
    Number of unique control sets:       189
 
 IO Utilization: 
@@ -1084,7 +1084,7 @@ Speed Grade: -3
 
    Minimum period: 9.886ns (Maximum Frequency: 101.156MHz)
    Minimum input arrival time before clock: 7.508ns
-   Maximum output required time after clock: 18.906ns
+   Maximum output required time after clock: 19.272ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1192,7 +1192,7 @@ Delay:               4.297ns (Levels of Logic = 6)
      XORCY:CI->O           1   0.180   0.580  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd1_xor<4> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd_61)
      LUT2:I1->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd2_lut<6> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd2_lut<6>)
      XORCY:LI->O           4   0.136   0.683  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd2_xor<6> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_6)
-     INV:I->O              1   0.206   0.579  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd_xor<6>11_INV_0 (vga_ip_0/USER_LOGIC_I/n0497<6>)
+     INV:I->O              1   0.206   0.579  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd_xor<6>11_INV_0 (vga_ip_0/USER_LOGIC_I/n0523<6>)
      LD:D                      0.037          vga_ip_0/USER_LOGIC_I/y_center_3
     ----------------------------------------
     Total                      4.297ns (1.637ns logic, 2.660ns route)
@@ -1277,9 +1277,9 @@ Offset:              7.508ns (Levels of Logic = 6)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'fpga_0_clk_1_sys_clk_pin'
-  Total number of paths / destination ports: 1927 / 59
+  Total number of paths / destination ports: 2329 / 59
 -------------------------------------------------------------------------
-Offset:              12.259ns (Levels of Logic = 10)
+Offset:              13.312ns (Levels of Logic = 11)
   Source:            vga_ip_0/vga_ip_0/USER_LOGIC_I/v_cnt_2 (FF)
   Destination:       vga_ip_0_VGA_G_pin<0> (PAD)
   Source Clock:      fpga_0_clk_1_sys_clk_pin rising 0.3X
@@ -1293,26 +1293,27 @@ Offset:              12.259ns (Levels of Logic = 10)
      LUT6:I4->O            1   0.203   0.580  vga_ip_0/USER_LOGIC_I/vga_ena2 (vga_ip_0/USER_LOGIC_I/vga_ena2)
      LUT6:I5->O            1   0.205   0.944  vga_ip_0/USER_LOGIC_I/vga_ena3 (vga_ip_0/USER_LOGIC_I/vga_ena3)
      LUT6:I0->O            1   0.203   0.924  vga_ip_0/USER_LOGIC_I/vga_ena5 (vga_ip_0/USER_LOGIC_I/vga_ena)
-     LUT6:I1->O            1   0.203   0.924  vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o_SW0 (N6)
-     LUT6:I1->O            3   0.203   0.898  vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o (vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o)
-     LUT6:I2->O            1   0.203   0.827  vga_ip_0/USER_LOGIC_I/vga_data<6>21 (vga_ip_0/USER_LOGIC_I/vga_data<6>2)
-     LUT6:I2->O            3   0.203   0.650  vga_ip_0/USER_LOGIC_I/vga_data<6>1 (VGA_B<1>)
+     LUT6:I1->O            4   0.203   1.028  vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o11 (vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o1)
+     LUT6:I1->O            5   0.203   0.962  vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o2 (vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o)
+     LUT6:I2->O            2   0.203   0.617  vga_ip_0/USER_LOGIC_I/vga_data<6>21 (vga_ip_0/USER_LOGIC_I/vga_data<6>2)
+     LUT3:I2->O            1   0.205   0.924  vga_ip_0/USER_LOGIC_I/vga_data<6>2 (vga_ip_0/USER_LOGIC_I/vga_data<6>1)
+     LUT5:I0->O            2   0.203   0.616  vga_ip_0/USER_LOGIC_I/vga_data<6>3 (VGA_B<0>)
      end scope: 'vga_ip_0:VGA_B<0>'
      OBUF:I->O                 2.571          vga_ip_0_VGA_B_pin_0_OBUF (vga_ip_0_VGA_B_pin<0>)
     ----------------------------------------
-    Total                     12.259ns (4.646ns logic, 7.613ns route)
-                                       (37.9% logic, 62.1% route)
+    Total                     13.312ns (4.851ns logic, 8.461ns route)
+                                       (36.4% logic, 63.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'vga_ip_0/vga_ip_0/USER_LOGIC_I/vga_data<6>2'
-  Total number of paths / destination ports: 6605424 / 8
+  Total number of paths / destination ports: 7798014 / 8
 -------------------------------------------------------------------------
-Offset:              18.139ns (Levels of Logic = 25)
+Offset:              18.463ns (Levels of Logic = 24)
   Source:            vga_ip_0/vga_ip_0/USER_LOGIC_I/y_center_8 (LATCH)
-  Destination:       vga_ip_0_VGA_G_pin<1> (PAD)
+  Destination:       vga_ip_0_VGA_R_pin<1> (PAD)
   Source Clock:      vga_ip_0/vga_ip_0/USER_LOGIC_I/vga_data<6>2 falling
 
-  Data Path: vga_ip_0/vga_ip_0/USER_LOGIC_I/y_center_8 to vga_ip_0_VGA_G_pin<1>
+  Data Path: vga_ip_0/vga_ip_0/USER_LOGIC_I/y_center_8 to vga_ip_0_VGA_R_pin<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -1328,38 +1329,37 @@ Offset:              18.139ns (Levels of Logic = 25)
      MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<8> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<8>)
      MUXCY:CI->O           0   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<9> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<9>)
      XORCY:CI->O          16   0.180   1.004  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_xor<10> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_sub_160_OUT<10>)
-     DSP48A1:B10->PCOUT47    1   6.270   0.000  vga_ip_0/USER_LOGIC_I/Mmult_n0504 (vga_ip_0/USER_LOGIC_I/Mmult_n0504_PCOUT_to_Maddsub_n0502_PCIN_47)
-     DSP48A1:PCIN47->P0    2   2.264   0.961  vga_ip_0/USER_LOGIC_I/Maddsub_n0502 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_add_162_OUT<0>)
-     LUT5:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<0> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<0> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1>)
+     DSP48A1:B10->PCOUT47    1   6.270   0.000  vga_ip_0/USER_LOGIC_I/Mmult_n0530 (vga_ip_0/USER_LOGIC_I/Mmult_n0530_PCOUT_to_Maddsub_n0528_PCIN_47)
+     DSP48A1:PCIN47->P5    3   2.264   0.995  vga_ip_0/USER_LOGIC_I/Maddsub_n0528 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_add_162_OUT<5>)
+     LUT5:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1>)
      MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<2> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<2>)
      MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<3> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<3>)
      MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<4> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<4>)
      MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<5> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<5>)
-     MUXCY:CI->O           3   0.213   0.995  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<6> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_LessThan_164_o)
-     LUT6:I1->O            1   0.203   0.580  vga_ip_0/USER_LOGIC_I/vga_data<5>1 (vga_ip_0/USER_LOGIC_I/vga_data<5>)
-     LUT3:I2->O            2   0.205   0.616  vga_ip_0/USER_LOGIC_I/vga_data<5>2 (VGA_G<2>)
-     end scope: 'vga_ip_0:VGA_G<1>'
-     OBUF:I->O                 2.571          vga_ip_0_VGA_G_pin_1_OBUF (vga_ip_0_VGA_G_pin<1>)
+     MUXCY:CI->O           5   0.213   0.962  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<6> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_LessThan_164_o)
+     LUT6:I2->O            1   0.203   0.924  vga_ip_0/USER_LOGIC_I/vga_data<2>1 (vga_ip_0/USER_LOGIC_I/vga_data<2>)
+     LUT6:I1->O            2   0.203   0.616  vga_ip_0/USER_LOGIC_I/vga_data<2>2 (VGA_R<2>)
+     end scope: 'vga_ip_0:VGA_R<1>'
+     OBUF:I->O                 2.571          vga_ip_0_VGA_R_pin_1_OBUF (vga_ip_0_VGA_R_pin<1>)
     ----------------------------------------
-    Total                     18.139ns (13.403ns logic, 4.736ns route)
-                                       (73.9% logic, 26.1% route)
+    Total                     18.463ns (13.382ns logic, 5.081ns route)
+                                       (72.5% logic, 27.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'vga_ip_0/vga_ip_0/USER_LOGIC_I/vga_ena'
-  Total number of paths / destination ports: 14677232 / 8
+  Total number of paths / destination ports: 17327339 / 8
 -------------------------------------------------------------------------
-Offset:              18.906ns (Levels of Logic = 21)
+Offset:              19.272ns (Levels of Logic = 20)
   Source:            vga_ip_0/vga_ip_0/USER_LOGIC_I/y_cor_4 (LATCH)
-  Destination:       vga_ip_0_VGA_G_pin<1> (PAD)
+  Destination:       vga_ip_0_VGA_R_pin<1> (PAD)
   Source Clock:      vga_ip_0/vga_ip_0/USER_LOGIC_I/vga_ena falling
 
-  Data Path: vga_ip_0/vga_ip_0/USER_LOGIC_I/y_cor_4 to vga_ip_0_VGA_G_pin<1>
+  Data Path: vga_ip_0/vga_ip_0/USER_LOGIC_I/y_cor_4 to vga_ip_0_VGA_R_pin<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q              34   0.498   1.425  vga_ip_0/USER_LOGIC_I/y_cor_4 (vga_ip_0/USER_LOGIC_I/y_cor_4)
+     LD:G->Q              37   0.498   1.467  vga_ip_0/USER_LOGIC_I/y_cor_4 (vga_ip_0/USER_LOGIC_I/y_cor_4)
      LUT2:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_lut<5> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_lut<5>)
      MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<5> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<5>)
      MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<6> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<6>)
@@ -1367,23 +1367,22 @@ Offset:              18.906ns (Levels of Logic = 21)
      MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<8> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<8>)
      MUXCY:CI->O           0   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<9> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<9>)
      XORCY:CI->O          16   0.180   1.004  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_xor<10> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_sub_160_OUT<10>)
-     DSP48A1:B10->PCOUT47    1   6.270   0.000  vga_ip_0/USER_LOGIC_I/Mmult_n0504 (vga_ip_0/USER_LOGIC_I/Mmult_n0504_PCOUT_to_Maddsub_n0502_PCIN_47)
-     DSP48A1:PCIN47->P0    2   2.264   0.961  vga_ip_0/USER_LOGIC_I/Maddsub_n0502 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_add_162_OUT<0>)
-     LUT5:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<0> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<0> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1>)
+     DSP48A1:B10->PCOUT47    1   6.270   0.000  vga_ip_0/USER_LOGIC_I/Mmult_n0530 (vga_ip_0/USER_LOGIC_I/Mmult_n0530_PCOUT_to_Maddsub_n0528_PCIN_47)
+     DSP48A1:PCIN47->P5    3   2.264   0.995  vga_ip_0/USER_LOGIC_I/Maddsub_n0528 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_add_162_OUT<5>)
+     LUT5:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1>)
      MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<2> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<2>)
      MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<3> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<3>)
      MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<4> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<4>)
      MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<5> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<5>)
-     MUXCY:CI->O           3   0.213   0.995  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<6> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_LessThan_164_o)
-     LUT6:I1->O            1   0.203   0.580  vga_ip_0/USER_LOGIC_I/vga_data<5>1 (vga_ip_0/USER_LOGIC_I/vga_data<5>)
-     LUT3:I2->O            2   0.205   0.616  vga_ip_0/USER_LOGIC_I/vga_data<5>2 (VGA_G<2>)
-     end scope: 'vga_ip_0:VGA_G<1>'
-     OBUF:I->O                 2.571          vga_ip_0_VGA_G_pin_1_OBUF (vga_ip_0_VGA_G_pin<1>)
+     MUXCY:CI->O           5   0.213   0.962  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<6> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_LessThan_164_o)
+     LUT6:I2->O            1   0.203   0.924  vga_ip_0/USER_LOGIC_I/vga_data<2>1 (vga_ip_0/USER_LOGIC_I/vga_data<2>)
+     LUT6:I1->O            2   0.203   0.616  vga_ip_0/USER_LOGIC_I/vga_data<2>2 (VGA_R<2>)
+     end scope: 'vga_ip_0:VGA_R<1>'
+     OBUF:I->O                 2.571          vga_ip_0_VGA_R_pin_1_OBUF (vga_ip_0_VGA_R_pin<1>)
     ----------------------------------------
-    Total                     18.906ns (13.325ns logic, 5.581ns route)
-                                       (70.5% logic, 29.5% route)
+    Total                     19.272ns (13.304ns logic, 5.968ns route)
+                                       (69.0% logic, 31.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'mdm_0/Ext_JTAG_UPDATE'
@@ -1484,7 +1483,7 @@ Clock to Setup on destination clock vga_ip_0/vga_ip_0/USER_LOGIC_I/vga_data<6>2
 Source Clock                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------------------+---------+---------+---------+---------+
 vga_ip_0/vga_ip_0/USER_LOGIC_I/vga_data<6>2|         |         |    4.297|         |
-vga_ip_0/vga_ip_0/USER_LOGIC_I/vga_ena     |         |         |   87.904|         |
+vga_ip_0/vga_ip_0/USER_LOGIC_I/vga_ena     |         |         |   87.923|         |
 -------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock vga_ip_0/vga_ip_0/USER_LOGIC_I/vga_ena
@@ -1498,12 +1497,12 @@ fpga_0_clk_1_sys_clk_pin|         |         |    2.885|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 26.00 secs
-Total CPU time to Xst completion: 26.27 secs
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 28.54 secs
  
 --> 
 
-Total memory usage is 240544 kilobytes
+Total memory usage is 244472 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
