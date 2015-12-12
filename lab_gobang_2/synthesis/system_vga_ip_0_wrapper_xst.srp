@@ -1,0 +1,1559 @@
+Release 14.2 - xst P.28xd (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to F:\xps\Othello-28\lab_gobang_2\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_vga_ip_0_wrapper_xst.prj"
+Verilog Include Directory          : {"F:\xps\Othello-28\lab_gobang_2\pcores\" "E:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "E:\Xilinx\14.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc6slx16csg324-3
+Output File Name                   : "../implementation/system_vga_ip_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_vga_ip_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" into library vga_ip_v1_00_a
+Parsing module <user_logic>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family.vhd" into library proc_common_v3_00_a
+Parsing package <family>.
+Parsing package body <family>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd" into library proc_common_v3_00_a
+Parsing package <family_support>.
+Parsing package body <family_support>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd" into library proc_common_v3_00_a
+Parsing package <coregen_comp_defs>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/common_types_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <Common_Types>.
+Parsing package body <Common_Types>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <proc_common_pkg>.
+Parsing package body <proc_common_pkg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/conv_funs_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <conv_funs_pkg>.
+Parsing package body <conv_funs_pkg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <ipif_pkg>.
+Parsing package body <ipif_pkg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/async_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <async_fifo_fg>.
+Parsing architecture <implementation> of entity <async_fifo_fg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/sync_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <sync_fifo_fg>.
+Parsing architecture <implementation> of entity <sync_fifo_fg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/basic_sfifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <basic_sfifo_fg>.
+Parsing architecture <implementation> of entity <basic_sfifo_fg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/blk_mem_gen_wrapper.vhd" into library proc_common_v3_00_a
+Parsing entity <blk_mem_gen_wrapper>.
+Parsing architecture <implementation> of entity <blk_mem_gen_wrapper>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/addsub.vhd" into library proc_common_v3_00_a
+Parsing entity <addsub>.
+Parsing architecture <imp> of entity <addsub>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_bit>.
+Parsing architecture <imp> of entity <counter_bit>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter.vhd" into library proc_common_v3_00_a
+Parsing entity <Counter>.
+Parsing architecture <imp> of entity <counter>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr>.
+Parsing architecture <imp> of entity <direct_path_cntr>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr_ai.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr_ai>.
+Parsing architecture <imp> of entity <direct_path_cntr_ai>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/down_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <down_counter>.
+Parsing architecture <simulation> of entity <down_counter>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/eval_timer.vhd" into library proc_common_v3_00_a
+Parsing entity <eval_timer>.
+Parsing architecture <imp> of entity <eval_timer>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/inferred_lut4.vhd" into library proc_common_v3_00_a
+Parsing entity <inferred_lut4>.
+Parsing architecture <implementation> of entity <inferred_lut4>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer.vhd" into library proc_common_v3_00_a
+Parsing entity <IPIF_Steer>.
+Parsing architecture <IMP> of entity <ipif_steer>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_steer128>.
+Parsing architecture <IMP> of entity <ipif_steer128>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_mirror128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_mirror128>.
+Parsing architecture <IMP> of entity <ipif_mirror128>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg>.
+Parsing architecture <imp> of entity <ld_arith_reg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg2.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg2>.
+Parsing architecture <imp> of entity <ld_arith_reg2>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot>.
+Parsing architecture <imp> of entity <mux_onehot>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_bits.vhd" into library proc_common_v3_00_a
+Parsing entity <or_bits>.
+Parsing architecture <implementation> of entity <or_bits>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy>.
+Parsing architecture <implementation> of entity <or_muxcy>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate>.
+Parsing architecture <imp> of entity <or_gate>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate128>.
+Parsing architecture <imp> of entity <or_gate128>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder_bit>.
+Parsing architecture <implementation> of entity <pf_adder_bit>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder>.
+Parsing architecture <implementation> of entity <pf_adder>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_bit>.
+Parsing architecture <implementation> of entity <pf_counter_bit>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter>.
+Parsing architecture <implementation> of entity <pf_counter>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_top>.
+Parsing architecture <implementation> of entity <pf_counter_top>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter>.
+Parsing architecture <implementation> of entity <pf_occ_counter>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter_top>.
+Parsing architecture <implementation> of entity <pf_occ_counter_top>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_dpram_select.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_dpram_select>.
+Parsing architecture <implementation> of entity <pf_dpram_select>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect>.
+Parsing architecture <imp> of entity <pselect>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_mask.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_mask>.
+Parsing architecture <imp> of entity <pselect_mask>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl16_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <srl16_fifo>.
+Parsing architecture <implementation> of entity <srl16_fifo>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <SRL_FIFO>.
+Parsing architecture <IMP> of entity <srl_fifo>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo2.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo2>.
+Parsing architecture <imp> of entity <srl_fifo2>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo3.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo3>.
+Parsing architecture <imp> of entity <srl_fifo3>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu>.
+Parsing architecture <imp> of entity <srl_fifo_rbu>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/valid_be.vhd" into library proc_common_v3_00_a
+Parsing entity <valid_be>.
+Parsing architecture <implementation> of entity <valid_be>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_with_enable_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_with_enable_f>.
+Parsing architecture <implementation> of entity <or_with_enable_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/muxf_struct_f.vhd" into library proc_common_v3_00_a
+Parsing entity <muxf_struct>.
+Parsing architecture <imp> of entity <muxf_struct>.
+Parsing entity <muxf_struct_f>.
+Parsing architecture <imp> of entity <muxf_struct_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/cntr_incr_decr_addn_f.vhd" into library proc_common_v3_00_a
+Parsing entity <cntr_incr_decr_addn_f>.
+Parsing architecture <imp> of entity <cntr_incr_decr_addn_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_f>.
+Parsing architecture <behavioral> of entity <dynshreg_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_i_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_i_f>.
+Parsing architecture <behavioral> of entity <dynshreg_i_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot_f.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot_f>.
+Parsing architecture <imp> of entity <mux_onehot_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu_f>.
+Parsing architecture <imp> of entity <srl_fifo_rbu_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_f>.
+Parsing architecture <imp> of entity <srl_fifo_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/compare_vectors_f.vhd" into library proc_common_v3_00_a
+Parsing entity <compare_vectors_f>.
+Parsing architecture <imp> of entity <compare_vectors_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_f>.
+Parsing architecture <imp> of entity <pselect_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_f>.
+Parsing architecture <imp> of entity <counter_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy_f>.
+Parsing architecture <implementation> of entity <or_muxcy_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate_f>.
+Parsing architecture <imp> of entity <or_gate_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd" into library proc_common_v3_00_a
+Parsing entity <soft_reset>.
+Parsing architecture <implementation> of entity <soft_reset>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family.vhd" into library proc_common_v3_00_a
+Parsing package <family>.
+Parsing package body <family>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd" into library proc_common_v3_00_a
+Parsing package <family_support>.
+Parsing package body <family_support>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd" into library proc_common_v3_00_a
+Parsing package <coregen_comp_defs>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/common_types_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <Common_Types>.
+Parsing package body <Common_Types>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <proc_common_pkg>.
+Parsing package body <proc_common_pkg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/conv_funs_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <conv_funs_pkg>.
+Parsing package body <conv_funs_pkg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <ipif_pkg>.
+Parsing package body <ipif_pkg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/async_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <async_fifo_fg>.
+Parsing architecture <implementation> of entity <async_fifo_fg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/sync_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <sync_fifo_fg>.
+Parsing architecture <implementation> of entity <sync_fifo_fg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/basic_sfifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <basic_sfifo_fg>.
+Parsing architecture <implementation> of entity <basic_sfifo_fg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/blk_mem_gen_wrapper.vhd" into library proc_common_v3_00_a
+Parsing entity <blk_mem_gen_wrapper>.
+Parsing architecture <implementation> of entity <blk_mem_gen_wrapper>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/addsub.vhd" into library proc_common_v3_00_a
+Parsing entity <addsub>.
+Parsing architecture <imp> of entity <addsub>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_bit>.
+Parsing architecture <imp> of entity <counter_bit>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter.vhd" into library proc_common_v3_00_a
+Parsing entity <Counter>.
+Parsing architecture <imp> of entity <counter>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr>.
+Parsing architecture <imp> of entity <direct_path_cntr>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr_ai.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr_ai>.
+Parsing architecture <imp> of entity <direct_path_cntr_ai>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/down_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <down_counter>.
+Parsing architecture <simulation> of entity <down_counter>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/eval_timer.vhd" into library proc_common_v3_00_a
+Parsing entity <eval_timer>.
+Parsing architecture <imp> of entity <eval_timer>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/inferred_lut4.vhd" into library proc_common_v3_00_a
+Parsing entity <inferred_lut4>.
+Parsing architecture <implementation> of entity <inferred_lut4>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer.vhd" into library proc_common_v3_00_a
+Parsing entity <IPIF_Steer>.
+Parsing architecture <IMP> of entity <ipif_steer>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_steer128>.
+Parsing architecture <IMP> of entity <ipif_steer128>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_mirror128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_mirror128>.
+Parsing architecture <IMP> of entity <ipif_mirror128>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg>.
+Parsing architecture <imp> of entity <ld_arith_reg>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg2.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg2>.
+Parsing architecture <imp> of entity <ld_arith_reg2>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot>.
+Parsing architecture <imp> of entity <mux_onehot>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_bits.vhd" into library proc_common_v3_00_a
+Parsing entity <or_bits>.
+Parsing architecture <implementation> of entity <or_bits>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy>.
+Parsing architecture <implementation> of entity <or_muxcy>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate>.
+Parsing architecture <imp> of entity <or_gate>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate128>.
+Parsing architecture <imp> of entity <or_gate128>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder_bit>.
+Parsing architecture <implementation> of entity <pf_adder_bit>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder>.
+Parsing architecture <implementation> of entity <pf_adder>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_bit>.
+Parsing architecture <implementation> of entity <pf_counter_bit>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter>.
+Parsing architecture <implementation> of entity <pf_counter>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_top>.
+Parsing architecture <implementation> of entity <pf_counter_top>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter>.
+Parsing architecture <implementation> of entity <pf_occ_counter>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter_top>.
+Parsing architecture <implementation> of entity <pf_occ_counter_top>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_dpram_select.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_dpram_select>.
+Parsing architecture <implementation> of entity <pf_dpram_select>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect>.
+Parsing architecture <imp> of entity <pselect>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_mask.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_mask>.
+Parsing architecture <imp> of entity <pselect_mask>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl16_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <srl16_fifo>.
+Parsing architecture <implementation> of entity <srl16_fifo>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <SRL_FIFO>.
+Parsing architecture <IMP> of entity <srl_fifo>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo2.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo2>.
+Parsing architecture <imp> of entity <srl_fifo2>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo3.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo3>.
+Parsing architecture <imp> of entity <srl_fifo3>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu>.
+Parsing architecture <imp> of entity <srl_fifo_rbu>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/valid_be.vhd" into library proc_common_v3_00_a
+Parsing entity <valid_be>.
+Parsing architecture <implementation> of entity <valid_be>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_with_enable_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_with_enable_f>.
+Parsing architecture <implementation> of entity <or_with_enable_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/muxf_struct_f.vhd" into library proc_common_v3_00_a
+Parsing entity <muxf_struct>.
+Parsing architecture <imp> of entity <muxf_struct>.
+Parsing entity <muxf_struct_f>.
+Parsing architecture <imp> of entity <muxf_struct_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/cntr_incr_decr_addn_f.vhd" into library proc_common_v3_00_a
+Parsing entity <cntr_incr_decr_addn_f>.
+Parsing architecture <imp> of entity <cntr_incr_decr_addn_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_f>.
+Parsing architecture <behavioral> of entity <dynshreg_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_i_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_i_f>.
+Parsing architecture <behavioral> of entity <dynshreg_i_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot_f.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot_f>.
+Parsing architecture <imp> of entity <mux_onehot_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu_f>.
+Parsing architecture <imp> of entity <srl_fifo_rbu_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_f>.
+Parsing architecture <imp> of entity <srl_fifo_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/compare_vectors_f.vhd" into library proc_common_v3_00_a
+Parsing entity <compare_vectors_f>.
+Parsing architecture <imp> of entity <compare_vectors_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_f>.
+Parsing architecture <imp> of entity <pselect_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_f>.
+Parsing architecture <imp> of entity <counter_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy_f>.
+Parsing architecture <implementation> of entity <or_muxcy_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate_f>.
+Parsing architecture <imp> of entity <or_gate_f>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd" into library proc_common_v3_00_a
+Parsing entity <soft_reset>.
+Parsing architecture <implementation> of entity <soft_reset>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_address_decoder.vhd" into library plbv46_slave_single_v1_01_a
+Parsing entity <plb_address_decoder>.
+Parsing architecture <IMP> of entity <plb_address_decoder>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" into library plbv46_slave_single_v1_01_a
+Parsing entity <plb_slave_attachment>.
+Parsing architecture <implementation> of entity <plb_slave_attachment>.
+Parsing VHDL file "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plbv46_slave_single.vhd" into library plbv46_slave_single_v1_01_a
+Parsing entity <plbv46_slave_single>.
+Parsing architecture <implementation> of entity <plbv46_slave_single>.
+Parsing VHDL file "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/vhdl/vga_ip.vhd" into library vga_ip_v1_00_a
+Parsing entity <vga_ip>.
+Parsing architecture <IMP> of entity <vga_ip>.
+Parsing VHDL file "F:\xps\Othello-28\lab_gobang_2\hdl\system_vga_ip_0_wrapper.vhd" into library work
+Parsing entity <system_vga_ip_0_wrapper>.
+Parsing architecture <STRUCTURE> of entity <system_vga_ip_0_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <system_vga_ip_0_wrapper> (architecture <STRUCTURE>) from library <work>.
+
+Elaborating entity <vga_ip> (architecture <IMP>) with generics from library <vga_ip_v1_00_a>.
+
+Elaborating entity <plbv46_slave_single> (architecture <implementation>) with generics from library <plbv46_slave_single_v1_01_a>.
+
+Elaborating entity <plb_slave_attachment> (architecture <implementation>) with generics from library <plbv46_slave_single_v1_01_a>.
+
+Elaborating entity <plb_address_decoder> (architecture <IMP>) with generics from library <plbv46_slave_single_v1_01_a>.
+WARNING:HDLCompiler:1127 - "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_address_decoder.vhd" Line 319: Assignment to cs_s_h_clr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_address_decoder.vhd" Line 323: Assignment to addr_match_clr ignored, since the identifier is never used
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <or_gate128> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <or_muxcy> (architecture <implementation>) with generics from library <proc_common_v3_00_a>.
+INFO:HDLCompiler:679 - "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" Line 711. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:1127 - "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd" Line 1025: Assignment to start_data_phase ignored, since the identifier is never used
+Going to verilog side to elaborate module user_logic
+
+Elaborating module <user_logic(h_a=96,h_b=48,h_c=640,h_d=16,v_a=2,v_b=33,v_c=480,v_d=10,chesscolor1=255,chesscolor2=0,boardcolor=236,cursorcolor=224,linecolor=0,prechesscolor=131,C_SLV_DWIDTH=32,C_NUM_REG=1)>.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 171: Result of 8-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 189: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 192: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 209: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 210: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 227: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 228: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 229: Result of 10-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 230: Result of 14-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 231: Result of 14-bit expression is truncated to fit in 10-bit target.
+Back to vhdl to continue elaboration
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system_vga_ip_0_wrapper>.
+    Related source file is "F:\xps\Othello-28\lab_gobang_2\hdl\system_vga_ip_0_wrapper.vhd".
+    Summary:
+	no macro.
+Unit <system_vga_ip_0_wrapper> synthesized.
+
+Synthesizing Unit <vga_ip>.
+    Related source file is "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/vhdl/vga_ip.vhd".
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+        C_BASEADDR = "10000110010100000000000000000000"
+        C_HIGHADDR = "10000110010100111111111111111111"
+        C_SPLB_AWIDTH = 32
+        C_SPLB_DWIDTH = 32
+        C_SPLB_NUM_MASTERS = 2
+        C_SPLB_MID_WIDTH = 1
+        C_SPLB_NATIVE_DWIDTH = 32
+        C_SPLB_P2P = 0
+        C_SPLB_SUPPORT_BURSTS = 0
+        C_SPLB_SMALLEST_MASTER = 32
+        C_SPLB_CLK_PERIOD_PS = 15000
+        C_INCLUDE_DPHASE_TIMER = 0
+        C_FAMILY = "spartan6"
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+INFO:Xst:3210 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/vhdl/vga_ip.vhd" line 352: Output port <Bus2IP_Addr> of the instance <PLBV46_SLAVE_SINGLE_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/vhdl/vga_ip.vhd" line 352: Output port <Bus2IP_CS> of the instance <PLBV46_SLAVE_SINGLE_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/vhdl/vga_ip.vhd" line 352: Output port <Bus2IP_RNW> of the instance <PLBV46_SLAVE_SINGLE_I> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <vga_ip> synthesized.
+
+Synthesizing Unit <plbv46_slave_single>.
+    Related source file is "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plbv46_slave_single.vhd".
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000110010100000000000000000000","0000000000000000000000000000000010000110010100111111111111111111")
+        C_ARD_NUM_CE_ARRAY = (1)
+        C_SPLB_P2P = 0
+        C_BUS2CORE_CLK_RATIO = 1
+        C_INCLUDE_DPHASE_TIMER = 0
+        C_SPLB_MID_WIDTH = 1
+        C_SPLB_NUM_MASTERS = 2
+        C_SPLB_AWIDTH = 32
+        C_SPLB_DWIDTH = 32
+        C_SIPIF_DWIDTH = 32
+        C_FAMILY = "spartan6"
+WARNING:Xst:647 - Input <PLB_MSize> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPendPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPendPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_reqPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_TAttribute> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_SAValid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPrim> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPrim> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_abort> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_busLock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_lockErr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrBurst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdBurst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPendReq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPendReq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <plbv46_slave_single> synthesized.
+
+Synthesizing Unit <plb_slave_attachment>.
+    Related source file is "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd".
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000110010100000000000000000000","0000000000000000000000000000000010000110010100111111111111111111")
+        C_ARD_NUM_CE_ARRAY = (1)
+        C_PLB_NUM_MASTERS = 2
+        C_PLB_MID_WIDTH = 1
+        C_SPLB_P2P = 0
+        C_BUS2CORE_CLK_RATIO = 1
+        C_IPIF_ABUS_WIDTH = 32
+        C_IPIF_DBUS_WIDTH = 32
+        C_DPHASE_TIMEOUT = 128
+        C_INCLUDE_DPHASE_TIMER = 0
+        C_FAMILY = "spartan6"
+WARNING:Xst:647 - Input <PLB_UABus> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Register <set_sl_busy> equivalent to <sl_addrack_i> has been removed
+    Register <wr_clear_sl_busy> equivalent to <sl_wrdack_i> has been removed
+    Register <sl_wrcomp_i> equivalent to <sl_wrdack_i> has been removed
+    Register <sl_rdcomp_i> equivalent to <rd_clear_sl_busy> has been removed
+    Register <sl_rddack_i> equivalent to <rd_clear_sl_busy> has been removed
+    Found 32-bit register for signal <plb_wrdbus_reg>.
+    Found 1-bit register for signal <plb_masterid_reg>.
+    Found 1-bit register for signal <plb_rnw_reg>.
+    Found 4-bit register for signal <plb_size_reg>.
+    Found 3-bit register for signal <plb_type_reg>.
+    Found 1-bit register for signal <plb_pavalid_reg>.
+    Found 32-bit register for signal <plb_abus_reg>.
+    Found 1-bit register for signal <GEN_FOR_SHARED.addr_cntl_cs>.
+    Found 1-bit register for signal <sl_addrack_i>.
+    Found 1-bit register for signal <sl_rearbitrate_i>.
+    Found 1-bit register for signal <addr_cycle_flush>.
+    Found 32-bit register for signal <master_id>.
+    Found 1-bit register for signal <sl_busy>.
+    Found 2-bit register for signal <sl_mbusy_i>.
+    Found 2-bit register for signal <sl_mrderr_i>.
+    Found 2-bit register for signal <sl_mwrerr_i>.
+    Found 1-bit register for signal <sl_wrdack_i>.
+    Found 1-bit register for signal <rd_clear_sl_busy>.
+    Found 32-bit register for signal <sl_rddbus_i>.
+    Found 1-bit register for signal <bus2ip_rnw_i>.
+    Found 4-bit register for signal <bus2ip_be_i>.
+    Found 32-bit register for signal <bus2ip_addr_i>.
+    Found 4-bit register for signal <plb_be_reg>.
+    Summary:
+	inferred 192 D-type flip-flop(s).
+	inferred  11 Multiplexer(s).
+Unit <plb_slave_attachment> synthesized.
+
+Synthesizing Unit <plb_address_decoder>.
+    Related source file is "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v1_01_a/hdl/vhdl/plb_address_decoder.vhd".
+        C_BUS_AWIDTH = 32
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000010000110010100000000000000000000","0000000000000000000000000000000010000110010100111111111111111111")
+        C_ARD_NUM_CE_ARRAY = (1)
+        C_SPLB_P2P = 0
+        C_FAMILY = "nofamily"
+WARNING:Xst:647 - Input <Address_In_Erly> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Address_Valid_Erly> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus_RNW_Erly> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <MEM_DECODE_GEN[0].GEN_PLB_SHARED.cs_out_s_h>.
+    Found 1-bit register for signal <cs_out_i>.
+    Found 1-bit register for signal <decode_hit_reg>.
+    Found 1-bit register for signal <rdce_out_i>.
+    Found 1-bit register for signal <wrce_out_i>.
+    Found 1-bit register for signal <rnw_s_h>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <plb_address_decoder> synthesized.
+
+Synthesizing Unit <pselect_f>.
+    Related source file is "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 14
+        C_AW = 32
+        C_BAR = "10000110010100000000000000000000"
+        C_FAMILY = "nofamily"
+WARNING:Xst:647 - Input <A<14:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f> synthesized.
+
+Synthesizing Unit <or_gate128>.
+    Related source file is "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd".
+        C_OR_WIDTH = 1
+        C_BUS_WIDTH = 1
+        C_USE_LUT_OR = false
+    Summary:
+	no macro.
+Unit <or_gate128> synthesized.
+
+Synthesizing Unit <or_muxcy>.
+    Related source file is "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd".
+        C_NUM_BITS = 1
+    Summary:
+	no macro.
+Unit <or_muxcy> synthesized.
+
+Synthesizing Unit <user_logic>.
+    Related source file is "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v".
+        h_a = 96
+        h_b = 48
+        h_c = 640
+        h_d = 16
+        h_total = 800
+        v_a = 2
+        v_b = 33
+        v_c = 480
+        v_d = 10
+        v_total = 525
+        chesscolor1 = 255
+        chesscolor2 = 0
+        boardcolor = 236
+        cursorcolor = 224
+        linecolor = 0
+        prechesscolor = 131
+        C_SLV_DWIDTH = 32
+        C_NUM_REG = 1
+WARNING:Xst:2999 - Signal 'colormap', unconnected in block 'user_logic', is tied to its initial value.
+    Found 4x8-bit single-port Read Only RAM <Mram_colormap> for signal <colormap>.
+    Found 10-bit register for signal <h_cnt>.
+    Found 10-bit register for signal <v_cnt>.
+    Found 1-bit register for signal <slv_reg0<0>>.
+    Found 1-bit register for signal <slv_reg0<1>>.
+    Found 1-bit register for signal <slv_reg0<2>>.
+    Found 1-bit register for signal <slv_reg0<3>>.
+    Found 1-bit register for signal <slv_reg0<4>>.
+    Found 1-bit register for signal <slv_reg0<5>>.
+    Found 1-bit register for signal <slv_reg0<6>>.
+    Found 1-bit register for signal <slv_reg0<7>>.
+    Found 1-bit register for signal <slv_reg0<8>>.
+    Found 1-bit register for signal <slv_reg0<9>>.
+    Found 1-bit register for signal <slv_reg0<10>>.
+    Found 1-bit register for signal <slv_reg0<11>>.
+    Found 1-bit register for signal <slv_reg0<12>>.
+    Found 1-bit register for signal <slv_reg0<13>>.
+    Found 1-bit register for signal <slv_reg0<14>>.
+    Found 1-bit register for signal <slv_reg0<15>>.
+    Found 1-bit register for signal <slv_reg0<16>>.
+    Found 1-bit register for signal <slv_reg0<17>>.
+    Found 1-bit register for signal <slv_reg0<18>>.
+    Found 1-bit register for signal <slv_reg0<19>>.
+    Found 1-bit register for signal <slv_reg0<20>>.
+    Found 1-bit register for signal <slv_reg0<21>>.
+    Found 1-bit register for signal <slv_reg0<22>>.
+    Found 1-bit register for signal <slv_reg0<23>>.
+    Found 1-bit register for signal <slv_reg0<24>>.
+    Found 1-bit register for signal <slv_reg0<25>>.
+    Found 1-bit register for signal <slv_reg0<26>>.
+    Found 1-bit register for signal <slv_reg0<27>>.
+    Found 1-bit register for signal <slv_reg0<28>>.
+    Found 1-bit register for signal <slv_reg0<29>>.
+    Found 1-bit register for signal <slv_reg0<30>>.
+    Found 1-bit register for signal <slv_reg0<31>>.
+    Found 192-bit register for signal <n0406[191:0]>.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_93_OUT> created at line 209.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_95_OUT> created at line 210.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_124_OUT> created at line 227.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_126_OUT> created at line 228.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_157_OUT> created at line 246.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_160_OUT> created at line 246.
+    Found 12-bit adder for signal <n0516> created at line 171.
+    Found 10-bit adder for signal <v_cnt[0]_GND_20_o_add_78_OUT> created at line 189.
+    Found 10-bit adder for signal <h_cnt[0]_GND_20_o_add_79_OUT> created at line 192.
+    Found 9-bit adder for signal <n0491> created at line 229.
+    Found 32-bit adder for signal <GND_20_o_GND_20_o_add_162_OUT> created at line 246.
+    Found 10-bit subtractor for signal <GND_20_o_GND_20_o_sub_94_OUT<9:0>> created at line 209.
+    Found 10-bit subtractor for signal <GND_20_o_GND_20_o_sub_96_OUT<9:0>> created at line 210.
+    Found 13-bit adder for signal <n0494> created at line 230.
+    Found 13-bit adder for signal <n0497> created at line 231.
+    Found 6x6-bit multiplier for signal <x_pos[0]_PWR_20_o_MuLt_128_OUT> created at line 230.
+    Found 6x6-bit multiplier for signal <y_pos[0]_PWR_20_o_MuLt_131_OUT> created at line 231.
+    Found 32x32-bit multiplier for signal <n0502> created at line 246.
+    Found 32x32-bit multiplier for signal <n0504> created at line 246.
+    Found 3-bit 64-to-1 multiplexer for signal <n0499[2:0]> created at line 247.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_cor<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_cor<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_cor<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_cor<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_cor<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_cor<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_cor<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_cor<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_cor<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_cor<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_pos<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_pos<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_pos<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_pos<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_pos<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_pos<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_pos<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_pos<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_pos<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_pos<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_pos<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_pos<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <board_pos<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <board_pos<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <board_pos<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <board_pos<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <board_pos<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <board_pos<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_center<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_center<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_center<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_center<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_center<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_center<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_center<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_center<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_center<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <x_center<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_center<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_center<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_center<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_center<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_center<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_center<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_center<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_center<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_center<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <y_center<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 12-bit comparator lessequal for signal <n0002> created at line 171
+    Found 10-bit comparator lessequal for signal <h_cnt[0]_GND_20_o_LessThan_87_o> created at line 198
+    Found 10-bit comparator lessequal for signal <v_cnt[0]_GND_20_o_LessThan_88_o> created at line 202
+    Found 10-bit comparator lessequal for signal <n0152> created at line 206
+    Found 10-bit comparator greater for signal <h_cnt[0]_PWR_20_o_LessThan_90_o> created at line 206
+    Found 10-bit comparator lessequal for signal <n0156> created at line 206
+    Found 10-bit comparator greater for signal <v_cnt[0]_PWR_20_o_LessThan_92_o> created at line 206
+    Found 10-bit comparator greater for signal <x_cor[0]_GND_20_o_LessThan_100_o> created at line 218
+    Found 10-bit comparator greater for signal <y_cor[0]_GND_20_o_LessThan_101_o> created at line 218
+    Found 10-bit comparator lessequal for signal <n0190> created at line 220
+    Found 10-bit comparator lessequal for signal <n0192> created at line 220
+    Found 10-bit comparator lessequal for signal <n0195> created at line 220
+    Found 10-bit comparator lessequal for signal <n0198> created at line 220
+    Found 32-bit comparator lessequal for signal <n0248> created at line 241
+    Found 32-bit comparator lessequal for signal <n0256> created at line 246
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Multiplier(s).
+	inferred  15 Adder/Subtractor(s).
+	inferred 244 D-type flip-flop(s).
+	inferred  58 Latch(s).
+	inferred  15 Comparator(s).
+	inferred 105 Multiplexer(s).
+Unit <user_logic> synthesized.
+
+Synthesizing Unit <div_32u_6u>.
+    Related source file is "".
+    Found 38-bit adder for signal <n2423> created at line 0.
+    Found 38-bit adder for signal <GND_41_o_b[5]_add_1_OUT> created at line 0.
+    Found 37-bit adder for signal <n2427> created at line 0.
+    Found 37-bit adder for signal <GND_41_o_b[5]_add_3_OUT> created at line 0.
+    Found 36-bit adder for signal <n2431> created at line 0.
+    Found 36-bit adder for signal <GND_41_o_b[5]_add_5_OUT> created at line 0.
+    Found 35-bit adder for signal <n2435> created at line 0.
+    Found 35-bit adder for signal <GND_41_o_b[5]_add_7_OUT> created at line 0.
+    Found 34-bit adder for signal <n2439> created at line 0.
+    Found 34-bit adder for signal <GND_41_o_b[5]_add_9_OUT> created at line 0.
+    Found 33-bit adder for signal <n2443> created at line 0.
+    Found 33-bit adder for signal <GND_41_o_b[5]_add_11_OUT> created at line 0.
+    Found 32-bit adder for signal <n2447> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[5]_add_13_OUT> created at line 0.
+    Found 32-bit adder for signal <n2451> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_15_OUT> created at line 0.
+    Found 32-bit adder for signal <n2455> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_17_OUT> created at line 0.
+    Found 32-bit adder for signal <n2459> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_19_OUT> created at line 0.
+    Found 32-bit adder for signal <n2463> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_21_OUT> created at line 0.
+    Found 32-bit adder for signal <n2467> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_23_OUT> created at line 0.
+    Found 32-bit adder for signal <n2471> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_25_OUT> created at line 0.
+    Found 32-bit adder for signal <n2475> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_27_OUT> created at line 0.
+    Found 32-bit adder for signal <n2479> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_29_OUT> created at line 0.
+    Found 32-bit adder for signal <n2483> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <n2487> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <n2491> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <n2495> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <n2499> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <n2503> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <n2507> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <n2511> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <n2515> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <n2519> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <n2523> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <n2527> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <n2531> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <n2535> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <n2539> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_59_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <n2543> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_61_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <n2547> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_41_o_add_63_OUT[31:0]> created at line 0.
+    Found 38-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 37-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 36-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 35-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 34-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 33-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0018> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0019> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0020> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0021> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0022> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0023> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0024> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0025> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0026> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0027> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0028> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0029> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0030> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0031> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0032> created at line 0
+    Found 32-bit comparator lessequal for signal <BUS_0033> created at line 0
+    Summary:
+	inferred  64 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 931 Multiplexer(s).
+Unit <div_32u_6u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x8-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 4
+ 32x32-bit multiplier                                  : 2
+ 6x6-bit multiplier                                    : 2
+# Adders/Subtractors                                   : 143
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 2
+ 11-bit subtractor                                     : 6
+ 12-bit adder                                          : 1
+ 13-bit adder                                          : 2
+ 32-bit adder                                          : 105
+ 33-bit adder                                          : 4
+ 34-bit adder                                          : 4
+ 35-bit adder                                          : 4
+ 36-bit adder                                          : 4
+ 37-bit adder                                          : 4
+ 38-bit adder                                          : 4
+ 9-bit adder                                           : 1
+# Registers                                            : 33
+ 1-bit register                                        : 17
+ 10-bit register                                       : 2
+ 192-bit register                                      : 1
+ 2-bit register                                        : 3
+ 3-bit register                                        : 1
+ 32-bit register                                       : 6
+ 4-bit register                                        : 3
+# Latches                                              : 58
+ 1-bit latch                                           : 58
+# Comparators                                          : 81
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 8
+ 12-bit comparator lessequal                           : 1
+ 32-bit comparator lessequal                           : 56
+ 33-bit comparator lessequal                           : 2
+ 34-bit comparator lessequal                           : 2
+ 35-bit comparator lessequal                           : 2
+ 36-bit comparator lessequal                           : 2
+ 37-bit comparator lessequal                           : 2
+ 38-bit comparator lessequal                           : 2
+# Multiplexers                                         : 1979
+ 1-bit 2-to-1 multiplexer                              : 1899
+ 2-bit 2-to-1 multiplexer                              : 1
+ 3-bit 64-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 8
+ 8-bit 2-to-1 multiplexer                              : 70
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <user_logic>.
+The following registers are absorbed into counter <v_cnt>: 1 register on signal <v_cnt>.
+The following registers are absorbed into counter <h_cnt>: 1 register on signal <h_cnt>.
+	Multiplier <Mmult_n0502> in block <user_logic> and adder/subtractor <Madd_GND_20_o_GND_20_o_add_162_OUT> in block <user_logic> are combined into a MAC<Maddsub_n0502>.
+	Multiplier <Mmult_x_pos[0]_PWR_20_o_MuLt_128_OUT> in block <user_logic> and adder/subtractor <Madd_n0494_Madd> in block <user_logic> are combined into a MAC<Maddsub_x_pos[0]_PWR_20_o_MuLt_128_OUT>.
+	Multiplier <Mmult_y_pos[0]_PWR_20_o_MuLt_131_OUT> in block <user_logic> and adder/subtractor <Madd_n0497_Madd> in block <user_logic> are combined into a MAC<Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_colormap> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0499[2:0]<1:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <user_logic> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x8-bit single-port distributed Read Only RAM         : 1
+# MACs                                                 : 3
+ 11x11-to-32-bit MAC                                   : 1
+ 6x6-to-10-bit MAC                                     : 2
+# Multipliers                                          : 1
+ 11x11-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 74
+ 10-bit subtractor                                     : 4
+ 11-bit subtractor                                     : 4
+ 12-bit adder                                          : 1
+ 32-bit adder carry in                                 : 64
+ 6-bit adder                                           : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 422
+ Flip-Flops                                            : 422
+# Comparators                                          : 81
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 8
+ 12-bit comparator lessequal                           : 1
+ 32-bit comparator lessequal                           : 56
+ 33-bit comparator lessequal                           : 2
+ 34-bit comparator lessequal                           : 2
+ 35-bit comparator lessequal                           : 2
+ 36-bit comparator lessequal                           : 2
+ 37-bit comparator lessequal                           : 2
+ 38-bit comparator lessequal                           : 2
+# Multiplexers                                         : 1980
+ 1-bit 2-to-1 multiplexer                              : 1898
+ 1-bit 64-to-1 multiplexer                             : 3
+ 2-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 8
+ 8-bit 2-to-1 multiplexer                              : 70
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch master_id_31 hinder the constant cleaning in the block plb_slave_attachment.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <master_id_30> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_29> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_28> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_27> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_26> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_25> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_24> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_23> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_22> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_21> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_20> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_19> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_18> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_17> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_16> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_15> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_14> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_13> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_12> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_11> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_10> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_9> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_8> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_7> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_6> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_5> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_4> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_3> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_2> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_1> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <GEN_FOR_SHARED.addr_cntl_cs> in Unit <plb_slave_attachment> is equivalent to the following FF/Latch, which will be removed : <addr_cycle_flush> 
+WARNING:Xst:1710 - FF/Latch <x_center_9> (without init value) has a constant value of 1 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <y_center_9> (without init value) has a constant value of 1 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <board_pos_5> in Unit <user_logic> is equivalent to the following FF/Latch, which will be removed : <x_center_6> 
+INFO:Xst:2261 - The FF/Latch <board_pos_6> in Unit <user_logic> is equivalent to the following FF/Latch, which will be removed : <x_center_7> 
+INFO:Xst:2261 - The FF/Latch <board_pos_7> in Unit <user_logic> is equivalent to the following FF/Latch, which will be removed : <x_center_8> 
+
+Optimizing unit <system_vga_ip_0_wrapper> ...
+
+Optimizing unit <plb_slave_attachment> ...
+
+Optimizing unit <plb_address_decoder> ...
+
+Optimizing unit <user_logic> ...
+WARNING:Xst:1710 - FF/Latch <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_0> (without init value) has a constant value of 0 in block <system_vga_ip_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <system_vga_ip_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0> (without init value) has a constant value of 0 in block <system_vga_ip_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1> (without init value) has a constant value of 0 in block <system_vga_ip_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_0> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_1> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_2> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_3> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_4> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_5> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_6> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_7> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_8> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_9> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_10> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_11> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_12> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_13> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_14> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_15> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_16> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_17> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_18> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_19> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_20> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_21> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_22> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_23> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_24> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_25> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_26> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_27> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_29> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_30> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_31> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_14> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_15> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_16> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_17> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_18> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_19> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_20> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_21> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_22> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_23> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_24> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_25> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_26> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_27> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_28> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_29> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_30> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_31> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN<0>.GEN_PLB_SHARED.cs_out_s_h_0> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block system_vga_ip_0_wrapper, actual ratio is 34.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 354
+ Flip-Flops                                            : 354
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system_vga_ip_0_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 4212
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 32
+#      LUT2                        : 132
+#      LUT3                        : 496
+#      LUT4                        : 202
+#      LUT5                        : 1022
+#      LUT6                        : 503
+#      MUXCY                       : 942
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 870
+# FlipFlops/Latches                : 407
+#      FD                          : 22
+#      FDR                         : 132
+#      FDRE                        : 136
+#      FDSE                        : 64
+#      LD                          : 53
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# DSPs                             : 2
+#      DSP48A1                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             407  out of  18224     2%  
+ Number of Slice LUTs:                 2397  out of   9112    26%  
+    Number used as Logic:              2397  out of   9112    26%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2454
+   Number with an unused Flip Flop:    2047  out of   2454    83%  
+   Number with an unused LUT:            57  out of   2454     2%  
+   Number of fully used LUT-FF pairs:   350  out of   2454    14%  
+   Number of unique control sets:        14
+
+IO Utilization: 
+ Number of IOs:                         220
+ Number of bonded IOBs:                   0  out of    232     0%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of DSP48A1s:                      2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
+Clock Signal                                                             | Clock buffer(FF name)                                                | Load  |
+-------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
+SPLB_Clk                                                                 | NONE(vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_0)| 334   |
+vga_ip_0/USER_LOGIC_I/vga_data<6>2(vga_ip_0/USER_LOGIC_I/vga_data<6>21:O)| BUFG(*)(vga_ip_0/USER_LOGIC_I/y_center_8)                            | 33    |
+vga_ip_0/USER_LOGIC_I/vga_ena(vga_ip_0/USER_LOGIC_I/vga_ena5:O)          | BUFG(*)(vga_ip_0/USER_LOGIC_I/y_cor_9)                               | 20    |
+CLK_25M                                                                  | NONE(vga_ip_0/USER_LOGIC_I/v_cnt_0)                                  | 20    |
+-------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.931ns (Maximum Frequency: 202.786MHz)
+   Minimum input arrival time before clock: 2.029ns
+   Maximum output required time after clock: 13.918ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'SPLB_Clk'
+  Clock period: 4.841ns (frequency: 206.575MHz)
+  Total number of paths / destination ports: 22493 / 520
+-------------------------------------------------------------------------
+Delay:               4.841ns (Levels of Logic = 8)
+  Source:            vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4 (FF)
+  Destination:       vga_ip_0/USER_LOGIC_I/board_63_191 (FF)
+  Source Clock:      SPLB_Clk rising
+  Destination Clock: SPLB_Clk rising
+
+  Data Path: vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4 to vga_ip_0/USER_LOGIC_I/board_63_191
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.721  vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4 (vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4)
+     LUT2:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Madd_n0516_lut<3> (vga_ip_0/USER_LOGIC_I/Madd_n0516_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Madd_n0516_cy<3> (vga_ip_0/USER_LOGIC_I/Madd_n0516_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Madd_n0516_cy<4> (vga_ip_0/USER_LOGIC_I/Madd_n0516_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Madd_n0516_cy<5> (vga_ip_0/USER_LOGIC_I/Madd_n0516_cy<5>)
+     XORCY:CI->O           4   0.180   0.684  vga_ip_0/USER_LOGIC_I/Madd_n0516_xor<6> (vga_ip_0/USER_LOGIC_I/n0516<6>)
+     LUT3:I2->O            3   0.205   0.651  vga_ip_0/USER_LOGIC_I/BUS_0001_GND_20_o_LessThan_5_o1_SW3 (N22)
+     LUT6:I5->O           17   0.205   1.028  vga_ip_0/USER_LOGIC_I/GND_20_o_BUS_0001_AND_144_o11 (vga_ip_0/USER_LOGIC_I/GND_20_o_BUS_0001_AND_144_o1)
+     LUT5:I4->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/Mmux_n046711 (vga_ip_0/USER_LOGIC_I/n0467<0>)
+     FDRE:D                    0.102          vga_ip_0/USER_LOGIC_I/board_63_171
+    ----------------------------------------
+    Total                      4.841ns (1.757ns logic, 3.084ns route)
+                                       (36.3% logic, 63.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'vga_ip_0/USER_LOGIC_I/vga_data<6>2'
+  Clock period: 4.297ns (frequency: 232.707MHz)
+  Total number of paths / destination ports: 602 / 21
+-------------------------------------------------------------------------
+Delay:               4.297ns (Levels of Logic = 6)
+  Source:            vga_ip_0/USER_LOGIC_I/y_pos_4 (LATCH)
+  Destination:       vga_ip_0/USER_LOGIC_I/y_center_3 (LATCH)
+  Source Clock:      vga_ip_0/USER_LOGIC_I/vga_data<6>2 falling
+  Destination Clock: vga_ip_0/USER_LOGIC_I/vga_data<6>2 falling
+
+  Data Path: vga_ip_0/USER_LOGIC_I/y_pos_4 to vga_ip_0/USER_LOGIC_I/y_center_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               5   0.498   0.819  vga_ip_0/USER_LOGIC_I/y_pos_4 (vga_ip_0/USER_LOGIC_I/y_pos_4)
+     LUT2:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd1_lut<3> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd1_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd1_cy<3> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd1_cy<3>)
+     XORCY:CI->O           1   0.180   0.580  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd1_xor<4> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd_61)
+     LUT2:I1->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd2_lut<6> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd2_lut<6>)
+     XORCY:LI->O           4   0.136   0.683  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd2_xor<6> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_6)
+     INV:I->O              1   0.206   0.579  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd_xor<6>11_INV_0 (vga_ip_0/USER_LOGIC_I/n0497<6>)
+     LD:D                      0.037          vga_ip_0/USER_LOGIC_I/y_center_3
+    ----------------------------------------
+    Total                      4.297ns (1.637ns logic, 2.660ns route)
+                                       (38.1% logic, 61.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_25M'
+  Clock period: 4.931ns (frequency: 202.786MHz)
+  Total number of paths / destination ports: 500 / 20
+-------------------------------------------------------------------------
+Delay:               4.931ns (Levels of Logic = 4)
+  Source:            vga_ip_0/USER_LOGIC_I/h_cnt_7 (FF)
+  Destination:       vga_ip_0/USER_LOGIC_I/v_cnt_9 (FF)
+  Source Clock:      CLK_25M rising
+  Destination Clock: CLK_25M rising
+
+  Data Path: vga_ip_0/USER_LOGIC_I/h_cnt_7 to vga_ip_0/USER_LOGIC_I/v_cnt_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.447   1.002  vga_ip_0/USER_LOGIC_I/h_cnt_7 (vga_ip_0/USER_LOGIC_I/h_cnt_7)
+     LUT3:I0->O            2   0.205   0.617  vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_equal_78_o<0>11 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_equal_78_o<0>1)
+     LUT6:I5->O           21   0.205   1.114  vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_equal_78_o<0> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_equal_78_o)
+     LUT6:I5->O            9   0.205   0.830  vga_ip_0/USER_LOGIC_I/Mcount_v_cnt_val (vga_ip_0/USER_LOGIC_I/Mcount_v_cnt_val)
+     LUT4:I3->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/v_cnt_9_rstpot (vga_ip_0/USER_LOGIC_I/v_cnt_9_rstpot)
+     FD:D                      0.102          vga_ip_0/USER_LOGIC_I/v_cnt_9
+    ----------------------------------------
+    Total                      4.931ns (1.369ns logic, 3.562ns route)
+                                       (27.8% logic, 72.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
+  Total number of paths / destination ports: 396 / 396
+-------------------------------------------------------------------------
+Offset:              2.029ns (Levels of Logic = 1)
+  Source:            SPLB_Rst (PAD)
+  Destination:       vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_0 (FF)
+  Destination Clock: SPLB_Clk rising
+
+  Data Path: SPLB_Rst to vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT2:I0->O           32   0.203   1.291  vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/ip2bus_rdack_i_inv_01 (vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/ip2bus_rdack_i_inv_0)
+     FDR:R                     0.430          vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31
+    ----------------------------------------
+    Total                      2.029ns (0.738ns logic, 1.291ns route)
+                                       (36.4% logic, 63.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_25M'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              1.705ns (Levels of Logic = 2)
+  Source:            SPLB_Rst (PAD)
+  Destination:       vga_ip_0/USER_LOGIC_I/v_cnt_9 (FF)
+  Destination Clock: CLK_25M rising
+
+  Data Path: SPLB_Rst to vga_ip_0/USER_LOGIC_I/v_cnt_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I0->O            9   0.203   0.830  vga_ip_0/USER_LOGIC_I/Mcount_v_cnt_val (vga_ip_0/USER_LOGIC_I/Mcount_v_cnt_val)
+     LUT4:I3->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/v_cnt_9_rstpot (vga_ip_0/USER_LOGIC_I/v_cnt_9_rstpot)
+     FD:D                      0.102          vga_ip_0/USER_LOGIC_I/v_cnt_9
+    ----------------------------------------
+    Total                      1.705ns (0.875ns logic, 0.830ns route)
+                                       (51.3% logic, 48.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vga_ip_0/USER_LOGIC_I/vga_ena'
+  Total number of paths / destination ports: 14677232 / 8
+-------------------------------------------------------------------------
+Offset:              13.918ns (Levels of Logic = 19)
+  Source:            vga_ip_0/USER_LOGIC_I/y_cor_4 (LATCH)
+  Destination:       VGA_G<1> (PAD)
+  Source Clock:      vga_ip_0/USER_LOGIC_I/vga_ena falling
+
+  Data Path: vga_ip_0/USER_LOGIC_I/y_cor_4 to VGA_G<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              34   0.498   1.425  vga_ip_0/USER_LOGIC_I/y_cor_4 (vga_ip_0/USER_LOGIC_I/y_cor_4)
+     LUT2:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_lut<5> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_lut<5>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<5> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<6> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<7> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<8> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<8>)
+     MUXCY:CI->O           0   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<9> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<9>)
+     XORCY:CI->O          16   0.180   1.004  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_xor<10> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_sub_160_OUT<10>)
+     DSP48A1:A10->PCOUT47    1   4.469   0.000  vga_ip_0/USER_LOGIC_I/Mmult_n0504 (vga_ip_0/USER_LOGIC_I/Mmult_n0504_PCOUT_to_Maddsub_n0502_PCIN_47)
+     DSP48A1:PCIN47->P0    2   2.264   0.961  vga_ip_0/USER_LOGIC_I/Maddsub_n0502 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_add_162_OUT<0>)
+     LUT5:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<0> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<0> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<2> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<3> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<4> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<5> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<5>)
+     MUXCY:CI->O           3   0.213   0.995  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<6> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_LessThan_164_o)
+     LUT6:I1->O            1   0.203   0.580  vga_ip_0/USER_LOGIC_I/vga_data<5>1 (vga_ip_0/USER_LOGIC_I/vga_data<5>)
+     LUT3:I2->O            0   0.205   0.000  vga_ip_0/USER_LOGIC_I/vga_data<5>2 (VGA_G<2>)
+    ----------------------------------------
+    Total                     13.918ns (8.953ns logic, 4.965ns route)
+                                       (64.3% logic, 35.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_25M'
+  Total number of paths / destination ports: 254 / 10
+-------------------------------------------------------------------------
+Offset:              9.038ns (Levels of Logic = 8)
+  Source:            vga_ip_0/USER_LOGIC_I/v_cnt_2 (FF)
+  Destination:       VGA_G<0> (PAD)
+  Source Clock:      CLK_25M rising
+
+  Data Path: vga_ip_0/USER_LOGIC_I/v_cnt_2 to VGA_G<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              11   0.447   1.111  vga_ip_0/USER_LOGIC_I/v_cnt_2 (vga_ip_0/USER_LOGIC_I/v_cnt_2)
+     LUT3:I0->O            3   0.205   0.755  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_96_OUT<9:0>_cy<0>31 (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_96_OUT<9:0>_cy<0>2)
+     LUT6:I4->O            1   0.203   0.580  vga_ip_0/USER_LOGIC_I/vga_ena2 (vga_ip_0/USER_LOGIC_I/vga_ena2)
+     LUT6:I5->O            1   0.205   0.944  vga_ip_0/USER_LOGIC_I/vga_ena3 (vga_ip_0/USER_LOGIC_I/vga_ena3)
+     LUT6:I0->O            1   0.203   0.924  vga_ip_0/USER_LOGIC_I/vga_ena5 (vga_ip_0/USER_LOGIC_I/vga_ena)
+     LUT6:I1->O            1   0.203   0.924  vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o_SW0 (N6)
+     LUT6:I1->O            3   0.203   0.898  vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o (vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o)
+     LUT6:I2->O            1   0.203   0.827  vga_ip_0/USER_LOGIC_I/vga_data<6>21 (vga_ip_0/USER_LOGIC_I/vga_data<6>2)
+     LUT6:I2->O            0   0.203   0.000  vga_ip_0/USER_LOGIC_I/vga_data<6>1 (VGA_B<1>)
+    ----------------------------------------
+    Total                      9.038ns (2.075ns logic, 6.963ns route)
+                                       (23.0% logic, 77.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vga_ip_0/USER_LOGIC_I/vga_data<6>2'
+  Total number of paths / destination ports: 6605424 / 8
+-------------------------------------------------------------------------
+Offset:              13.151ns (Levels of Logic = 23)
+  Source:            vga_ip_0/USER_LOGIC_I/y_center_8 (LATCH)
+  Destination:       VGA_G<1> (PAD)
+  Source Clock:      vga_ip_0/USER_LOGIC_I/vga_data<6>2 falling
+
+  Data Path: vga_ip_0/USER_LOGIC_I/y_center_8 to VGA_G<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.498   0.580  vga_ip_0/USER_LOGIC_I/y_center_8 (vga_ip_0/USER_LOGIC_I/y_center_8)
+     LUT2:I1->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_lut<1> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<1> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<2> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<3> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<4> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<5> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<6> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<7> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<8> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<8>)
+     MUXCY:CI->O           0   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<9> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<9>)
+     XORCY:CI->O          16   0.180   1.004  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_xor<10> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_sub_160_OUT<10>)
+     DSP48A1:A10->PCOUT47    1   4.469   0.000  vga_ip_0/USER_LOGIC_I/Mmult_n0504 (vga_ip_0/USER_LOGIC_I/Mmult_n0504_PCOUT_to_Maddsub_n0502_PCIN_47)
+     DSP48A1:PCIN47->P0    2   2.264   0.961  vga_ip_0/USER_LOGIC_I/Maddsub_n0502 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_add_162_OUT<0>)
+     LUT5:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<0> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<0> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<2> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<3> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<4> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<5> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<5>)
+     MUXCY:CI->O           3   0.213   0.995  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<6> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_LessThan_164_o)
+     LUT6:I1->O            1   0.203   0.580  vga_ip_0/USER_LOGIC_I/vga_data<5>1 (vga_ip_0/USER_LOGIC_I/vga_data<5>)
+     LUT3:I2->O            0   0.205   0.000  vga_ip_0/USER_LOGIC_I/vga_data<5>2 (VGA_G<2>)
+    ----------------------------------------
+    Total                     13.151ns (9.031ns logic, 4.120ns route)
+                                       (68.7% logic, 31.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
+  Total number of paths / destination ports: 1576 / 48
+-------------------------------------------------------------------------
+Offset:              5.557ns (Levels of Logic = 5)
+  Source:            vga_ip_0/USER_LOGIC_I/board_63_65 (FF)
+  Destination:       VGA_R<0> (PAD)
+  Source Clock:      SPLB_Clk rising
+
+  Data Path: vga_ip_0/USER_LOGIC_I/board_63_65 to VGA_R<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.447   0.864  vga_ip_0/USER_LOGIC_I/board_63_65 (vga_ip_0/USER_LOGIC_I/board_63_65)
+     LUT6:I2->O            1   0.203   0.827  vga_ip_0/USER_LOGIC_I/mux2_124 (vga_ip_0/USER_LOGIC_I/mux2_124)
+     LUT6:I2->O            1   0.203   0.827  vga_ip_0/USER_LOGIC_I/mux2_71 (vga_ip_0/USER_LOGIC_I/mux2_71)
+     LUT6:I2->O            3   0.203   0.995  vga_ip_0/USER_LOGIC_I/board_pos<2>21 (vga_ip_0/USER_LOGIC_I/n0499[2:0]<2>)
+     LUT6:I1->O            1   0.203   0.580  vga_ip_0/USER_LOGIC_I/vga_data<1>1 (vga_ip_0/USER_LOGIC_I/vga_data<1>)
+     LUT3:I2->O            0   0.205   0.000  vga_ip_0/USER_LOGIC_I/vga_data<1>2 (VGA_R<2>)
+    ----------------------------------------
+    Total                      5.557ns (1.464ns logic, 4.093ns route)
+                                       (26.3% logic, 73.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_25M
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_25M        |    4.931|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock SPLB_Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+SPLB_Clk       |    4.841|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock vga_ip_0/USER_LOGIC_I/vga_data<6>2
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+vga_ip_0/USER_LOGIC_I/vga_data<6>2|         |         |    4.297|         |
+vga_ip_0/USER_LOGIC_I/vga_ena     |         |         |   87.904|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock vga_ip_0/USER_LOGIC_I/vga_ena
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_25M        |         |         |    2.885|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 27.00 secs
+Total CPU time to Xst completion: 27.29 secs
+ 
+--> 
+
+Total memory usage is 224352 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  186 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+
