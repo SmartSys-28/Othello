@@ -277,8 +277,30 @@ void DrawScore(int score, int turn) {
 	}
 }
 
+// 画出一个C的图案，因为下次要多次画C，所以为求简洁写了一个函数
+void DrawC() {
+	int vga_input;
+	vga_input = (1 << 24) + (22 << 16) + (1 << 8) + 3;
+	VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+	vga_input = (1 << 24) + (23 << 16) + (1 << 8) + 3;
+	VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+	vga_input = (1 << 24) + (24 << 16) + (1 << 8) + 3;
+	VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+	vga_input = (1 << 24) + (25 << 16) + (1 << 8) + 3;
+	VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+	vga_input = (1 << 24) + (26 << 16) + (1 << 8) + 3;
+	VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+	vga_input = (2 << 24) + (22 << 16) + (1 << 8) + 3;
+	VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+	vga_input = (2 << 24) + (26 << 16) + (1 << 8) + 3;
+	VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+	vga_input = (3 << 24) + (22 << 16) + (1 << 8) + 3;
+	VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+	vga_input = (3 << 24) + (26 << 16) + (1 << 8) + 3;
+	VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+}
+
 // 这个函数也是用来Draw出现在的status的（是人人对战，还是人机对战，以及何种难度等）
-// 但是这个功能现在可能来不及做了，所以看情况吧
 void DrawStatus(int status) {
 	int i, j;
 	int vga_input;
@@ -288,16 +310,44 @@ void DrawStatus(int status) {
 			VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
 		}
 	}
-	if (status == 1) {
-		// 在此处放入绘制PVP的代码，表示人机对战模式
+	if (status == 0) {
+		// 在此处放入绘制0的代码，表示Stop停止
+		DrawNumber(0, 4, 22, 3);
+	} else if (status == 1) {
+		// 在此处放入绘制C1的代码，表示Easy模式
+		DrawC();
+		DrawNumber(1, 5, 22, 3);
 	} else if (status == 2) {
-		// 在此处放入绘制E的代码，表示Easy模式
+		// 在此处放入绘制C2的代码，表示medium模式
+		DrawC();
+		DrawNumber(2, 5, 22, 3);
 	} else if (status == 3) {
-		// 在此处放入绘制M的代码，表示medium模式
-	} else {
-		// 在此处放入绘制H的代码，表示hard模式
+		// 在此处放入绘制C3的代码，表示hard模式
+		DrawC();
+		DrawNumber(3, 5, 22, 3);
+	} else if (status == 4) {
+		// 在此处放入绘制P的代码，表示人机对战模式
+		vga_input = (4 << 24) + (22 << 16) + (1 << 8) + 3;
+		VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+		vga_input = (4 << 24) + (23 << 16) + (1 << 8) + 3;
+		VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+		vga_input = (4 << 24) + (24 << 16) + (1 << 8) + 3;
+		VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+		vga_input = (4 << 24) + (25 << 16) + (1 << 8) + 3;
+		VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+		vga_input = (4 << 24) + (26 << 16) + (1 << 8) + 3;
+		VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+		vga_input = (5 << 24) + (22 << 16) + (1 << 8) + 3;
+		VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+		vga_input = (5 << 24) + (24 << 16) + (1 << 8) + 3;
+		VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+		vga_input = (6 << 24) + (22 << 16) + (1 << 8) + 3;
+		VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+		vga_input = (6 << 24) + (23 << 16) + (1 << 8) + 3;
+		VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
+		vga_input = (6 << 24) + (24 << 16) + (1 << 8) + 3;
+		VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
 	}
-
 }
 
 // 这个函数是用来初始化画出一个menu[]的，在想要初始化的时候可以调用下

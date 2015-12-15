@@ -21,3 +21,62 @@ Done writing filter settings to:
 	F:\xps\Othello-28\lab_gobang_2\etc\system.filters
 Done writing Tab View settings to:
 	F:\xps\Othello-28\lab_gobang_2\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Overriding Xilinx file <TextEditor.cfg> with local file <E:/Xilinx/14.2/ISE_DS/EDK/data/TextEditor.cfg>
+
+********************************************************************************
+At Local date and time: Tue Dec 15 23:10:29 2015
+ make -f system.make netlist started...
+make: Nothing to be done for `netlist'.
+Done!
+
+********************************************************************************
+At Local date and time: Tue Dec 15 23:10:32 2015
+ make -f system.make bits started...
+make: Nothing to be done for `bits'.
+Done!
+
+********************************************************************************
+At Local date and time: Tue Dec 15 23:10:37 2015
+ make -f system.make exporttosdk started...
+make: Nothing to be done for `exporttosdk'.
+Done!
+
+********************************************************************************
+At Local date and time: Tue Dec 15 23:10:38 2015
+ xsdk.exe -hwspec F:\xps\Othello-28\lab_gobang_2\SDK\SDK_Export\hw\system.xml started...
+Xilinx Software Development Kit
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	F:\xps\Othello-28\lab_gobang_2\etc\system.filters
+Done writing Tab View settings to:
+	F:\xps\Othello-28\lab_gobang_2\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Wed Dec 16 00:02:30 2015
+ make -f system.make exporttosdk started...
+make: Nothing to be done for `exporttosdk'.
+Done!
+
+********************************************************************************
+At Local date and time: Wed Dec 16 00:02:31 2015
+ xsdk.exe -hwspec F:\xps\Othello-28\lab_gobang_2\SDK\SDK_Export\hw\system.xml started...
+Xilinx Software Development Kit
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	F:\xps\Othello-28\lab_gobang_2\etc\system.filters
+Done writing Tab View settings to:
+	F:\xps\Othello-28\lab_gobang_2\etc\system.gui
