@@ -5,6 +5,16 @@
 ### 一，介绍
 * `void DrawScore(int score, int turn)`, 此函数可以用来绘制黑白双方的实时得分。
 * `void DrawMenu()`, 此函数可以用来绘制出右侧的最基本菜单。
+* `void DrawStatus(int status)`，此函数可以用来绘制出不同游戏模式下的代号，显示在右下角的菜单中，其中status值和模式对应关系为：
+
+*Status* | *Game Mode* | *图案*
+--- | --- | ---
+0 | New/Stopped | 0
+1 | Computer-1 | C1
+2 | Computer-2 | C2
+3 | Computer-3 | C3
+4 | Player-vs-Player | P
+
 * [MenuDraw.c](https://github.com/SmartSys-28/Othello/blob/master/lab_gobang_2/SDK/SDK_Export/lab_gobang_2/src/MenuDraw.c) 文件中还提供了其他的一些Draw函数，但一般不需要你们来调用，你们只要去使用最顶层的那两个函数即可。
 
 ### 二，使用方法
@@ -52,7 +62,7 @@ if (RxBuffer == 0x5A) { // 0x5A这个值对应的应该是确定键，也就是e
 ```
 在最下方调用了两次`DrawScore()`，绘制了黑白双方的分数。
 
-* `DrawMenu()` 函数用于初始化右边的整个menu，在`DrawMenu()`函数中，我们已经调用了
+* `DrawMenu()`函数用于初始化右边的整个menu，在`DrawMenu()`函数中，我们已经调用了
 ```c
 DrawScore(2, 0); // 初始化显示出白棋的分数
 DrawScore(2, 1); // 初始化显示出黑棋的分数
@@ -76,6 +86,15 @@ DrawChess(x_cur, y_cur, 3); // 画出初始的旗子所在处的颜色，其中3
 DrawMenu();
 ```
 在初始化整个界面的最后，加上了`DrawMenu()`初始化右边Menu的操作，便可以了。
+
+* 根据传入的status值不同，`DrawStatus()`函数可在右下方Menu中绘制出不同的Game Mode Figure。举个例子，在 [lab_gobang_2.c](https://github.com/SmartSys-28/Othello/blob/master/lab_gobang_2/SDK/SDK_Export/lab_gobang_2/src/lab_gobang_2.c) 中，在进入主循环之前，我们也使用了这个函数：
+```c
+int boardStatus = 4;
+DrawStatus(boardStatus);
+while (1) { // 进入了主循环之中，游戏开始！
+```
+因为本个项目中的程序为人人对战，所以此处将`status`值设为4，传入`DrawStatus()`函数中，并绘制出相应图形。<br>
+所以说，在实际操作中，每当你要切换模式的时候，可以调用一下这个函数，便可以将之前的模式图形抹掉，并绘制出新模式的图形。
 
 ## Part 2: BUG修正
 

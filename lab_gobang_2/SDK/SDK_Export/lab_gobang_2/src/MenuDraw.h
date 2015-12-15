@@ -7,6 +7,8 @@ void EraseNumber(int turn);
 
 void DrawScore(int score, int turn);
 
+void DrawC();
+
 void DrawStatus(int status);
 
 void DrawMenu();

@@ -673,6 +673,8 @@ int main(void) {
 	DrawChess(x_cur, y_cur, 3); // 画出初始的旗子所在处的颜色，其中3这个参数代表的颜色应该是移动的光标的颜色
 	DrawMenu();
 
+	int boardStatus = 4;
+	DrawStatus(boardStatus);
 	while (1) { // 进入了主循环之中，游戏开始！
 		do {
 			dip_check = XGpio_DiscreteRead(&dip, 1);
