@@ -77,7 +77,8 @@ DrawMenu();
 ```
 在初始化整个界面的最后，加上了`DrawMenu()`初始化右边Menu的操作，便可以了。
 
-### Part 2: BUG修正
+## Part 2: BUG修正
+
 * 重写了 [lab_gobang_2.c](https://github.com/SmartSys-28/Othello/blob/master/lab_gobang_2/SDK/SDK_Export/lab_gobang_2/src/lab_gobang_2.c) 中的EraseCursor()函数，如下：
 ```c
 void EraseCursor(int x_pos, int y_pos, int turn) {
