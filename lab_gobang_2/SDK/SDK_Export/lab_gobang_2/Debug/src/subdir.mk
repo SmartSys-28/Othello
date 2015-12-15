@@ -4,15 +4,18 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/MenuDraw.c \
 ../src/lab_gobang_2.c 
 
 LD_SRCS += \
 ../src/lscript.ld 
 
 OBJS += \
+./src/MenuDraw.o \
 ./src/lab_gobang_2.o 
 
 C_DEPS += \
+./src/MenuDraw.d \
 ./src/lab_gobang_2.d 
 
 

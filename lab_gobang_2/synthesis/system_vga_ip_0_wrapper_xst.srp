@@ -4,7 +4,7 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 TABLE OF CONTENTS
@@ -462,16 +462,18 @@ WARNING:HDLCompiler:1127 - "E:/Xilinx/14.2/ISE_DS/EDK/hw/XilinxProcessorIPLib/pc
 Going to verilog side to elaborate module user_logic
 
 Elaborating module <user_logic(h_a=96,h_b=48,h_c=640,h_d=16,v_a=2,v_b=33,v_c=480,v_d=10,chesscolor1=255,chesscolor2=0,boardcolor=236,cursorcolor=224,linecolor=0,menulinecolor=224,menucolor=146,C_SLV_DWIDTH=32,C_NUM_REG=1)>.
-WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 172: Result of 8-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 190: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 193: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 210: Result of 32-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 211: Result of 32-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 229: Result of 32-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 230: Result of 32-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 231: Result of 10-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 232: Result of 14-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 233: Result of 14-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 178: Result of 8-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 180: Result of 8-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 199: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 202: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 219: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 220: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 238: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 239: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 240: Result of 10-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 241: Result of 14-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 242: Result of 14-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "F:/xps/Othello-28/lab_gobang_2/pcores/vga_ip_v1_00_a/hdl/verilog/user_logic.v" Line 270: Result of 29-bit expression is truncated to fit in 10-bit target.
 Back to vhdl to continue elaboration
 
 =========================================================================
@@ -658,7 +660,8 @@ Synthesizing Unit <user_logic>.
         C_SLV_DWIDTH = 32
         C_NUM_REG = 1
 WARNING:Xst:2999 - Signal 'colormap', unconnected in block 'user_logic', is tied to its initial value.
-    Found 4x8-bit single-port Read Only RAM <Mram_colormap> for signal <colormap>.
+    Found 4x8-bit dual-port Read Only RAM <Mram_colormap> for signal <colormap>.
+    Found 600-bit register for signal <n1049[599:0]>.
     Found 10-bit register for signal <h_cnt>.
     Found 10-bit register for signal <v_cnt>.
     Found 1-bit register for signal <slv_reg0<0>>.
@@ -693,27 +696,33 @@ WARNING:Xst:2999 - Signal 'colormap', unconnected in block 'user_logic', is tied
     Found 1-bit register for signal <slv_reg0<29>>.
     Found 1-bit register for signal <slv_reg0<30>>.
     Found 1-bit register for signal <slv_reg0<31>>.
-    Found 192-bit register for signal <n0432[191:0]>.
-    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_93_OUT> created at line 210.
-    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_95_OUT> created at line 211.
-    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_124_OUT> created at line 229.
-    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_126_OUT> created at line 230.
-    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_157_OUT> created at line 248.
-    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_160_OUT> created at line 248.
-    Found 12-bit adder for signal <n0544> created at line 172.
-    Found 10-bit adder for signal <v_cnt[0]_GND_20_o_add_78_OUT> created at line 190.
-    Found 10-bit adder for signal <h_cnt[0]_GND_20_o_add_79_OUT> created at line 193.
-    Found 9-bit adder for signal <n0517> created at line 231.
-    Found 32-bit adder for signal <GND_20_o_GND_20_o_add_162_OUT> created at line 248.
-    Found 10-bit subtractor for signal <GND_20_o_GND_20_o_sub_94_OUT<9:0>> created at line 210.
-    Found 10-bit subtractor for signal <GND_20_o_GND_20_o_sub_96_OUT<9:0>> created at line 211.
-    Found 13-bit adder for signal <n0523> created at line 233.
-    Found 13-bit adder for signal <n0520> created at line 232.
-    Found 6x6-bit multiplier for signal <x_pos[0]_PWR_20_o_MuLt_128_OUT> created at line 232.
-    Found 6x6-bit multiplier for signal <y_pos[0]_PWR_20_o_MuLt_131_OUT> created at line 233.
-    Found 32x32-bit multiplier for signal <n0528> created at line 248.
-    Found 32x32-bit multiplier for signal <n0530> created at line 248.
-    Found 3-bit 64-to-1 multiplexer for signal <n0525[2:0]> created at line 249.
+    Found 192-bit register for signal <n1048[191:0]>.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_405_OUT> created at line 219.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_407_OUT> created at line 220.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_436_OUT> created at line 238.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_438_OUT> created at line 239.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_469_OUT> created at line 257.
+    Found 11-bit subtractor for signal <GND_20_o_GND_20_o_sub_472_OUT> created at line 257.
+    Found 11-bit subtractor for signal <n1463> created at line 270.
+    Found 12-bit adder for signal <n1477> created at line 178.
+    Found 13-bit adder for signal <n1608> created at line 180.
+    Found 10-bit adder for signal <v_cnt[0]_GND_20_o_add_390_OUT> created at line 199.
+    Found 10-bit adder for signal <h_cnt[0]_GND_20_o_add_391_OUT> created at line 202.
+    Found 9-bit adder for signal <n1442> created at line 240.
+    Found 32-bit adder for signal <GND_20_o_GND_20_o_add_474_OUT> created at line 257.
+    Found 28-bit adder for signal <n1465> created at line 270.
+    Found 10-bit subtractor for signal <GND_20_o_GND_20_o_sub_406_OUT<9:0>> created at line 219.
+    Found 10-bit subtractor for signal <GND_20_o_GND_20_o_sub_408_OUT<9:0>> created at line 220.
+    Found 13-bit adder for signal <n1448> created at line 242.
+    Found 13-bit adder for signal <n1445> created at line 241.
+    Found 8x4-bit multiplier for signal <Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT> created at line 180.
+    Found 6x6-bit multiplier for signal <x_pos[0]_PWR_20_o_MuLt_440_OUT> created at line 241.
+    Found 6x6-bit multiplier for signal <y_pos[0]_PWR_20_o_MuLt_443_OUT> created at line 242.
+    Found 32x32-bit multiplier for signal <n1453> created at line 257.
+    Found 32x32-bit multiplier for signal <n1455> created at line 257.
+    Found 6x4-bit multiplier for signal <y_cor[0]_PWR_20_o_MuLt_498_OUT> created at line 270.
+    Found 3-bit 64-to-1 multiplexer for signal <n1450[2:0]> created at line 258.
+    Found 2-bit 300-to-1 multiplexer for signal <menu_pos[1]_X_20_o_wide_mux_503_OUT> created at line 276.
 WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <x_cor<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -772,104 +781,110 @@ WARNING:Xst:737 - Found 1-bit latch for signal <y_center<6>>. Latches may be gen
 WARNING:Xst:737 - Found 1-bit latch for signal <y_center<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <y_center<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <y_center<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 12-bit comparator lessequal for signal <n0002> created at line 172
-    Found 10-bit comparator lessequal for signal <h_cnt[0]_GND_20_o_LessThan_87_o> created at line 199
-    Found 10-bit comparator lessequal for signal <v_cnt[0]_GND_20_o_LessThan_88_o> created at line 203
-    Found 10-bit comparator lessequal for signal <n0152> created at line 207
-    Found 10-bit comparator greater for signal <h_cnt[0]_PWR_20_o_LessThan_90_o> created at line 207
-    Found 10-bit comparator lessequal for signal <n0156> created at line 207
-    Found 10-bit comparator greater for signal <v_cnt[0]_PWR_20_o_LessThan_92_o> created at line 207
-    Found 10-bit comparator greater for signal <x_cor[0]_GND_20_o_LessThan_100_o> created at line 219
-    Found 10-bit comparator lessequal for signal <n0188> created at line 222
-    Found 10-bit comparator lessequal for signal <n0190> created at line 222
-    Found 10-bit comparator lessequal for signal <n0193> created at line 222
-    Found 10-bit comparator lessequal for signal <n0196> created at line 222
-    Found 32-bit comparator lessequal for signal <n0246> created at line 243
-    Found 32-bit comparator lessequal for signal <n0254> created at line 248
-    Found 10-bit comparator lessequal for signal <n0267> created at line 258
-    Found 10-bit comparator greater for signal <y_cor[0]_GND_20_o_LessThan_185_o> created at line 258
-    Found 10-bit comparator lessequal for signal <n0272> created at line 261
-    Found 10-bit comparator lessequal for signal <n0274> created at line 261
-    Found 10-bit comparator lessequal for signal <n0276> created at line 261
-    Found 10-bit comparator lessequal for signal <n0280> created at line 261
-    Found 10-bit comparator lessequal for signal <n0282> created at line 261
-    Found 10-bit comparator lessequal for signal <n0286> created at line 261
+WARNING:Xst:737 - Found 1-bit latch for signal <menu_pos<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <menu_pos<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <menu_pos<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <menu_pos<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <menu_pos<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <menu_pos<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <menu_pos<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <menu_pos<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <menu_pos<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <menu_pos<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 12-bit comparator lessequal for signal <n0004> created at line 178
+    Found 13-bit comparator lessequal for signal <n0138> created at line 180
+    Found 10-bit comparator lessequal for signal <h_cnt[0]_GND_20_o_LessThan_399_o> created at line 208
+    Found 10-bit comparator lessequal for signal <v_cnt[0]_GND_20_o_LessThan_400_o> created at line 212
+    Found 10-bit comparator lessequal for signal <n0765> created at line 216
+    Found 10-bit comparator greater for signal <h_cnt[0]_PWR_20_o_LessThan_402_o> created at line 216
+    Found 10-bit comparator lessequal for signal <n0769> created at line 216
+    Found 10-bit comparator greater for signal <v_cnt[0]_PWR_20_o_LessThan_404_o> created at line 216
+    Found 10-bit comparator greater for signal <x_cor[0]_GND_20_o_LessThan_412_o> created at line 228
+    Found 10-bit comparator lessequal for signal <n0801> created at line 231
+    Found 10-bit comparator lessequal for signal <n0803> created at line 231
+    Found 10-bit comparator lessequal for signal <n0806> created at line 231
+    Found 10-bit comparator lessequal for signal <n0809> created at line 231
+    Found 32-bit comparator lessequal for signal <n0859> created at line 252
+    Found 32-bit comparator lessequal for signal <n0867> created at line 257
+    Found 10-bit comparator lessequal for signal <n0880> created at line 267
+    Found 10-bit comparator greater for signal <y_cor[0]_GND_20_o_LessThan_497_o> created at line 267
+    Found 10-bit comparator greater for signal <menu_pos[0]_GND_20_o_LessThan_501_o> created at line 271
     Summary:
 	inferred   1 RAM(s).
-	inferred   4 Multiplier(s).
-	inferred  15 Adder/Subtractor(s).
-	inferred 244 D-type flip-flop(s).
-	inferred  58 Latch(s).
-	inferred  22 Comparator(s).
-	inferred 106 Multiplexer(s).
+	inferred   6 Multiplier(s).
+	inferred  18 Adder/Subtractor(s).
+	inferred 844 D-type flip-flop(s).
+	inferred  68 Latch(s).
+	inferred  18 Comparator(s).
+	inferred 409 Multiplexer(s).
 Unit <user_logic> synthesized.
 
 Synthesizing Unit <div_32u_6u>.
     Related source file is "".
     Found 38-bit adder for signal <n2423> created at line 0.
-    Found 38-bit adder for signal <GND_41_o_b[5]_add_1_OUT> created at line 0.
+    Found 38-bit adder for signal <GND_42_o_b[5]_add_1_OUT> created at line 0.
     Found 37-bit adder for signal <n2427> created at line 0.
-    Found 37-bit adder for signal <GND_41_o_b[5]_add_3_OUT> created at line 0.
+    Found 37-bit adder for signal <GND_42_o_b[5]_add_3_OUT> created at line 0.
     Found 36-bit adder for signal <n2431> created at line 0.
-    Found 36-bit adder for signal <GND_41_o_b[5]_add_5_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_42_o_b[5]_add_5_OUT> created at line 0.
     Found 35-bit adder for signal <n2435> created at line 0.
-    Found 35-bit adder for signal <GND_41_o_b[5]_add_7_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_42_o_b[5]_add_7_OUT> created at line 0.
     Found 34-bit adder for signal <n2439> created at line 0.
-    Found 34-bit adder for signal <GND_41_o_b[5]_add_9_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_42_o_b[5]_add_9_OUT> created at line 0.
     Found 33-bit adder for signal <n2443> created at line 0.
-    Found 33-bit adder for signal <GND_41_o_b[5]_add_11_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_42_o_b[5]_add_11_OUT> created at line 0.
     Found 32-bit adder for signal <n2447> created at line 0.
     Found 32-bit adder for signal <a[31]_b[5]_add_13_OUT> created at line 0.
     Found 32-bit adder for signal <n2451> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_15_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_15_OUT> created at line 0.
     Found 32-bit adder for signal <n2455> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_17_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_17_OUT> created at line 0.
     Found 32-bit adder for signal <n2459> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_19_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_19_OUT> created at line 0.
     Found 32-bit adder for signal <n2463> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_21_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_21_OUT> created at line 0.
     Found 32-bit adder for signal <n2467> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_23_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_23_OUT> created at line 0.
     Found 32-bit adder for signal <n2471> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_25_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_25_OUT> created at line 0.
     Found 32-bit adder for signal <n2475> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_27_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_27_OUT> created at line 0.
     Found 32-bit adder for signal <n2479> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_29_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_29_OUT> created at line 0.
     Found 32-bit adder for signal <n2483> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_31_OUT> created at line 0.
     Found 32-bit adder for signal <n2487> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_33_OUT> created at line 0.
     Found 32-bit adder for signal <n2491> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_35_OUT> created at line 0.
     Found 32-bit adder for signal <n2495> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_37_OUT> created at line 0.
     Found 32-bit adder for signal <n2499> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_39_OUT> created at line 0.
     Found 32-bit adder for signal <n2503> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_41_OUT> created at line 0.
     Found 32-bit adder for signal <n2507> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_43_OUT> created at line 0.
     Found 32-bit adder for signal <n2511> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_45_OUT> created at line 0.
     Found 32-bit adder for signal <n2515> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_47_OUT> created at line 0.
     Found 32-bit adder for signal <n2519> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_49_OUT> created at line 0.
     Found 32-bit adder for signal <n2523> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_51_OUT> created at line 0.
     Found 32-bit adder for signal <n2527> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_53_OUT> created at line 0.
     Found 32-bit adder for signal <n2531> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_55_OUT> created at line 0.
     Found 32-bit adder for signal <n2535> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_57_OUT> created at line 0.
     Found 32-bit adder for signal <n2539> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_59_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_59_OUT[31:0]> created at line 0.
     Found 32-bit adder for signal <n2543> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_61_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_61_OUT[31:0]> created at line 0.
     Found 32-bit adder for signal <n2547> created at line 0.
-    Found 32-bit adder for signal <a[31]_GND_41_o_add_63_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_42_o_add_63_OUT[31:0]> created at line 0.
     Found 38-bit comparator lessequal for signal <BUS_0001> created at line 0
     Found 37-bit comparator lessequal for signal <BUS_0002> created at line 0
     Found 36-bit comparator lessequal for signal <BUS_0003> created at line 0
@@ -914,16 +929,19 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 4x8-bit single-port Read Only RAM                     : 1
-# Multipliers                                          : 4
+ 4x8-bit dual-port Read Only RAM                       : 1
+# Multipliers                                          : 6
  32x32-bit multiplier                                  : 2
+ 6x4-bit multiplier                                    : 1
  6x6-bit multiplier                                    : 2
-# Adders/Subtractors                                   : 143
+ 8x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 146
  10-bit adder                                          : 2
  10-bit subtractor                                     : 2
- 11-bit subtractor                                     : 6
+ 11-bit subtractor                                     : 7
  12-bit adder                                          : 1
- 13-bit adder                                          : 2
+ 13-bit adder                                          : 3
+ 28-bit adder                                          : 1
  32-bit adder                                          : 105
  33-bit adder                                          : 4
  34-bit adder                                          : 4
@@ -932,7 +950,7 @@ Macro Statistics
  37-bit adder                                          : 4
  38-bit adder                                          : 4
  9-bit adder                                           : 1
-# Registers                                            : 33
+# Registers                                            : 34
  1-bit register                                        : 17
  10-bit register                                       : 2
  192-bit register                                      : 1
@@ -940,12 +958,14 @@ Macro Statistics
  3-bit register                                        : 1
  32-bit register                                       : 6
  4-bit register                                        : 3
-# Latches                                              : 58
- 1-bit latch                                           : 58
-# Comparators                                          : 88
- 10-bit comparator greater                             : 4
- 10-bit comparator lessequal                           : 15
+ 600-bit register                                      : 1
+# Latches                                              : 68
+ 1-bit latch                                           : 68
+# Comparators                                          : 84
+ 10-bit comparator greater                             : 5
+ 10-bit comparator lessequal                           : 9
  12-bit comparator lessequal                           : 1
+ 13-bit comparator lessequal                           : 1
  32-bit comparator lessequal                           : 56
  33-bit comparator lessequal                           : 2
  34-bit comparator lessequal                           : 2
@@ -953,12 +973,13 @@ Macro Statistics
  36-bit comparator lessequal                           : 2
  37-bit comparator lessequal                           : 2
  38-bit comparator lessequal                           : 2
-# Multiplexers                                         : 1980
+# Multiplexers                                         : 2283
  1-bit 2-to-1 multiplexer                              : 1899
  2-bit 2-to-1 multiplexer                              : 1
+ 2-bit 300-to-1 multiplexer                            : 1
  3-bit 64-to-1 multiplexer                             : 1
  32-bit 2-to-1 multiplexer                             : 8
- 8-bit 2-to-1 multiplexer                              : 71
+ 8-bit 2-to-1 multiplexer                              : 373
 
 =========================================================================
 
@@ -970,47 +991,63 @@ Macro Statistics
 Synthesizing (advanced) Unit <user_logic>.
 The following registers are absorbed into counter <h_cnt>: 1 register on signal <h_cnt>.
 The following registers are absorbed into counter <v_cnt>: 1 register on signal <v_cnt>.
-	Multiplier <Mmult_n0528> in block <user_logic> and adder/subtractor <Madd_GND_20_o_GND_20_o_add_162_OUT> in block <user_logic> are combined into a MAC<Maddsub_n0528>.
-	Multiplier <Mmult_x_pos[0]_PWR_20_o_MuLt_128_OUT> in block <user_logic> and adder/subtractor <Madd_n0520_Madd> in block <user_logic> are combined into a MAC<Maddsub_x_pos[0]_PWR_20_o_MuLt_128_OUT>.
-	Multiplier <Mmult_y_pos[0]_PWR_20_o_MuLt_131_OUT> in block <user_logic> and adder/subtractor <Madd_n0523_Madd> in block <user_logic> are combined into a MAC<Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_colormap> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+	Multiplier <Mmult_n1453> in block <user_logic> and adder/subtractor <Madd_GND_20_o_GND_20_o_add_474_OUT> in block <user_logic> are combined into a MAC<Maddsub_n1453>.
+	Multiplier <Mmult_x_pos[0]_PWR_20_o_MuLt_440_OUT> in block <user_logic> and adder/subtractor <Madd_n1445_Madd> in block <user_logic> are combined into a MAC<Maddsub_x_pos[0]_PWR_20_o_MuLt_440_OUT>.
+	Multiplier <Mmult_y_pos[0]_PWR_20_o_MuLt_443_OUT> in block <user_logic> and adder/subtractor <Madd_n1448_Madd> in block <user_logic> are combined into a MAC<Maddsub_y_pos[0]_PWR_20_o_MuLt_443_OUT>.
+	Multiplier <Mmult_y_cor[0]_PWR_20_o_MuLt_498_OUT> in block <user_logic> and adder/subtractor <Madd_n1465_Madd> in block <user_logic> are combined into a MAC<Maddsub_y_cor[0]_PWR_20_o_MuLt_498_OUT>.
+	Multiplier <Mmult_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT> in block <user_logic> and adder/subtractor <Madd_n1608> in block <user_logic> are combined into a MAC<Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT>.
+	The following registers are also absorbed by the MAC: <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg> in block <vga_ip>.
+Unit <user_logic> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_ip>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <USER_LOGIC_I/Mram_colormap> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 4-word x 8-bit                      |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <n0525[2:0]<1:0>> |          |
+    |     addrA          | connected to signal <USER_LOGIC_I/menu_pos[1]_X_20_o_wide_mux_503_OUT> |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-Unit <user_logic> synthesized (advanced).
+    | Port B                                                              |
+    |     aspect ratio   | 4-word x 8-bit                      |          |
+    |     weB            | connected to signal <GND>           | high     |
+    |     addrB          | connected to signal <USER_LOGIC_I/n1450[2:0]<1:0>> |          |
+    |     diB            | connected to signal <GND>           |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <vga_ip> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 1
- 4x8-bit single-port distributed Read Only RAM         : 1
-# MACs                                                 : 3
+ 4x8-bit dual-port distributed Read Only RAM           : 1
+# MACs                                                 : 5
  11x11-to-32-bit MAC                                   : 1
+ 6x4-to-10-bit MAC                                     : 1
  6x6-to-10-bit MAC                                     : 2
+ 8x4-to-13-bit MAC                                     : 1
 # Multipliers                                          : 1
  11x11-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 74
+# Adders/Subtractors                                   : 75
  10-bit subtractor                                     : 4
- 11-bit subtractor                                     : 4
+ 11-bit subtractor                                     : 5
  12-bit adder                                          : 1
  32-bit adder carry in                                 : 64
  6-bit adder                                           : 1
 # Counters                                             : 2
  10-bit up counter                                     : 2
-# Registers                                            : 422
- Flip-Flops                                            : 422
-# Comparators                                          : 88
- 10-bit comparator greater                             : 4
- 10-bit comparator lessequal                           : 15
+# Registers                                            : 989
+ Flip-Flops                                            : 989
+# Comparators                                          : 84
+ 10-bit comparator greater                             : 5
+ 10-bit comparator lessequal                           : 9
  12-bit comparator lessequal                           : 1
+ 13-bit comparator lessequal                           : 1
  32-bit comparator lessequal                           : 56
  33-bit comparator lessequal                           : 2
  34-bit comparator lessequal                           : 2
@@ -1018,101 +1055,76 @@ Macro Statistics
  36-bit comparator lessequal                           : 2
  37-bit comparator lessequal                           : 2
  38-bit comparator lessequal                           : 2
-# Multiplexers                                         : 1981
+# Multiplexers                                         : 2285
  1-bit 2-to-1 multiplexer                              : 1898
+ 1-bit 300-to-1 multiplexer                            : 2
  1-bit 64-to-1 multiplexer                             : 3
  2-bit 2-to-1 multiplexer                              : 1
  32-bit 2-to-1 multiplexer                             : 8
- 8-bit 2-to-1 multiplexer                              : 71
+ 8-bit 2-to-1 multiplexer                              : 373
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1426 - The value init of the FF/Latch master_id_31 hinder the constant cleaning in the block plb_slave_attachment.
+WARNING:Xst:1426 - The value init of the FF/Latch PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_31 hinder the constant cleaning in the block vga_ip.
    You should achieve better results by setting this init to 0.
-WARNING:Xst:1293 - FF/Latch <master_id_30> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_29> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_28> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_27> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_26> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_25> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_24> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_23> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_22> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_21> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_20> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_19> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_18> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_17> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_16> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_15> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_14> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_13> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_12> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_11> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_10> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_9> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_8> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_7> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_6> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_5> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_4> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_3> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_2> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <master_id_1> has a constant value of 0 in block <plb_slave_attachment>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <GEN_FOR_SHARED.addr_cntl_cs> in Unit <plb_slave_attachment> is equivalent to the following FF/Latch, which will be removed : <addr_cycle_flush> 
-WARNING:Xst:1710 - FF/Latch <x_center_9> (without init value) has a constant value of 1 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <y_center_9> (without init value) has a constant value of 1 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <board_pos_5> in Unit <user_logic> is equivalent to the following FF/Latch, which will be removed : <x_center_6> 
-INFO:Xst:2261 - The FF/Latch <board_pos_6> in Unit <user_logic> is equivalent to the following FF/Latch, which will be removed : <x_center_7> 
-INFO:Xst:2261 - The FF/Latch <board_pos_7> in Unit <user_logic> is equivalent to the following FF/Latch, which will be removed : <x_center_8> 
+WARNING:Xst:1293 - FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_30> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_29> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_28> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_27> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_26> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_25> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_24> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_23> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_22> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_21> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_20> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_19> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_18> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_17> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_16> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_15> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_14> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_13> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_12> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_11> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_10> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_9> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_8> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_7> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_6> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_5> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_4> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_3> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_2> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_1> has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/addr_cycle_flush> in Unit <vga_ip> is equivalent to the following FF/Latch, which will be removed : <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/GEN_FOR_SHARED.addr_cntl_cs> 
+WARNING:Xst:1710 - FF/Latch <USER_LOGIC_I/y_center_9> (without init value) has a constant value of 1 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <USER_LOGIC_I/x_center_9> (without init value) has a constant value of 1 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_0> (without init value) has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1> (without init value) has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0> (without init value) has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT1_0> (without init value) has a constant value of 0 in block <vga_ip>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <USER_LOGIC_I/x_center_6> in Unit <vga_ip> is equivalent to the following FF/Latch, which will be removed : <USER_LOGIC_I/board_pos_5> 
+INFO:Xst:2261 - The FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_0> in Unit <vga_ip> is equivalent to the following FF/Latch, which will be removed : <USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT1_1> 
+INFO:Xst:2261 - The FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_1> in Unit <vga_ip> is equivalent to the following FF/Latch, which will be removed : <USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT1_2> 
+INFO:Xst:2261 - The FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_2> in Unit <vga_ip> is equivalent to the following FF/Latch, which will be removed : <USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT1_3> 
+INFO:Xst:2261 - The FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_3> in Unit <vga_ip> is equivalent to the following FF/Latch, which will be removed : <USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT1_4> 
+INFO:Xst:2261 - The FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4> in Unit <vga_ip> is equivalent to the following FF/Latch, which will be removed : <USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT1_5> 
+INFO:Xst:2261 - The FF/Latch <USER_LOGIC_I/x_center_8> in Unit <vga_ip> is equivalent to the following FF/Latch, which will be removed : <USER_LOGIC_I/board_pos_7> 
+INFO:Xst:2261 - The FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_5> in Unit <vga_ip> is equivalent to the following FF/Latch, which will be removed : <USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT1_6> 
+INFO:Xst:2261 - The FF/Latch <USER_LOGIC_I/x_center_7> in Unit <vga_ip> is equivalent to the following FF/Latch, which will be removed : <USER_LOGIC_I/board_pos_6> 
+INFO:Xst:2261 - The FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_6> in Unit <vga_ip> is equivalent to the following FF/Latch, which will be removed : <USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT1_7> 
+INFO:Xst:2261 - The FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_7> in Unit <vga_ip> is equivalent to the following FF/Latch, which will be removed : <USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT1_8> 
 
 Optimizing unit <system_vga_ip_0_wrapper> ...
 
-Optimizing unit <plb_slave_attachment> ...
+Optimizing unit <vga_ip> ...
 
 Optimizing unit <plb_address_decoder> ...
-
-Optimizing unit <user_logic> ...
-WARNING:Xst:1710 - FF/Latch <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_0> (without init value) has a constant value of 0 in block <system_vga_ip_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <system_vga_ip_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0> (without init value) has a constant value of 0 in block <system_vga_ip_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1> (without init value) has a constant value of 0 in block <system_vga_ip_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_0> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_1> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_2> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_3> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_4> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_5> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_6> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_7> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_8> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_9> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_10> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_11> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_12> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_13> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_14> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_15> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_16> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_17> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_18> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_19> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_20> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_21> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_22> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_23> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_24> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_25> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_26> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_27> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_29> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_30> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_31> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
-WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
 WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_14> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
 WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_15> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
 WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_16> of sequential type is unconnected in block <system_vga_ip_0_wrapper>.
@@ -1136,7 +1148,7 @@ WARNING:Xst:2677 - Node <vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DEC
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 0) on block system_vga_ip_0_wrapper, actual ratio is 34.
+Found area constraint ratio of 100 (+ 0) on block system_vga_ip_0_wrapper, actual ratio is 48.
 
 Final Macro Processing ...
 
@@ -1144,8 +1156,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 354
- Flip-Flops                                            : 354
+# Registers                                            : 954
+ Flip-Flops                                            : 954
 
 =========================================================================
 
@@ -1168,25 +1180,26 @@ Top Level Output File Name         : system_vga_ip_0_wrapper.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 4224
+# BELS                             : 5188
 #      GND                         : 1
 #      INV                         : 10
-#      LUT1                        : 32
-#      LUT2                        : 131
-#      LUT3                        : 496
-#      LUT4                        : 202
-#      LUT5                        : 1028
-#      LUT6                        : 510
-#      MUXCY                       : 942
-#      MUXF7                       : 1
+#      LUT1                        : 40
+#      LUT2                        : 155
+#      LUT3                        : 495
+#      LUT4                        : 794
+#      LUT5                        : 1063
+#      LUT6                        : 742
+#      MUXCY                       : 975
+#      MUXF7                       : 7
 #      VCC                         : 1
-#      XORCY                       : 870
-# FlipFlops/Latches                : 407
-#      FD                          : 22
-#      FDR                         : 132
-#      FDRE                        : 136
-#      FDSE                        : 64
+#      XORCY                       : 905
+# FlipFlops/Latches                : 1017
+#      FD                          : 2
+#      FDR                         : 142
+#      FDRE                        : 446
+#      FDSE                        : 364
 #      LD                          : 53
+#      LDE_1                       : 10
 # Clock Buffers                    : 2
 #      BUFG                        : 2
 # DSPs                             : 2
@@ -1199,16 +1212,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             407  out of  18224     2%  
- Number of Slice LUTs:                 2409  out of   9112    26%  
-    Number used as Logic:              2409  out of   9112    26%  
+ Number of Slice Registers:            1017  out of  18224     5%  
+ Number of Slice LUTs:                 3299  out of   9112    36%  
+    Number used as Logic:              3299  out of   9112    36%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2467
-   Number with an unused Flip Flop:    2060  out of   2467    83%  
-   Number with an unused LUT:            58  out of   2467     2%  
-   Number of fully used LUT-FF pairs:   349  out of   2467    14%  
-   Number of unique control sets:        14
+ Number of LUT Flip Flop pairs used:   3358
+   Number with an unused Flip Flop:    2341  out of   3358    69%  
+   Number with an unused LUT:            59  out of   3358     1%  
+   Number of fully used LUT-FF pairs:   958  out of   3358    28%  
+   Number of unique control sets:        17
 
 IO Utilization: 
  Number of IOs:                         220
@@ -1236,15 +1249,16 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
-Clock Signal                                                             | Clock buffer(FF name)                                                | Load  |
--------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
-SPLB_Clk                                                                 | NONE(vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_0)| 334   |
-vga_ip_0/USER_LOGIC_I/vga_data<6>2(vga_ip_0/USER_LOGIC_I/vga_data<6>21:O)| BUFG(*)(vga_ip_0/USER_LOGIC_I/y_center_8)                            | 33    |
-vga_ip_0/USER_LOGIC_I/vga_ena(vga_ip_0/USER_LOGIC_I/vga_ena5:O)          | BUFG(*)(vga_ip_0/USER_LOGIC_I/y_cor_9)                               | 20    |
-CLK_25M                                                                  | NONE(vga_ip_0/USER_LOGIC_I/v_cnt_0)                                  | 20    |
--------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
-(*) These 2 clock signal(s) are generated by combinatorial logic,
+---------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
+Clock Signal                                                                                             | Clock buffer(FF name)                                                | Load  |
+---------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
+CLK_25M                                                                                                  | NONE(vga_ip_0/USER_LOGIC_I/h_cnt_0)                                  | 20    |
+vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_AND_2702_o(vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_AND_2702_o1:O)| BUFG(*)(vga_ip_0/USER_LOGIC_I/board_pos_2)                           | 33    |
+SPLB_Clk                                                                                                 | NONE(vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_0)| 934   |
+vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_1598_o(vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_1598_o2:O)| NONE(*)(vga_ip_0/USER_LOGIC_I/menu_pos_0)                            | 10    |
+vga_ip_0/USER_LOGIC_I/vga_ena(vga_ip_0/USER_LOGIC_I/vga_ena4:O)                                          | BUFG(*)(vga_ip_0/USER_LOGIC_I/x_cor_0)                               | 20    |
+---------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -1257,9 +1271,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 4.931ns (Maximum Frequency: 202.786MHz)
+   Minimum period: 6.756ns (Maximum Frequency: 148.013MHz)
    Minimum input arrival time before clock: 2.029ns
-   Maximum output required time after clock: 14.284ns
+   Maximum output required time after clock: 14.290ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1267,89 +1281,111 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'SPLB_Clk'
-  Clock period: 4.841ns (frequency: 206.575MHz)
-  Total number of paths / destination ports: 22493 / 520
+Timing constraint: Default period analysis for Clock 'CLK_25M'
+  Clock period: 4.876ns (frequency: 205.101MHz)
+  Total number of paths / destination ports: 510 / 50
 -------------------------------------------------------------------------
-Delay:               4.841ns (Levels of Logic = 8)
-  Source:            vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4 (FF)
-  Destination:       vga_ip_0/USER_LOGIC_I/board_63_191 (FF)
-  Source Clock:      SPLB_Clk rising
-  Destination Clock: SPLB_Clk rising
+Delay:               4.876ns (Levels of Logic = 3)
+  Source:            vga_ip_0/USER_LOGIC_I/h_cnt_7 (FF)
+  Destination:       vga_ip_0/USER_LOGIC_I/h_cnt_0 (FF)
+  Source Clock:      CLK_25M rising
+  Destination Clock: CLK_25M rising
 
-  Data Path: vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4 to vga_ip_0/USER_LOGIC_I/board_63_191
+  Data Path: vga_ip_0/USER_LOGIC_I/h_cnt_7 to vga_ip_0/USER_LOGIC_I/h_cnt_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.447   0.721  vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4 (vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4)
-     LUT2:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Madd_n0544_lut<3> (vga_ip_0/USER_LOGIC_I/Madd_n0544_lut<3>)
-     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Madd_n0544_cy<3> (vga_ip_0/USER_LOGIC_I/Madd_n0544_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Madd_n0544_cy<4> (vga_ip_0/USER_LOGIC_I/Madd_n0544_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Madd_n0544_cy<5> (vga_ip_0/USER_LOGIC_I/Madd_n0544_cy<5>)
-     XORCY:CI->O           4   0.180   0.684  vga_ip_0/USER_LOGIC_I/Madd_n0544_xor<6> (vga_ip_0/USER_LOGIC_I/n0544<6>)
-     LUT3:I2->O            3   0.205   0.651  vga_ip_0/USER_LOGIC_I/BUS_0001_GND_20_o_LessThan_5_o1_SW3 (N20)
-     LUT6:I5->O           17   0.205   1.028  vga_ip_0/USER_LOGIC_I/GND_20_o_BUS_0001_AND_144_o11 (vga_ip_0/USER_LOGIC_I/GND_20_o_BUS_0001_AND_144_o1)
-     LUT5:I4->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/Mmux_n049311 (vga_ip_0/USER_LOGIC_I/n0493<0>)
-     FDRE:D                    0.102          vga_ip_0/USER_LOGIC_I/board_63_171
+     FDR:C->Q              7   0.447   1.002  vga_ip_0/USER_LOGIC_I/h_cnt_7 (vga_ip_0/USER_LOGIC_I/h_cnt_7)
+     LUT3:I0->O            2   0.205   0.617  vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_equal_390_o<0>11 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_equal_390_o<0>1)
+     LUT6:I5->O           12   0.205   0.909  vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_equal_390_o<0> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_equal_390_o)
+     LUT2:I1->O           10   0.205   0.856  vga_ip_0/USER_LOGIC_I/Mcount_h_cnt_val1 (vga_ip_0/USER_LOGIC_I/Mcount_h_cnt_val)
+     FDR:R                     0.430          vga_ip_0/USER_LOGIC_I/h_cnt_0
     ----------------------------------------
-    Total                      4.841ns (1.757ns logic, 3.084ns route)
-                                       (36.3% logic, 63.7% route)
+    Total                      4.876ns (1.492ns logic, 3.384ns route)
+                                       (30.6% logic, 69.4% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'vga_ip_0/USER_LOGIC_I/vga_data<6>2'
-  Clock period: 4.297ns (frequency: 232.707MHz)
+Timing constraint: Default period analysis for Clock 'vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_AND_2702_o'
+  Clock period: 4.399ns (frequency: 227.311MHz)
   Total number of paths / destination ports: 602 / 21
 -------------------------------------------------------------------------
-Delay:               4.297ns (Levels of Logic = 6)
+Delay:               4.399ns (Levels of Logic = 6)
   Source:            vga_ip_0/USER_LOGIC_I/y_pos_4 (LATCH)
   Destination:       vga_ip_0/USER_LOGIC_I/y_center_3 (LATCH)
-  Source Clock:      vga_ip_0/USER_LOGIC_I/vga_data<6>2 falling
-  Destination Clock: vga_ip_0/USER_LOGIC_I/vga_data<6>2 falling
+  Source Clock:      vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_AND_2702_o falling
+  Destination Clock: vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_AND_2702_o falling
 
   Data Path: vga_ip_0/USER_LOGIC_I/y_pos_4 to vga_ip_0/USER_LOGIC_I/y_center_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q               5   0.498   0.819  vga_ip_0/USER_LOGIC_I/y_pos_4 (vga_ip_0/USER_LOGIC_I/y_pos_4)
-     LUT2:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd1_lut<3> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd1_lut<3>)
-     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd1_cy<3> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd1_cy<3>)
-     XORCY:CI->O           1   0.180   0.580  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd1_xor<4> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd_61)
-     LUT2:I1->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd2_lut<6> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd2_lut<6>)
-     XORCY:LI->O           4   0.136   0.683  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd2_xor<6> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_6)
-     INV:I->O              1   0.206   0.579  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_131_OUT_Madd_xor<6>11_INV_0 (vga_ip_0/USER_LOGIC_I/n0523<6>)
+     LUT2:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_443_OUT_Madd1_lut<3> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_443_OUT_Madd1_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_443_OUT_Madd1_cy<3> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_443_OUT_Madd1_cy<3>)
+     XORCY:CI->O           1   0.180   0.684  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_443_OUT_Madd1_xor<4> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_443_OUT_Madd_61)
+     LUT2:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_443_OUT_Madd2_lut<6> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_443_OUT_Madd2_lut<6>)
+     XORCY:LI->O           4   0.136   0.683  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_443_OUT_Madd2_xor<6> (vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_443_OUT_6)
+     INV:I->O              1   0.206   0.579  vga_ip_0/USER_LOGIC_I/Maddsub_y_pos[0]_PWR_20_o_MuLt_443_OUT_Madd_xor<6>11_INV_0 (vga_ip_0/USER_LOGIC_I/n1448<6>)
      LD:D                      0.037          vga_ip_0/USER_LOGIC_I/y_center_3
     ----------------------------------------
-    Total                      4.297ns (1.637ns logic, 2.660ns route)
-                                       (38.1% logic, 61.9% route)
+    Total                      4.399ns (1.635ns logic, 2.764ns route)
+                                       (37.2% logic, 62.8% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'CLK_25M'
-  Clock period: 4.931ns (frequency: 202.786MHz)
-  Total number of paths / destination ports: 500 / 20
+Timing constraint: Default period analysis for Clock 'SPLB_Clk'
+  Clock period: 6.756ns (frequency: 148.013MHz)
+  Total number of paths / destination ports: 460229 / 1720
 -------------------------------------------------------------------------
-Delay:               4.931ns (Levels of Logic = 4)
-  Source:            vga_ip_0/USER_LOGIC_I/h_cnt_7 (FF)
-  Destination:       vga_ip_0/USER_LOGIC_I/v_cnt_9 (FF)
-  Source Clock:      CLK_25M rising
-  Destination Clock: CLK_25M rising
+Delay:               6.756ns (Levels of Logic = 12)
+  Source:            vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_15 (FF)
+  Destination:       vga_ip_0/USER_LOGIC_I/menu_299_87 (FF)
+  Source Clock:      SPLB_Clk rising
+  Destination Clock: SPLB_Clk rising
 
-  Data Path: vga_ip_0/USER_LOGIC_I/h_cnt_7 to vga_ip_0/USER_LOGIC_I/v_cnt_9
+  Data Path: vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_15 to vga_ip_0/USER_LOGIC_I/menu_299_87
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               7   0.447   1.002  vga_ip_0/USER_LOGIC_I/h_cnt_7 (vga_ip_0/USER_LOGIC_I/h_cnt_7)
-     LUT3:I0->O            2   0.205   0.617  vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_equal_78_o<0>11 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_equal_78_o<0>1)
-     LUT6:I5->O           21   0.205   1.114  vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_equal_78_o<0> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_equal_78_o)
-     LUT6:I5->O            9   0.205   0.830  vga_ip_0/USER_LOGIC_I/Mcount_v_cnt_val (vga_ip_0/USER_LOGIC_I/Mcount_v_cnt_val)
-     LUT4:I3->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/v_cnt_9_rstpot (vga_ip_0/USER_LOGIC_I/v_cnt_9_rstpot)
-     FD:D                      0.102          vga_ip_0/USER_LOGIC_I/v_cnt_9
+     FDR:C->Q              4   0.447   0.788  vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_15 (vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_15)
+     LUT2:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd1_lut<3> (vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd1_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd1_cy<3> (vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd1_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd1_cy<4> (vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd1_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd1_cy<5> (vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd1_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd1_cy<6> (vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd1_cy<6>)
+     XORCY:CI->O           1   0.180   0.580  vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd1_xor<7> (vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_7)
+     LUT2:I1->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd_lut<7> (vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd_lut<7>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd_cy<7> (vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd_cy<7>)
+     XORCY:CI->O          34   0.180   1.321  vga_ip_0/USER_LOGIC_I/Maddsub_Bus2IP_Data[8]_PWR_20_o_MuLt_72_OUT_Madd_xor<8> (vga_ip_0/USER_LOGIC_I/n1608<8>)
+     LUT4:I3->O            3   0.205   0.755  vga_ip_0/USER_LOGIC_I/BUS_0002_GND_20_o_LessThan_75_o1_SW9 (N46)
+     LUT6:I4->O           15   0.203   0.982  vga_ip_0/USER_LOGIC_I/GND_20_o_BUS_0002_AND_1295_o11 (vga_ip_0/USER_LOGIC_I/GND_20_o_BUS_0002_AND_1295_o1)
+     LUT4:I3->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/Mmux_n116311 (vga_ip_0/USER_LOGIC_I/n1163<0>)
+     FDRE:D                    0.102          vga_ip_0/USER_LOGIC_I/menu_299_86
     ----------------------------------------
-    Total                      4.931ns (1.369ns logic, 3.562ns route)
-                                       (27.8% logic, 72.2% route)
+    Total                      6.756ns (2.331ns logic, 4.425ns route)
+                                       (34.5% logic, 65.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_25M'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              1.854ns (Levels of Logic = 1)
+  Source:            SPLB_Rst (PAD)
+  Destination:       vga_ip_0/USER_LOGIC_I/v_cnt_0 (FF)
+  Destination Clock: CLK_25M rising
+
+  Data Path: SPLB_Rst to vga_ip_0/USER_LOGIC_I/v_cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I0->O           10   0.203   0.856  vga_ip_0/USER_LOGIC_I/Mcount_v_cnt_val (vga_ip_0/USER_LOGIC_I/Mcount_v_cnt_val)
+     FDRE:R                    0.430          vga_ip_0/USER_LOGIC_I/v_cnt_0
+    ----------------------------------------
+    Total                      1.854ns (0.998ns logic, 0.856ns route)
+                                       (53.8% logic, 46.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 396 / 396
+  Total number of paths / destination ports: 996 / 996
 -------------------------------------------------------------------------
 Offset:              2.029ns (Levels of Logic = 1)
   Source:            SPLB_Rst (PAD)
@@ -1360,157 +1396,166 @@ Offset:              2.029ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT2:I0->O           32   0.203   1.291  vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/ip2bus_rdack_i_inv_01 (vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/ip2bus_rdack_i_inv_0)
+     LUT2:I0->O           32   0.203   1.291  vga_ip_0/ipif_Bus2IP_RdCE_inv_01 (vga_ip_0/ipif_Bus2IP_RdCE_inv_0)
      FDR:R                     0.430          vga_ip_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31
     ----------------------------------------
     Total                      2.029ns (0.738ns logic, 1.291ns route)
                                        (36.4% logic, 63.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_25M'
-  Total number of paths / destination ports: 20 / 20
--------------------------------------------------------------------------
-Offset:              1.705ns (Levels of Logic = 2)
-  Source:            SPLB_Rst (PAD)
-  Destination:       vga_ip_0/USER_LOGIC_I/v_cnt_9 (FF)
-  Destination Clock: CLK_25M rising
-
-  Data Path: SPLB_Rst to vga_ip_0/USER_LOGIC_I/v_cnt_9
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LUT6:I0->O            9   0.203   0.830  vga_ip_0/USER_LOGIC_I/Mcount_v_cnt_val (vga_ip_0/USER_LOGIC_I/Mcount_v_cnt_val)
-     LUT4:I3->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/v_cnt_9_rstpot (vga_ip_0/USER_LOGIC_I/v_cnt_9_rstpot)
-     FD:D                      0.102          vga_ip_0/USER_LOGIC_I/v_cnt_9
-    ----------------------------------------
-    Total                      1.705ns (0.875ns logic, 0.830ns route)
-                                       (51.3% logic, 48.7% route)
-
-=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'vga_ip_0/USER_LOGIC_I/vga_ena'
-  Total number of paths / destination ports: 17327339 / 8
+  Total number of paths / destination ports: 15492792 / 8
 -------------------------------------------------------------------------
-Offset:              14.284ns (Levels of Logic = 18)
+Offset:              14.290ns (Levels of Logic = 19)
   Source:            vga_ip_0/USER_LOGIC_I/y_cor_4 (LATCH)
-  Destination:       VGA_R<1> (PAD)
+  Destination:       VGA_G<1> (PAD)
   Source Clock:      vga_ip_0/USER_LOGIC_I/vga_ena falling
 
-  Data Path: vga_ip_0/USER_LOGIC_I/y_cor_4 to VGA_R<1>
+  Data Path: vga_ip_0/USER_LOGIC_I/y_cor_4 to VGA_G<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q              37   0.498   1.467  vga_ip_0/USER_LOGIC_I/y_cor_4 (vga_ip_0/USER_LOGIC_I/y_cor_4)
-     LUT2:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_lut<5> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_lut<5>)
-     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<5> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<6> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<7> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<8> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<8>)
-     MUXCY:CI->O           0   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<9> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<9>)
-     XORCY:CI->O          16   0.180   1.004  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_xor<10> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_sub_160_OUT<10>)
-     DSP48A1:A10->PCOUT47    1   4.469   0.000  vga_ip_0/USER_LOGIC_I/Mmult_n0530 (vga_ip_0/USER_LOGIC_I/Mmult_n0530_PCOUT_to_Maddsub_n0528_PCIN_47)
-     DSP48A1:PCIN47->P5    3   2.264   0.995  vga_ip_0/USER_LOGIC_I/Maddsub_n0528 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_add_162_OUT<5>)
-     LUT5:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<1>)
-     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<2> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<3> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<4> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<5> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<5>)
-     MUXCY:CI->O           5   0.213   0.962  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<6> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_LessThan_164_o)
-     LUT6:I2->O            1   0.203   0.924  vga_ip_0/USER_LOGIC_I/vga_data<2>1 (vga_ip_0/USER_LOGIC_I/vga_data<2>)
-     LUT6:I1->O            0   0.203   0.000  vga_ip_0/USER_LOGIC_I/vga_data<2>2 (VGA_R<2>)
+     LD:G->Q              36   0.498   1.453  vga_ip_0/USER_LOGIC_I/y_cor_4 (vga_ip_0/USER_LOGIC_I/y_cor_4)
+     LUT2:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_lut<5> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_lut<5>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<5> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<6> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<7> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<8> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<8>)
+     MUXCY:CI->O           0   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<9> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<9>)
+     XORCY:CI->O          16   0.180   1.004  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_xor<10> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_sub_472_OUT<10>)
+     DSP48A1:A10->PCOUT47    1   4.469   0.000  vga_ip_0/USER_LOGIC_I/Mmult_n1455 (vga_ip_0/USER_LOGIC_I/Mmult_n1455_PCOUT47_to_USER_LOGIC_I/Maddsub_n1453_PCIN47)
+     DSP48A1:PCIN47->P4    4   2.264   1.028  vga_ip_0/USER_LOGIC_I/Maddsub_n1453 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_add_474_OUT<4>)
+     LUT5:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_lut<0> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<0> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<2> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<3> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<4> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<5> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<5>)
+     MUXCY:CI->O           4   0.213   1.028  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<6> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_LessThan_476_o)
+     LUT6:I1->O            1   0.203   0.827  vga_ip_0/VGA_G<2>1 (vga_ip_0/VGA_G<2>)
+     LUT6:I2->O            0   0.203   0.000  vga_ip_0/VGA_G<2>2 (VGA_G<2>)
     ----------------------------------------
-    Total                     14.284ns (8.932ns logic, 5.352ns route)
-                                       (62.5% logic, 37.5% route)
+    Total                     14.290ns (8.951ns logic, 5.339ns route)
+                                       (62.6% logic, 37.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_25M'
-  Total number of paths / destination ports: 464 / 10
+  Total number of paths / destination ports: 734 / 10
 -------------------------------------------------------------------------
-Offset:              10.125ns (Levels of Logic = 9)
+Offset:              10.218ns (Levels of Logic = 9)
   Source:            vga_ip_0/USER_LOGIC_I/v_cnt_2 (FF)
-  Destination:       VGA_G<0> (PAD)
+  Destination:       VGA_B<1> (PAD)
   Source Clock:      CLK_25M rising
 
-  Data Path: vga_ip_0/USER_LOGIC_I/v_cnt_2 to VGA_G<0>
+  Data Path: vga_ip_0/USER_LOGIC_I/v_cnt_2 to VGA_B<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              11   0.447   1.111  vga_ip_0/USER_LOGIC_I/v_cnt_2 (vga_ip_0/USER_LOGIC_I/v_cnt_2)
-     LUT3:I0->O            3   0.205   0.755  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_96_OUT<9:0>_cy<0>31 (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_96_OUT<9:0>_cy<0>2)
-     LUT6:I4->O            1   0.203   0.580  vga_ip_0/USER_LOGIC_I/vga_ena2 (vga_ip_0/USER_LOGIC_I/vga_ena2)
-     LUT6:I5->O            1   0.205   0.944  vga_ip_0/USER_LOGIC_I/vga_ena3 (vga_ip_0/USER_LOGIC_I/vga_ena3)
-     LUT6:I0->O            1   0.203   0.924  vga_ip_0/USER_LOGIC_I/vga_ena5 (vga_ip_0/USER_LOGIC_I/vga_ena)
-     LUT6:I1->O            4   0.203   1.028  vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o11 (vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o1)
-     LUT6:I1->O            5   0.203   0.962  vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o2 (vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_212_o)
-     LUT6:I2->O            2   0.203   0.617  vga_ip_0/USER_LOGIC_I/vga_data<6>21 (vga_ip_0/USER_LOGIC_I/vga_data<6>2)
-     LUT3:I2->O            1   0.205   0.924  vga_ip_0/USER_LOGIC_I/vga_data<6>2 (vga_ip_0/USER_LOGIC_I/vga_data<6>1)
-     LUT5:I0->O            0   0.203   0.000  vga_ip_0/USER_LOGIC_I/vga_data<6>3 (VGA_B<0>)
+     FDRE:C->Q            10   0.447   1.085  vga_ip_0/USER_LOGIC_I/v_cnt_2 (vga_ip_0/USER_LOGIC_I/v_cnt_2)
+     LUT3:I0->O            3   0.205   0.755  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_408_OUT<9:0>_cy<0>31 (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_408_OUT<9:0>_cy<0>2)
+     LUT6:I4->O            1   0.203   0.580  vga_ip_0/USER_LOGIC_I/vga_ena1 (vga_ip_0/USER_LOGIC_I/vga_ena1)
+     LUT6:I5->O            1   0.205   0.944  vga_ip_0/USER_LOGIC_I/vga_ena2 (vga_ip_0/USER_LOGIC_I/vga_ena2)
+     LUT6:I0->O            1   0.203   0.924  vga_ip_0/USER_LOGIC_I/vga_ena4 (vga_ip_0/USER_LOGIC_I/vga_ena)
+     LUT6:I1->O            2   0.203   0.961  vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_1598_o11 (vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_1598_o1)
+     LUT6:I1->O           17   0.203   1.392  vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_1598_o2 (vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_1598_o)
+     LUT6:I0->O            5   0.203   0.715  vga_ip_0/USER_LOGIC_I/Mmux_vga_data61 (vga_ip_0/USER_LOGIC_I/Mmux_vga_data61)
+     LUT3:I2->O            1   0.205   0.580  vga_ip_0/USER_LOGIC_I/Mmux_vga_data21 (vga_ip_0/USER_LOGIC_I/Mmux_vga_data2)
+     LUT5:I4->O            0   0.205   0.000  vga_ip_0/USER_LOGIC_I/Mmux_vga_data23 (VGA_B<1>)
     ----------------------------------------
-    Total                     10.125ns (2.280ns logic, 7.845ns route)
+    Total                     10.218ns (2.282ns logic, 7.936ns route)
+                                       (22.3% logic, 77.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_1598_o'
+  Total number of paths / destination ports: 2878 / 8
+-------------------------------------------------------------------------
+Offset:              8.227ns (Levels of Logic = 7)
+  Source:            vga_ip_0/USER_LOGIC_I/menu_pos_8 (LATCH)
+  Destination:       VGA_B<1> (PAD)
+  Source Clock:      vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_1598_o rising
+
+  Data Path: vga_ip_0/USER_LOGIC_I/menu_pos_8 to VGA_B<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q          150   0.498   2.373  vga_ip_0/USER_LOGIC_I/menu_pos_8 (vga_ip_0/USER_LOGIC_I/menu_pos_8)
+     LUT6:I0->O            1   0.203   0.827  vga_ip_0/mux3_1914 (vga_ip_0/mux3_1914)
+     LUT6:I2->O            1   0.203   0.827  vga_ip_0/mux3_145 (vga_ip_0/mux3_145)
+     LUT6:I2->O            1   0.203   0.827  vga_ip_0/mux3_91 (vga_ip_0/mux3_91)
+     LUT6:I2->O            1   0.203   0.000  vga_ip_0/mux3_4 (vga_ip_0/mux3_4)
+     MUXF7:I0->O           5   0.131   0.943  vga_ip_0/mux3_2_f7 (vga_ip_0/USER_LOGIC_I/menu_pos[1]_X_20_o_wide_mux_503_OUT<0>)
+     LUT3:I0->O            1   0.205   0.580  vga_ip_0/USER_LOGIC_I/Mmux_vga_data21 (vga_ip_0/USER_LOGIC_I/Mmux_vga_data2)
+     LUT5:I4->O            0   0.205   0.000  vga_ip_0/USER_LOGIC_I/Mmux_vga_data23 (VGA_B<1>)
+    ----------------------------------------
+    Total                      8.227ns (1.851ns logic, 6.376ns route)
                                        (22.5% logic, 77.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'vga_ip_0/USER_LOGIC_I/vga_data<6>2'
-  Total number of paths / destination ports: 7798014 / 8
+Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
+  Total number of paths / destination ports: 5776 / 48
 -------------------------------------------------------------------------
-Offset:              13.475ns (Levels of Logic = 22)
-  Source:            vga_ip_0/USER_LOGIC_I/y_center_8 (LATCH)
-  Destination:       VGA_R<1> (PAD)
-  Source Clock:      vga_ip_0/USER_LOGIC_I/vga_data<6>2 falling
+Offset:              6.668ns (Levels of Logic = 7)
+  Source:            vga_ip_0/USER_LOGIC_I/menu_299_258 (FF)
+  Destination:       VGA_B<1> (PAD)
+  Source Clock:      SPLB_Clk rising
 
-  Data Path: vga_ip_0/USER_LOGIC_I/y_center_8 to VGA_R<1>
+  Data Path: vga_ip_0/USER_LOGIC_I/menu_299_258 to VGA_B<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.447   0.864  vga_ip_0/USER_LOGIC_I/menu_299_258 (vga_ip_0/USER_LOGIC_I/menu_299_258)
+     LUT6:I2->O            1   0.203   0.827  vga_ip_0/mux3_1914 (vga_ip_0/mux3_1914)
+     LUT6:I2->O            1   0.203   0.827  vga_ip_0/mux3_145 (vga_ip_0/mux3_145)
+     LUT6:I2->O            1   0.203   0.827  vga_ip_0/mux3_91 (vga_ip_0/mux3_91)
+     LUT6:I2->O            1   0.203   0.000  vga_ip_0/mux3_4 (vga_ip_0/mux3_4)
+     MUXF7:I0->O           5   0.131   0.943  vga_ip_0/mux3_2_f7 (vga_ip_0/USER_LOGIC_I/menu_pos[1]_X_20_o_wide_mux_503_OUT<0>)
+     LUT3:I0->O            1   0.205   0.580  vga_ip_0/USER_LOGIC_I/Mmux_vga_data21 (vga_ip_0/USER_LOGIC_I/Mmux_vga_data2)
+     LUT5:I4->O            0   0.205   0.000  vga_ip_0/USER_LOGIC_I/Mmux_vga_data23 (VGA_B<1>)
+    ----------------------------------------
+    Total                      6.668ns (1.800ns logic, 4.868ns route)
+                                       (27.0% logic, 73.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_AND_2702_o'
+  Total number of paths / destination ports: 6972336 / 8
+-------------------------------------------------------------------------
+Offset:              13.495ns (Levels of Logic = 23)
+  Source:            vga_ip_0/USER_LOGIC_I/y_center_8 (LATCH)
+  Destination:       VGA_G<1> (PAD)
+  Source Clock:      vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_AND_2702_o falling
+
+  Data Path: vga_ip_0/USER_LOGIC_I/y_center_8 to VGA_G<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      LD:G->Q               1   0.498   0.580  vga_ip_0/USER_LOGIC_I/y_center_8 (vga_ip_0/USER_LOGIC_I/y_center_8)
-     LUT2:I1->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_lut<1> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_lut<1>)
-     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<1> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<2> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<3> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<4> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<5> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<6> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<7> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<8> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<8>)
-     MUXCY:CI->O           0   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<9> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_cy<9>)
-     XORCY:CI->O          16   0.180   1.004  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_160_OUT_xor<10> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_sub_160_OUT<10>)
-     DSP48A1:A10->PCOUT47    1   4.469   0.000  vga_ip_0/USER_LOGIC_I/Mmult_n0530 (vga_ip_0/USER_LOGIC_I/Mmult_n0530_PCOUT_to_Maddsub_n0528_PCIN_47)
-     DSP48A1:PCIN47->P5    3   2.264   0.995  vga_ip_0/USER_LOGIC_I/Maddsub_n0528 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_add_162_OUT<5>)
-     LUT5:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_lut<1>)
-     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<2> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<3> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<4> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<5> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<5>)
-     MUXCY:CI->O           5   0.213   0.962  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_164_o_cy<6> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_LessThan_164_o)
-     LUT6:I2->O            1   0.203   0.924  vga_ip_0/USER_LOGIC_I/vga_data<2>1 (vga_ip_0/USER_LOGIC_I/vga_data<2>)
-     LUT6:I1->O            0   0.203   0.000  vga_ip_0/USER_LOGIC_I/vga_data<2>2 (VGA_R<2>)
+     LUT2:I1->O            1   0.205   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_lut<1> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<1> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<2> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<3> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<4> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<5> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<6> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<7> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<8> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<8>)
+     MUXCY:CI->O           0   0.019   0.000  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<9> (vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_cy<9>)
+     XORCY:CI->O          16   0.180   1.004  vga_ip_0/USER_LOGIC_I/Msub_GND_20_o_GND_20_o_sub_472_OUT_xor<10> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_sub_472_OUT<10>)
+     DSP48A1:A10->PCOUT47    1   4.469   0.000  vga_ip_0/USER_LOGIC_I/Mmult_n1455 (vga_ip_0/USER_LOGIC_I/Mmult_n1455_PCOUT47_to_USER_LOGIC_I/Maddsub_n1453_PCIN47)
+     DSP48A1:PCIN47->P4    4   2.264   1.028  vga_ip_0/USER_LOGIC_I/Maddsub_n1453 (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_add_474_OUT<4>)
+     LUT5:I0->O            1   0.203   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_lut<0> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<0> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<1> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<2> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<3> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<4> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<5> (vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<5>)
+     MUXCY:CI->O           4   0.213   1.028  vga_ip_0/USER_LOGIC_I/Mcompar_GND_20_o_GND_20_o_LessThan_476_o_cy<6> (vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_LessThan_476_o)
+     LUT6:I1->O            1   0.203   0.827  vga_ip_0/VGA_G<2>1 (vga_ip_0/VGA_G<2>)
+     LUT6:I2->O            0   0.203   0.000  vga_ip_0/VGA_G<2>2 (VGA_G<2>)
     ----------------------------------------
-    Total                     13.475ns (9.010ns logic, 4.465ns route)
+    Total                     13.495ns (9.029ns logic, 4.466ns route)
                                        (66.9% logic, 33.1% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 1768 / 48
--------------------------------------------------------------------------
-Offset:              5.931ns (Levels of Logic = 5)
-  Source:            vga_ip_0/USER_LOGIC_I/board_63_65 (FF)
-  Destination:       VGA_R<1> (PAD)
-  Source Clock:      SPLB_Clk rising
-
-  Data Path: vga_ip_0/USER_LOGIC_I/board_63_65 to VGA_R<1>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDRE:C->Q             2   0.447   0.864  vga_ip_0/USER_LOGIC_I/board_63_65 (vga_ip_0/USER_LOGIC_I/board_63_65)
-     LUT6:I2->O            1   0.203   0.827  vga_ip_0/USER_LOGIC_I/mux2_124 (vga_ip_0/USER_LOGIC_I/mux2_124)
-     LUT6:I2->O            1   0.203   0.827  vga_ip_0/USER_LOGIC_I/mux2_71 (vga_ip_0/USER_LOGIC_I/mux2_71)
-     LUT6:I2->O            4   0.203   1.028  vga_ip_0/USER_LOGIC_I/board_pos<2>21 (vga_ip_0/USER_LOGIC_I/n0525[2:0]<2>)
-     LUT6:I1->O            1   0.203   0.924  vga_ip_0/USER_LOGIC_I/vga_data<2>1 (vga_ip_0/USER_LOGIC_I/vga_data<2>)
-     LUT6:I1->O            0   0.203   0.000  vga_ip_0/USER_LOGIC_I/vga_data<2>2 (VGA_R<2>)
-    ----------------------------------------
-    Total                      5.931ns (1.462ns logic, 4.469ns route)
-                                       (24.6% logic, 75.4% route)
 
 =========================================================================
 
@@ -1522,7 +1567,7 @@ Clock to Setup on destination clock CLK_25M
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_25M        |    4.931|         |         |         |
+CLK_25M        |    4.876|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock SPLB_Clk
@@ -1530,37 +1575,46 @@ Clock to Setup on destination clock SPLB_Clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-SPLB_Clk       |    4.841|         |         |         |
+SPLB_Clk       |    6.756|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock vga_ip_0/USER_LOGIC_I/vga_data<6>2
-----------------------------------+---------+---------+---------+---------+
-                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------------------------+---------+---------+---------+---------+
-vga_ip_0/USER_LOGIC_I/vga_data<6>2|         |         |    4.297|         |
-vga_ip_0/USER_LOGIC_I/vga_ena     |         |         |   87.923|         |
-----------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_AND_2702_o
+--------------------------------------------------+---------+---------+---------+---------+
+                                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------+---------+---------+---------+---------+
+vga_ip_0/USER_LOGIC_I/GND_20_o_GND_20_o_AND_2702_o|         |         |    4.399|         |
+vga_ip_0/USER_LOGIC_I/vga_ena                     |         |         |   87.924|         |
+--------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock vga_ip_0/USER_LOGIC_I/GND_20_o_y_cor[0]_AND_1598_o
+-----------------------------+---------+---------+---------+---------+
+                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------+---------+---------+---------+---------+
+CLK_25M                      |    7.882|         |         |         |
+vga_ip_0/USER_LOGIC_I/vga_ena|         |    5.094|         |         |
+-----------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock vga_ip_0/USER_LOGIC_I/vga_ena
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK_25M        |         |         |    2.885|         |
+CLK_25M        |         |         |    2.858|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 33.00 secs
-Total CPU time to Xst completion: 32.88 secs
+Total REAL time to Xst completion: 47.00 secs
+Total CPU time to Xst completion: 47.02 secs
  
 --> 
 
-Total memory usage is 243204 kilobytes
+Total memory usage is 253636 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  186 (   0 filtered)
-Number of infos    :    9 (   0 filtered)
+Number of warnings :  166 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
 

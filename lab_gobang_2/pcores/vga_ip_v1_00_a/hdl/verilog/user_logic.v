@@ -134,12 +134,14 @@ output                                    IP2Bus_Error;
   reg        [0 : 9]                        x_cor;
   reg        [0 : 9]                        y_cor;
   reg        [0 : 2]                        board[0 : 63];
+  reg        [0 : 1]                        menu[0 : 299];
   reg        [0 : 7]                        colormap[0 : 3];
   reg        [0 : 9]                        x_center;
   reg        [0 : 9]                        y_center;
   reg        [0 : 5]                        x_pos;
   reg        [0 : 5]                        y_pos;
   reg        [0 : 7]                        board_pos;
+  reg        [0 : 9]                        menu_pos;
   integer                                   i;
   // Nets for user logic slave model s/w accessible register example
   reg        [0 : C_SLV_DWIDTH-1]           slv_reg0;
@@ -164,12 +166,19 @@ output                                    IP2Bus_Error;
     if ( Bus2IP_Reset == 1 )
 	   begin
 		  for (i = 0; i < 64; i=i+1)
-		    board[i] <= 2'b10;
+		    board[i] <= 3'b010;
+		  for (i = 0; i < 300; i=i+1)
+		    menu[i] <= 2'b10;
 		end
 	 else
 	   begin
         if ( Bus2IP_WrCE == 1'b1)
-		    board[Bus2IP_Data[0 : 7] + Bus2IP_Data[8 : 15] * 8] <= Bus2IP_Data[24 : 31];
+		    begin
+			   if (Bus2IP_Data[16 : 23]== 0)
+		        board[Bus2IP_Data[0 : 7] + Bus2IP_Data[8 : 15] * 8] <= Bus2IP_Data[24 : 31];
+				else if (Bus2IP_Data[16 : 23]== 1)
+				  menu[Bus2IP_Data[0 : 7] + Bus2IP_Data[8 : 15] * 10] <= Bus2IP_Data[24 : 31];
+			 end
 		end
   end
   
@@ -258,10 +267,16 @@ output                                    IP2Bus_Error;
 	 else if (vga_ena == 1 && x_cor >= 480 && x_cor <= 640 && y_cor < 480)
 	 // 开始绘制右边160*480的menu部分==================================================================
 	   begin
-		  if (y_cor <= 15 || (y_cor >= 155 && y_cor <= 170) || (y_cor >= 310 && y_cor <= 325) || y_cor >= 465)
-		    vga_data <= menulinecolor;
+		  menu_pos <= (x_cor - 480) / 16 + y_cor / 16 * 10;
+		  if (menu_pos < 300)
+		    begin
+		      if (menu[menu_pos] == 2'b10)
+              vga_data <= menucolor;
+            else
+              vga_data <= colormap[menu[menu_pos]];
+		    end
 		  else
-		    vga_data <= menucolor;
+		    vga_data <= 0;
 		end
 		// menu部分的绘制结束==========================================================================
 	 else

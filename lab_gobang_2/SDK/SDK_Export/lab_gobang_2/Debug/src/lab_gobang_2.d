@@ -10,7 +10,7 @@ src/lab_gobang_2.d: ../src/lab_gobang_2.c \
  ../../standalone_bsp_0/microblaze_0/include/xutil.h \
  ../../standalone_bsp_0/microblaze_0/include/vga_ip.h \
  ../../standalone_bsp_0/microblaze_0/include/xps2.h \
- ../../standalone_bsp_0/microblaze_0/include/xps2_l.h
+ ../../standalone_bsp_0/microblaze_0/include/xps2_l.h ../src/MenuDraw.h
 
 ../../standalone_bsp_0/microblaze_0/include/xparameters.h:
 
@@ -35,3 +35,5 @@ src/lab_gobang_2.d: ../src/lab_gobang_2.c \
 ../../standalone_bsp_0/microblaze_0/include/xps2.h:
 
 ../../standalone_bsp_0/microblaze_0/include/xps2_l.h:
+
+../src/MenuDraw.h:
