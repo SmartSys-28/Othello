@@ -4,6 +4,8 @@
 #include "vga_ip.h"
 #include "xps2.h"
 
+#include "MenuDraw.h"
+
 //====================================================
 int Board_size = 8;
 int Black_num;
@@ -39,8 +41,11 @@ void DrawChess(int x_pos, int y_pos, int turn) {
 }
 
 // 这个函数的话，是一个专门抹去光标的函数（因为光标要在棋盘上不停移动，在移动到下一个位置时，要把上一个位置的光标还原回棋子颜色）
-void EraseCursor(int x_pos, int y_pos) {
-	DrawChess(x_pos, y_pos, board_state[x_pos][y_pos]);
+void EraseCursor(int x_pos, int y_pos, int turn) {
+	if (turn == 1 && board_state[x_pos][y_pos] == 4)
+		DrawChess(x_pos, y_pos, 5);
+	else
+		DrawChess(x_pos, y_pos, board_state[x_pos][y_pos]);
 }
 
 void EraseLittleChess() {
@@ -666,6 +671,7 @@ int main(void) {
 	FindAvailable(turn);
 	DrawAvailable(turn);
 	DrawChess(x_cur, y_cur, 3); // 画出初始的旗子所在处的颜色，其中3这个参数代表的颜色应该是移动的光标的颜色
+	DrawMenu();
 
 	while (1) { // 进入了主循环之中，游戏开始！
 		do {
@@ -676,7 +682,7 @@ int main(void) {
 		count = (count + 1) % 3; // 这个count的功能是？防抖吗？似乎对主程序没有逻辑上的影响
 		if (count == 1) {
 			if (RxBuffer == 0x1D && win_status == -1) { // 0x1D这个值应该对应的是往上移动，也就是W键
-				EraseCursor(x_cur, y_cur);
+				EraseCursor(x_cur, y_cur, turn);
 				if (y_cur == 0)
 					y_cur = 7;
 				else
@@ -684,7 +690,7 @@ int main(void) {
 				DrawChess(x_cur, y_cur, 3);
 			}
 			if (RxBuffer == 0x1B && win_status == -1) { // 0x1B这个值应该对应的是向下移动，也就是S键
-				EraseCursor(x_cur, y_cur);
+				EraseCursor(x_cur, y_cur, turn);
 				if (y_cur == 7)
 					y_cur = 0;
 				else
@@ -692,7 +698,7 @@ int main(void) {
 				DrawChess(x_cur, y_cur, 3);
 			}
 			if (RxBuffer == 0x1C && win_status == -1) { // 0x1C这个值对应的应该是向左移动，也就是A键
-				EraseCursor(x_cur, y_cur);
+				EraseCursor(x_cur, y_cur, turn);
 				if (x_cur == 0)
 					x_cur = 7;
 				else
@@ -700,7 +706,7 @@ int main(void) {
 				DrawChess(x_cur, y_cur, 3);
 			}
 			if (RxBuffer == 0x23 && win_status == -1) { // 0x23这个值对应的应该是向右移动，也就是D键
-				EraseCursor(x_cur, y_cur);
+				EraseCursor(x_cur, y_cur, turn);
 				if (x_cur == 7)
 					x_cur = 0;
 				else
@@ -723,6 +729,8 @@ int main(void) {
 					flip(x_cur, y_cur, turn);
 					win_status = check_win();
 					if (win_status != -1) { // 若有一方胜利了，本轮游戏结束
+						DrawScore(White_num, 0);
+						DrawScore(Black_num, 1);
 						Draw_win(win_status);//画出显示胜利的棋盘形状
 						//						xil_printf("\r\nPlayer %x wins!\r\n", turn + 1);
 						//						return 0;
@@ -736,6 +744,9 @@ int main(void) {
 						DrawAvailable(turn);
 					}
 				}
+				DrawScore(White_num, 0);
+				DrawScore(Black_num, 1);
+
 			}
 
 			if (RxBuffer == 0x76) { // 0x1C这个值对应的应该是restart，对应的是esc键

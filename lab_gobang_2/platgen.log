@@ -215,8 +215,6 @@ Copying cache implementation netlist
 IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
 F:\xps\Othello-28\lab_gobang_2\system.mhs line 215 - Copying cache
 implementation netlist
-IPNAME:vga_ip INSTANCE:vga_ip_0 - F:\xps\Othello-28\lab_gobang_2\system.mhs line
-228 - Copying cache implementation netlist
 IPNAME:xps_ps2 INSTANCE:xps_ps2_0 - F:\xps\Othello-28\lab_gobang_2\system.mhs
 line 243 - Copying cache implementation netlist
 
@@ -262,4 +260,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 58.00 seconds
+Total run time: 64.00 seconds
