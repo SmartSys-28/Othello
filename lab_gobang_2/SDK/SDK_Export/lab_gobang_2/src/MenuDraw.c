@@ -376,6 +376,5 @@ void DrawMenu() {
 			VGA_IP_mWriteReg(XPAR_VGA_IP_0_BASEADDR, 0, vga_input);
 		}
 	}
-	DrawScore(2, 0); // 初始化显示出白棋的分数
-	DrawScore(2, 1); // 初始化显示出黑棋的分数
+
 }

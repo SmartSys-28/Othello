@@ -11,6 +11,65 @@ int Board_size = 8;
 int Black_num;
 int White_num;
 int board_state[8][8];
+//int *p1[2];
+int stack[50];
+int depth;
+const int INFINITE = 99999;
+//void push(int *x) {
+//	if(depth % 2 == 0) {
+//		if(p1[0] != NULL) free(p1[0]);
+//		p1[0] = x;
+//	}
+//	else if(depth % 2 == 1) {
+//		if(p1[1] != NULL) free(p1[1]);
+//		p1[1] = x;
+//	}
+//	depth = (depth + 1) % 2;
+//	p1[depth] = x;
+//	depth++;
+//}
+
+const int EVAL_SCORES[64] = { 500, -150, 30, 10, 10, 30, -150, 500, -150, -250,
+		0, 0, 0, 0, -250, -150, 30, 0, 1, 2, 2, 1, 0, 30, 10, 0, 2, 16, 16, 2,
+		0, 10, 10, 0, 2, 16, 16, 2, 0, 10, 30, 0, 1, 2, 2, 1, 0, 30, -150,
+		-250, 0, 0, 0, 0, -250, -150, 500, -150, 30, 10, 10, 30, -150, 500 };
+
+//int* pop() {
+//	depth = 1 - depth;
+//	return p1[depth];
+//}
+
+void lpush(int x) {
+	if (depth >= 50)
+		return;
+	stack[depth] = x;
+	depth++;
+}
+
+int lpop() {
+	if (depth <= 0)
+		return -1;
+	depth--;
+	return stack[depth];
+}
+int find_best( turn) { //½ö½ö°´ÕÕEVAL_SCORESµÄÖµÑ¡Ôñ£¬Ñ¡Ôñ×î´óµÄÄÇ¸ö
+	int quality = -INFINITE;
+	int best_pos = -1;
+	int temp_pos = -1;
+	int a = 0, b = 0;
+	for (a = 0; a < Board_size; a++) {
+		for (b = 0; b < Board_size; b++) {
+			if (board_state[a][b] == 4) {
+				temp_pos = a * Board_size + b;
+				if (EVAL_SCORES[temp_pos] > quality) {
+					best_pos = temp_pos;
+					quality = EVAL_SCORES[best_pos];
+				}
+			}
+		}
+	}
+	return best_pos;
+}
 
 // ÔÚÏÂÃæµÄ³ÌĞòÖĞ£¬ÎÒÃÇÒª·ÖÇåx_cor, y_corºÍx_pos, y_posµÄÇø±ğ¡£
 // ÆäÖĞ£¬x_posºÍy_posÊÇboardÉÏµÄ²ÎÊı£¬ÊÇ·Ç³£Õı³£µÄÒ»¸öintÊı¡£´ú±íÁËÆå×ÓËùÔÚµÄÄ³Ò»ĞĞÄ³Ò»ÁĞ
@@ -68,7 +127,10 @@ void DrawAvailable(int turn) {
 		}
 }
 
-int IsAvailable(int turn) { // ÕÒ³ö¿ÉÒÔÂä×ÓµÄÎ»ÖÃ£¬»­³öĞèµ÷ÓÃDrawAvailable() //·µ»ØÖµ1ÎªÓĞ×Ó¿ÉÏÂ£¬·µ»ØÖµÎª0ÎªÎŞ×Ó¿ÉÏÂ
+int FindAvailable(int turn, int CheckOrFind) { // ÕÒ³ö¿ÉÒÔÂä×ÓµÄÎ»ÖÃ£¬»­³öĞèµ÷ÓÃDrawAvailable() //·µ»ØÖµ1ÎªÓĞ×Ó¿ÉÏÂ£¬·µ»ØÖµÎª0ÎªÎŞ×Ó¿ÉÏÂ
+	//Èç¹ûÖ»ÊÇ²éÑ¯ÊÇ·ñÓĞ×Ó¿ÉÒÔÏÂCheckOrFind=0(Ô­IsAvailableµÄ¹¦ÄÜ)£¬Èç¹ûÒªÔÚÆåÅÌÉÏ»­ÉÏ¿ÉÏÂµÄÎ»ÖÃCheckOrFind=1
+	if (CheckOrFind)
+		EraseLittleChess();
 	int i, j;
 	int flip_flag, flip_flag2;
 	int result = 0;
@@ -90,7 +152,8 @@ int IsAvailable(int turn) { // ÕÒ³ö¿ÉÒÔÂä×ÓµÄÎ»ÖÃ£¬»­³öĞèµ÷ÓÃDrawAvailable() //·
 						}
 					}
 				if (flip_flag != -1) {
-					//board_state[x_pos][y_pos] = 4;
+					if (CheckOrFind)
+						board_state[x_pos][y_pos] = 4;
 					continue;
 				}
 
@@ -108,7 +171,8 @@ int IsAvailable(int turn) { // ÕÒ³ö¿ÉÒÔÂä×ÓµÄÎ»ÖÃ£¬»­³öĞèµ÷ÓÃDrawAvailable() //·
 						}
 					}
 				if (flip_flag != -1) {
-					//board_state[x_pos][y_pos] = 4;
+					if (CheckOrFind)
+						board_state[x_pos][y_pos] = 4;
 					continue;
 				}
 
@@ -126,7 +190,8 @@ int IsAvailable(int turn) { // ÕÒ³ö¿ÉÒÔÂä×ÓµÄÎ»ÖÃ£¬»­³öĞèµ÷ÓÃDrawAvailable() //·
 						}
 					}
 				if (flip_flag != -1) {
-					//board_state[x_pos][y_pos] = 4;
+					if (CheckOrFind)
+						board_state[x_pos][y_pos] = 4;
 					continue;
 				}
 
@@ -144,7 +209,8 @@ int IsAvailable(int turn) { // ÕÒ³ö¿ÉÒÔÂä×ÓµÄÎ»ÖÃ£¬»­³öĞèµ÷ÓÃDrawAvailable() //·
 						}
 					}
 				if (flip_flag != -1) {
-					//board_state[x_pos][y_pos] = 4;
+					if (CheckOrFind)
+						board_state[x_pos][y_pos] = 4;
 					continue;
 				}
 
@@ -164,7 +230,8 @@ int IsAvailable(int turn) { // ÕÒ³ö¿ÉÒÔÂä×ÓµÄÎ»ÖÃ£¬»­³öĞèµ÷ÓÃDrawAvailable() //·
 						}
 					}
 				if (flip_flag != -1) {
-					//board_state[x_pos][y_pos] = 4;
+					if (CheckOrFind)
+						board_state[x_pos][y_pos] = 4;
 					continue;
 				}
 
@@ -183,7 +250,8 @@ int IsAvailable(int turn) { // ÕÒ³ö¿ÉÒÔÂä×ÓµÄÎ»ÖÃ£¬»­³öĞèµ÷ÓÃDrawAvailable() //·
 						}
 					}
 				if (flip_flag != -1) {
-					//board_state[x_pos][y_pos] = 4;
+					if (CheckOrFind)
+						board_state[x_pos][y_pos] = 4;
 					continue;
 				}
 
@@ -202,7 +270,8 @@ int IsAvailable(int turn) { // ÕÒ³ö¿ÉÒÔÂä×ÓµÄÎ»ÖÃ£¬»­³öĞèµ÷ÓÃDrawAvailable() //·
 						}
 					}
 				if (flip_flag != -1) {
-					//board_state[x_pos][y_pos] = 4;
+					if (CheckOrFind)
+						board_state[x_pos][y_pos] = 4;
 					continue;
 				}
 
@@ -221,181 +290,23 @@ int IsAvailable(int turn) { // ÕÒ³ö¿ÉÒÔÂä×ÓµÄÎ»ÖÃ£¬»­³öĞèµ÷ÓÃDrawAvailable() //·
 						}
 					}
 				if (flip_flag != -1) {
-					;
-					//board_state[x_pos][y_pos] = 4;
+					if (CheckOrFind)
+						board_state[x_pos][y_pos] = 4;
 					continue;
 				}
 			}
-	return result;
-}
-int FindAvailable(int turn) { // ÕÒ³ö¿ÉÒÔÂä×ÓµÄÎ»ÖÃ£¬»­³öĞèµ÷ÓÃDrawAvailable() //·µ»ØÖµ1ÎªÓĞ×Ó¿ÉÏÂ£¬·µ»ØÖµÎª0ÎªÎŞ×Ó¿ÉÏÂ
-	int i, j;
-	int flip_flag, flip_flag2;
-	int result = 0;
-	int x_pos, y_pos;
-	for (x_pos = 0; x_pos < Board_size; x_pos++) //0°×1ºÚ2ÎŞ×Ó3¹â±ê4¿ÉÒÔÏÂ
-		for (y_pos = 0; y_pos < Board_size; y_pos++) //board_stateÖ»È¡0 1 2£¬4±íÊ¾¿ÉÒÔÏÂ
-			if (board_state[x_pos][y_pos] == 2) {
-				flip_flag = -1;
-				if ((x_pos + 1 < Board_size) && (board_state[x_pos + 1][y_pos]
-						== (1 - turn)))
-					for (i = x_pos + 1; i < Board_size; i++) { // ÍùÓÒË®Æ½·½Ïò½øĞĞÅĞ¶Ï£¬¿´¿´ÓĞ¶àÉÙ¸öÍ¬ÑÕÉ«Æå×ÓÅÅÁĞ
-						if (board_state[i][y_pos] == 2 || board_state[i][y_pos]
-								== 4)
-							break;
-						else if (board_state[i][y_pos] == turn) { //ÅĞ¶ÏÕâ¸ö·½ÏòÉÏÊÇ·ñÓĞ¿ÉÒÔ·­×ªµÄÆå×Ó
-							flip_flag = i;
-							result = 1;
-							break;
-						}
-					}
-				if (flip_flag != -1) {
-					board_state[x_pos][y_pos] = 4;
-					continue;
-				}
-
-				flip_flag = -1;
-				if ((x_pos - 1 >= 0) && (board_state[x_pos - 1][y_pos] == (1
-						- turn)))
-					for (i = x_pos - 1; i >= 0; i--) { // Íù×óË®Æ½·½Ïò½øĞĞÅĞ¶Ï£¬¿´¿´ÓĞ¶àÉÙ¸öÍ¬ÑÕÉ«Æå×ÓÅÅÁĞ
-						if (board_state[i][y_pos] == 2 || board_state[i][y_pos]
-								== 4)
-							break;
-						else if (board_state[i][y_pos] == turn) { //ÅĞ¶ÏÕâ¸ö·½ÏòÉÏÊÇ·ñÓĞ¿ÉÒÔ·­×ªµÄÆå×Ó
-							flip_flag = i;
-							result = 1;
-							break;
-						}
-					}
-				if (flip_flag != -1) {
-					board_state[x_pos][y_pos] = 4;
-					continue;
-				}
-
-				flip_flag = -1;
-				if ((y_pos + 1 < Board_size) && (board_state[x_pos][y_pos + 1]
-						== (1 - turn)))
-					for (i = y_pos + 1; i < Board_size; i++) { // ÍùÉÏÊúÖ±·½Ïò½øĞĞÅĞ¶Ï£¬¿´¿´ÓĞ¶àÉÙ¸öÍ¬ÑÕÉ«Æå×ÓÅÅÁĞ
-						if (board_state[x_pos][i] == 2 || board_state[x_pos][i]
-								== 4)
-							break;
-						else if (board_state[x_pos][i] == turn) {
-							flip_flag = i;
-							result = 1;
-							break;
-						}
-					}
-				if (flip_flag != -1) {
-					board_state[x_pos][y_pos] = 4;
-					continue;
-				}
-
-				flip_flag = -1;
-				if ((y_pos - 1 >= 0) && (board_state[x_pos][y_pos - 1] == (1
-						- turn)))
-					for (i = y_pos - 1; i >= 0; i--) { // ÍùÏÂÊúÖ±·½Ïò½øĞĞÅĞ¶Ï£¬¿´¿´ÓĞ¶àÉÙ¸öÍ¬ÑÕÉ«Æå×ÓÅÅÁĞ
-						if (board_state[x_pos][i] == 2 || board_state[x_pos][i]
-								== 4)
-							break;
-						else if (board_state[x_pos][i] == turn) {
-							flip_flag = i;
-							result = 1;
-							break;
-						}
-					}
-				if (flip_flag != -1) {
-					board_state[x_pos][y_pos] = 4;
-					continue;
-				}
-
-				flip_flag = -1;
-				flip_flag2 = -1;
-				if (((x_pos + 1) < Board_size && (y_pos + 1) < Board_size)
-						&& (board_state[x_pos + 1][y_pos + 1] == (1 - turn)))
-					for (i = x_pos + 1, j = y_pos + 1; i < Board_size && j
-							< Board_size; i++, j++) { // Íù¶«±±·½Ïò½øĞĞÅĞ¶Ï£¬¿´¿´ÓĞ¶àÉÙ¸öÍ¬ÑÕÉ«Æå×ÓÅÅÁĞ
-						if (board_state[i][j] == 2 || board_state[i][j] == 4)
-							break;
-						else if (board_state[i][j] == turn) {
-							flip_flag = i;
-							flip_flag2 = j;
-							result = 1;
-							break;
-						}
-					}
-				if (flip_flag != -1) {
-					board_state[x_pos][y_pos] = 4;
-					continue;
-				}
-
-				flip_flag = -1;
-				flip_flag2 = -1;
-				if (((x_pos - 1) >= 0 && (y_pos - 1) >= 0)
-						&& (board_state[x_pos - 1][y_pos - 1] == (1 - turn)))
-					for (i = x_pos - 1, j = y_pos - 1; i >= 0 && j >= 0; i--, j--) { // ÍùÎ÷ÄÏ·½Ïò½øĞĞÅĞ¶Ï£¬¿´¿´ÓĞ¶àÉÙ¸öÍ¬ÑÕÉ«Æå×ÓÅÅÁĞ
-						if (board_state[i][j] == 2 || board_state[i][j] == 4)
-							break;
-						else if (board_state[i][j] == turn) {
-							flip_flag = i;
-							flip_flag2 = j;
-							result = 1;
-							break;
-						}
-					}
-				if (flip_flag != -1) {
-					board_state[x_pos][y_pos] = 4;
-					continue;
-				}
-
-				flip_flag = -1;
-				flip_flag2 = -1;
-				if (((x_pos + 1) < Board_size && (y_pos - 1) >= 0)
-						&& (board_state[x_pos + 1][y_pos - 1] == (1 - turn)))
-					for (i = x_pos + 1, j = y_pos - 1; i < Board_size && j >= 0; i++, j--) { // Íù¶«ÄÏ·½Ïò½øĞĞÅĞ¶Ï£¬¿´¿´ÓĞ¶àÉÙ¸öÍ¬ÑÕÉ«Æå×ÓÅÅÁĞ
-						if (board_state[i][j] == 2 || board_state[i][j] == 4)
-							break;
-						else if (board_state[i][j] == turn) {
-							flip_flag = i;
-							flip_flag2 = j;
-							result = 1;
-							break;
-						}
-					}
-				if (flip_flag != -1) {
-					board_state[x_pos][y_pos] = 4;
-					continue;
-				}
-
-				flip_flag = -1;
-				flip_flag2 = -1;
-				if (((x_pos - 1) >= 0 && (y_pos + 1) < Board_size)
-						&& (board_state[x_pos - 1][y_pos + 1] == (1 - turn)))
-					for (i = x_pos - 1, j = y_pos + 1; i >= 0 && j < Board_size; i--, j++) { // ÍùÎ÷±±·½Ïò½øĞĞÅĞ¶Ï£¬¿´¿´ÓĞ¶àÉÙ¸öÍ¬ÑÕÉ«Æå×ÓÅÅÁĞ
-						if (board_state[i][j] == 2 || board_state[i][j] == 4)
-							break;
-						else if (board_state[i][j] == turn) {
-							flip_flag = i;
-							flip_flag2 = j;
-							result = 1;
-							break;
-						}
-					}
-				if (flip_flag != -1) {
-					;
-					board_state[x_pos][y_pos] = 4;
-					continue;
-				}
-			}
+	if (CheckOrFind)
+		DrawAvailable(turn);
 	return result;
 }
 
 // ¹À¼ÆÔÚmainº¯ÊıÖ®ÖĞ£¬Ã¿Ò»´ÎÏÂ×ÓÍê¶¼»áµ÷ÓÃÕâ¸öº¯Êı£¬À´ÅĞ¶ÏÊÇ·ñÓĞÒ»·½»ñµÃÁËÊ¤Àû£¨ÎÒ²Â²âµÄ£©
 int check_win() { //0°×Ó®£¬1ºÚÓ®£¬2Æ½¾Ö,-1Ã»ÓĞÈËÓ®,
-	if (Black_num == 0)
+	if (Black_num == 0)//ºÚ×ÓÊıÎª0
 		return 0;
-	if (White_num == 0)
+	if (White_num == 0)//°××ÓÊıÎª0
 		return 1;
-	if ((IsAvailable(0) == 0 && IsAvailable(1) == 0)
+	if ((FindAvailable(0, 0) == 0 && FindAvailable(1, 0) == 0)//Ë«·½¶¼ÎŞ×Ó¿ÉÏÂ
 			|| ((Black_num + White_num) == Board_size * Board_size)) {
 		if (Black_num > White_num)
 			return 1;
@@ -409,6 +320,9 @@ int check_win() { //0°×Ó®£¬1ºÚÓ®£¬2Æ½¾Ö,-1Ã»ÓĞÈËÓ®,
 void flip(int x_pos, int y_pos, int turn) { //½öÊµÏÖ·­×ª¹¦ÄÜ
 	int i, j;
 	int flip_flag, flip_flag2, bk_flag;
+	//int *posS = (int*) malloc(sizeof(int) * 50);
+	//posS[0] = 1;
+	depth = 0;
 	flip_flag = -1;
 	if ((x_pos + 1 < Board_size) && (board_state[x_pos + 1][y_pos]
 			== (1 - turn)))
@@ -426,6 +340,7 @@ void flip(int x_pos, int y_pos, int turn) { //½öÊµÏÖ·­×ª¹¦ÄÜ
 		for (i = x_pos + 1; i < flip_flag; i++) {
 			board_state[i][y_pos] = turn;
 			DrawChess(i, y_pos, turn);//»­ÓëturnµÄÑÕÉ«¸²¸Ç
+			lpush(i * Board_size + y_pos);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -449,6 +364,7 @@ void flip(int x_pos, int y_pos, int turn) { //½öÊµÏÖ·­×ª¹¦ÄÜ
 		for (i = x_pos - 1; i > flip_flag; i--) {
 			board_state[i][y_pos] = turn;
 			DrawChess(i, y_pos, turn);//»­ÓëturnµÄÑÕÉ«¸²¸Ç
+			lpush(i * Board_size + y_pos);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -473,6 +389,7 @@ void flip(int x_pos, int y_pos, int turn) { //½öÊµÏÖ·­×ª¹¦ÄÜ
 		for (i = y_pos + 1; i < flip_flag; i++) {
 			board_state[x_pos][i] = turn;
 			DrawChess(x_pos, i, turn);
+			lpush(x_pos * Board_size + i);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -495,6 +412,7 @@ void flip(int x_pos, int y_pos, int turn) { //½öÊµÏÖ·­×ª¹¦ÄÜ
 		for (i = y_pos - 1; i > flip_flag; i--) {
 			board_state[x_pos][i] = turn;
 			DrawChess(x_pos, i, turn);
+			lpush(x_pos * Board_size + i);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -521,6 +439,7 @@ void flip(int x_pos, int y_pos, int turn) { //½öÊµÏÖ·­×ª¹¦ÄÜ
 		for (i = x_pos + 1, j = y_pos + 1; i < flip_flag && j < flip_flag2; i++, j++) {
 			board_state[i][j] = turn;
 			DrawChess(i, j, turn);
+			lpush(i * Board_size + j);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -546,6 +465,7 @@ void flip(int x_pos, int y_pos, int turn) { //½öÊµÏÖ·­×ª¹¦ÄÜ
 		for (i = x_pos - 1, j = y_pos - 1; i > flip_flag && j > flip_flag2; i--, j--) {
 			board_state[i][j] = turn;
 			DrawChess(i, j, turn);
+			lpush(i * Board_size + j);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -572,6 +492,7 @@ void flip(int x_pos, int y_pos, int turn) { //½öÊµÏÖ·­×ª¹¦ÄÜ
 		for (i = x_pos + 1, j = y_pos - 1; i < flip_flag && j > flip_flag2; i++, j--) {
 			board_state[i][j] = turn;
 			DrawChess(i, j, turn);
+			lpush(i * Board_size + j);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -597,6 +518,7 @@ void flip(int x_pos, int y_pos, int turn) { //½öÊµÏÖ·­×ª¹¦ÄÜ
 		for (i = x_pos - 1, j = y_pos + 1; i > flip_flag && j < flip_flag2; i--, j++) {
 			board_state[i][j] = turn;
 			DrawChess(i, j, turn);
+			lpush(i * Board_size + j);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -605,7 +527,33 @@ void flip(int x_pos, int y_pos, int turn) { //½öÊµÏÖ·­×ª¹¦ÄÜ
 				White_num--;
 			}
 		}
-
+	lpush(x_pos * Board_size + y_pos);
+	//push(posS);
+}
+void undo(int turn) {
+	int pos;
+	pos = lpop();
+	board_state[pos / Board_size][pos % Board_size] = 4;
+	DrawChess(pos / Board_size, pos % Board_size, 2);
+	if (turn == 1) {
+		Black_num--;
+	} else {
+		White_num--;
+	}
+	while (1) {
+		pos = lpop();
+		if (pos == -1)
+			break;
+		board_state[pos / Board_size][pos % Board_size] = 1 - turn;
+		DrawChess(pos / Board_size, pos % Board_size, 1 - turn);
+		if (turn == 1) {
+			Black_num--;
+			White_num++;
+		} else {
+			Black_num++;
+			White_num--;
+		}
+	}
 }
 void Draw_win( win_status) {
 	int color;
@@ -632,17 +580,19 @@ void Draw_win( win_status) {
 int main(void) {
 	XGpio dip; // dipÊÇ¶¨ÒåµÄÒ»¸ö°å×ÓÀàĞÍ£¿
 	int dip_check;
-
+	int Mode = 0;
 	static XPs2 Ps2Inst;
 	XPs2_Config *ConfigPtr;
 	u32 StatusReg;
 	u32 BytesReceived;
 	u8 RxBuffer; // RxBufferÕâ¸ö±äÁ¿±È½ÏÖØÒª£¬ÔÚÖ÷Ñ­»·Âß¼­²¿·ÖÎÒÃÇĞèÒªÍ¨¹ıÅĞ¶ÏÕâ¸öÖµÀ´ÅĞ¶Ïµ½µ×¼üÅÌÊäÈëÁËÄÄ¸ö°´¼ü
-	int count = 0;
+	int count = 0, count1 = 0;
 	int win_status = -1;
 	int i, j;
 	int x_cur = 5, y_cur = 5; // Õâ¸öÊÇ¶¨ÒåÁËÒ»¸öx£¬yµÄ³õÊ¼×ø±ê°É
 	int turn = 1; // ¶¨ÒåÁËÒ»¸ö³õÊ¼µÄÆå×ÓÑÕÉ«£¨ÄÑµÀÊÇÏÂ×ÓÊ±ÒÆ¶¯µÄ¹â±ê£¿£©
+	int regret = 0;
+	depth = 0;
 
 	xil_printf("-- Game Starts! --\r\n"); // Õâ¸öÓ¦¸ÃÊÇÔÚÄ³Ò»¸öµØ·½Êä³öÒ»¶Î»°£¬·½±ãdebug
 
@@ -658,23 +608,9 @@ int main(void) {
 		}
 	}
 	DrawBoard();
-	DrawChess(3, 3, 1); // ¸ù¾İºÚ°×ÆåµÄ¹æÔò£¬³õÊ¼»¯³ö¼¸¸öÆì×ÓºÍ¸üĞÂboard_state[][]Êı×é
-	board_state[3][3] = 1;
-	DrawChess(3, 4, 0);
-	board_state[3][4] = 0;
-	DrawChess(4, 3, 0);
-	board_state[4][3] = 0;
-	DrawChess(4, 4, 1);
-	board_state[4][4] = 1;
-	Black_num = 2;
-	White_num = 2;
-	FindAvailable(turn);
-	DrawAvailable(turn);
-	DrawChess(x_cur, y_cur, 3); // »­³ö³õÊ¼µÄÆì×ÓËùÔÚ´¦µÄÑÕÉ«£¬ÆäÖĞ3Õâ¸ö²ÎÊı´ú±íµÄÑÕÉ«Ó¦¸ÃÊÇÒÆ¶¯µÄ¹â±êµÄÑÕÉ«
 	DrawMenu();
+	DrawStatus(0);
 
-	int boardStatus = 4;
-	DrawStatus(boardStatus);
 	while (1) { // ½øÈëÁËÖ÷Ñ­»·Ö®ÖĞ£¬ÓÎÏ·¿ªÊ¼£¡
 		do {
 			dip_check = XGpio_DiscreteRead(&dip, 1);
@@ -683,100 +619,170 @@ int main(void) {
 		BytesReceived = XPs2_Recv(&Ps2Inst, &RxBuffer, 1);
 		count = (count + 1) % 3; // Õâ¸öcountµÄ¹¦ÄÜÊÇ£¿·À¶¶Âğ£¿ËÆºõ¶ÔÖ÷³ÌĞòÃ»ÓĞÂß¼­ÉÏµÄÓ°Ïì
 		if (count == 1) {
-			if (RxBuffer == 0x1D && win_status == -1) { // 0x1DÕâ¸öÖµÓ¦¸Ã¶ÔÓ¦µÄÊÇÍùÉÏÒÆ¶¯£¬Ò²¾ÍÊÇW¼ü
-				EraseCursor(x_cur, y_cur, turn);
-				if (y_cur == 0)
-					y_cur = 7;
-				else
-					y_cur--;
-				DrawChess(x_cur, y_cur, 3);
-			}
-			if (RxBuffer == 0x1B && win_status == -1) { // 0x1BÕâ¸öÖµÓ¦¸Ã¶ÔÓ¦µÄÊÇÏòÏÂÒÆ¶¯£¬Ò²¾ÍÊÇS¼ü
-				EraseCursor(x_cur, y_cur, turn);
-				if (y_cur == 7)
-					y_cur = 0;
-				else
-					y_cur++;
-				DrawChess(x_cur, y_cur, 3);
-			}
-			if (RxBuffer == 0x1C && win_status == -1) { // 0x1CÕâ¸öÖµ¶ÔÓ¦µÄÓ¦¸ÃÊÇÏò×óÒÆ¶¯£¬Ò²¾ÍÊÇA¼ü
-				EraseCursor(x_cur, y_cur, turn);
-				if (x_cur == 0)
-					x_cur = 7;
-				else
-					x_cur--;
-				DrawChess(x_cur, y_cur, 3);
-			}
-			if (RxBuffer == 0x23 && win_status == -1) { // 0x23Õâ¸öÖµ¶ÔÓ¦µÄÓ¦¸ÃÊÇÏòÓÒÒÆ¶¯£¬Ò²¾ÍÊÇD¼ü
-				EraseCursor(x_cur, y_cur, turn);
-				if (x_cur == 7)
-					x_cur = 0;
-				else
-					x_cur++;
-				DrawChess(x_cur, y_cur, 3);
-			}
+			if (RxBuffer == 0x16) //°´1¼ü½øÈëC1Ä£Ê½£¬¼òµ¥ÈË»ú¶ÔÕ½
+				Mode = 1;
+			if (RxBuffer == 0x1E) //°´2¼ü½øÈëC2Ä£Ê½£¬Ò»°ãÄÑ¶ÈÈË»ú¶ÔÕ½
+				Mode = 2;
+			if (RxBuffer == 0x26) //°´3¼ü½øÈëC3Ä£Ê½£¬¸ßÄÑ¶ÈÈË»ú¶ÔÕ½
+				Mode = 3;
+			if (RxBuffer == 0x25) //°´4¼ü½øÈë£¬ÈËÈË¶ÔÕ½Ä£Ê½
+				Mode = 4;
 
-			if (RxBuffer == 0x5A) { // 0x5AÕâ¸öÖµ¶ÔÓ¦µÄÓ¦¸ÃÊÇÈ·¶¨¼ü£¬Ò²¾ÍÊÇenter¼ü
-				if (win_status != -1)
-					return 0;
-				if (board_state[x_cur][y_cur] == 4) {
-					EraseLittleChess();
-					DrawChess(x_cur, y_cur, turn);
-					if (turn == 0) {
-						White_num++;
-					} else {
-						Black_num++;
-					}
-					board_state[x_cur][y_cur] = turn;
-					flip(x_cur, y_cur, turn);
-					win_status = check_win();
-					if (win_status != -1) { // ÈôÓĞÒ»·½Ê¤ÀûÁË£¬±¾ÂÖÓÎÏ·½áÊø
-						DrawScore(White_num, 0);
-						DrawScore(Black_num, 1);
-						Draw_win(win_status);//»­³öÏÔÊ¾Ê¤ÀûµÄÆåÅÌĞÎ×´
-						//						xil_printf("\r\nPlayer %x wins!\r\n", turn + 1);
-						//						return 0;
+			if (Mode != 0) { //ÈôÑ¡ÔñÁËÄ£Ê½£¬½øÈëÓÎÏ·
+				DrawChess(3, 3, 1); // ¸ù¾İºÚ°×ÆåµÄ¹æÔò£¬³õÊ¼»¯³ö¼¸¸öÆì×ÓºÍ¸üĞÂboard_state[][]Êı×é
+				board_state[3][3] = 1;
+				DrawChess(3, 4, 0);
+				board_state[3][4] = 0;
+				DrawChess(4, 3, 0);
+				board_state[4][3] = 0;
+				DrawChess(4, 4, 1);
+				board_state[4][4] = 1;
+				Black_num = 2;
+				White_num = 2;
+				FindAvailable(turn, 1);
+				DrawAvailable(turn);
+				DrawChess(x_cur, y_cur, 3); // »­³ö³õÊ¼µÄÆì×ÓËùÔÚ´¦µÄÑÕÉ«£¬ÆäÖĞ3Õâ¸ö²ÎÊı´ú±íµÄÑÕÉ«Ó¦¸ÃÊÇÒÆ¶¯µÄ¹â±êµÄÑÕÉ«
+				DrawScore(2, 0); // ³õÊ¼»¯ÏÔÊ¾³ö°×ÆåµÄ·ÖÊı
+				DrawScore(2, 1); // ³õÊ¼»¯ÏÔÊ¾³öºÚÆåµÄ·ÖÊı
+				DrawStatus(Mode);
+				//int boardStatus = 4;
+				//DrawStatus(boardStatus);
+				while (1) {
+					do {
+						dip_check = XGpio_DiscreteRead(&dip, 1);
+						StatusReg = XPs2_GetStatus(&Ps2Inst);
+					} while ((StatusReg & XPS2_STATUS_RX_FULL) == 0);
+					BytesReceived = XPs2_Recv(&Ps2Inst, &RxBuffer, 1);
+					count1 = (count1 + 1) % 3;
+					if (count1 == 1) {
 
-					} else {
-						turn = 1 - turn; // ÂÖ»»ºÚ°×´ÎĞò
-						if (!FindAvailable(turn)) {//Ò»·½Îå×Ó¿ÉÏÂÊ±»»ÁíÒ»·½ÏÂ
-							turn = 1 - turn;
-							FindAvailable(turn);
+						if (RxBuffer == 0x1D && win_status == -1) { // 0x1DÕâ¸öÖµÓ¦¸Ã¶ÔÓ¦µÄÊÇÍùÉÏÒÆ¶¯£¬Ò²¾ÍÊÇW¼ü
+							EraseCursor(x_cur, y_cur, turn);
+							if (y_cur == 0)
+								y_cur = 7;
+							else
+								y_cur--;
+							DrawChess(x_cur, y_cur, 3);
 						}
-						DrawAvailable(turn);
+						if (RxBuffer == 0x1B && win_status == -1) { // 0x1BÕâ¸öÖµÓ¦¸Ã¶ÔÓ¦µÄÊÇÏòÏÂÒÆ¶¯£¬Ò²¾ÍÊÇS¼ü
+							EraseCursor(x_cur, y_cur, turn);
+							if (y_cur == 7)
+								y_cur = 0;
+							else
+								y_cur++;
+							DrawChess(x_cur, y_cur, 3);
+						}
+						if (RxBuffer == 0x1C && win_status == -1) { // 0x1CÕâ¸öÖµ¶ÔÓ¦µÄÓ¦¸ÃÊÇÏò×óÒÆ¶¯£¬Ò²¾ÍÊÇA¼ü
+							EraseCursor(x_cur, y_cur, turn);
+							if (x_cur == 0)
+								x_cur = 7;
+							else
+								x_cur--;
+							DrawChess(x_cur, y_cur, 3);
+						}
+						if (RxBuffer == 0x23 && win_status == -1) { // 0x23Õâ¸öÖµ¶ÔÓ¦µÄÓ¦¸ÃÊÇÏòÓÒÒÆ¶¯£¬Ò²¾ÍÊÇD¼ü
+							EraseCursor(x_cur, y_cur, turn);
+							if (x_cur == 7)
+								x_cur = 0;
+							else
+								x_cur++;
+							DrawChess(x_cur, y_cur, 3);
+						}
+
+						if (RxBuffer == 0x5A) { // 0x5AÕâ¸öÖµ¶ÔÓ¦µÄÓ¦¸ÃÊÇÈ·¶¨¼ü£¬Ò²¾ÍÊÇenter¼ü
+							if (win_status != -1)
+								return 0;
+							if (board_state[x_cur][y_cur] == 4) {
+								regret = 0;
+								EraseLittleChess();
+								DrawChess(x_cur, y_cur, turn);
+								if (turn == 0) {
+									White_num++;
+								} else {
+									Black_num++;
+								}
+								board_state[x_cur][y_cur] = turn;
+								flip(x_cur, y_cur, turn);
+								win_status = check_win();
+								if (win_status != -1) { // ÈôÓĞÒ»·½Ê¤ÀûÁË£¬±¾ÂÖÓÎÏ·½áÊø
+									DrawScore(White_num, 0);
+									DrawScore(Black_num, 1);
+									Draw_win(win_status);//»­³öÏÔÊ¾Ê¤ÀûµÄÆåÅÌĞÎ×´
+									//						xil_printf("\r\nPlayer %x wins!\r\n", turn + 1);
+									//						return 0;
+
+								} else {
+									if (Mode == 4) { //ÈôÎªÈËÈË¶ÔÕ½Ä£Ê½£¬»»Ò»·½ÏÂ
+										turn = 1 - turn; // ÂÖ»»ºÚ°×´ÎĞò
+										if (!FindAvailable(turn, 1)) {//Ò»·½Îå×Ó¿ÉÏÂÊ±»»ÁíÒ»·½ÏÂ
+											turn = 1 - turn;
+											FindAvailable(turn, 1);
+										}
+										DrawAvailable(turn);
+									} else
+										//ÈôÎªÈË»ú¶ÔÕ½Ä£Ê½£¬ÓÉµçÄÔÏÂ
+										while (1) {
+											turn = 1 - turn; // ÂÖ»»ºÚ°×´ÎĞò
+											//human = 1 - human;//ÓÉ»úÆ÷ÏÂ
+											//EraseLittleChess();
+											if (!FindAvailable(turn, 1)) {//Èô»úÆ÷ÎŞ×Ó¿ÉÏÂ
+												turn = 1 - turn; // ÂÖ»»ºÚ°×´ÎĞò
+												//human = 1 - human;//ÓÉÈËÏÂ
+												break;//ÓÉÓÚcheck_winÏÔÊ¾Î´·ÖÊ¤¸º£¬ËùÒÔÈËÒ»¶¨ÓĞ×Ó¿ÉÏÂ£¬Ìø³öÑ­»·£¬½»¸ø¼üÅÌ
+											}
+											int temp_result;
+											temp_result = find_best(turn);
+											x_cur = temp_result / 8;
+											y_cur = temp_result % 8;
+											board_state[x_cur][y_cur] = turn;
+											DrawChess(x_cur, y_cur, turn);
+											if (turn == 0) {
+												White_num++;
+											} else {
+												Black_num++;
+											}
+											flip(x_cur, y_cur, turn);
+											win_status = check_win();
+											if (win_status != -1) { // ÈôÓĞÒ»·½Ê¤ÀûÁË£¬±¾ÂÖÓÎÏ·½áÊø
+												Draw_win(win_status);//»­³öÏÔÊ¾Ê¤ÀûµÄÆåÅÌĞÎ×´
+												//						xil_printf("\r\nPlayer %x wins!\r\n", turn + 1);
+												//						return 0;
+
+											} else {
+												turn = 1 - turn;//»»ÁíÒ»·½
+												//human = 1 - human;//ÓÉÈËÏÂ
+												//EraseLittleChess();
+												if (FindAvailable(turn, 1))
+													break; //ÈôÈËÓĞ×Ó¿ÉÏÂ£¬Ìø³öÑ­»·£¬½»¸ø¼üÅÌ
+											}
+
+										}
+								}
+							}
+							DrawScore(White_num, 0);
+							DrawScore(Black_num, 1);
+
+						}
+
+						if (RxBuffer == 0x2D && win_status == -1 && Mode == 4   // 0x76Õâ¸öÖµ¶ÔÓ¦µÄÓ¦¸ÃÊÇ»ÚÆå£¬¶ÔÓ¦µÄÊÇR¼ü
+								&& regret == 0) {
+
+							turn = 1 - turn;
+							undo(turn);
+							FindAvailable(turn, 1);
+							DrawScore(White_num, 0); // ³õÊ¼»¯ÏÔÊ¾³ö°×ÆåµÄ·ÖÊı
+							DrawScore(Black_num, 1); // ³õÊ¼»¯ÏÔÊ¾³öºÚÆåµÄ·ÖÊı
+							regret = 1;
+						}
+
+						if (RxBuffer == 0x76) { // 0x76Õâ¸öÖµ¶ÔÓ¦µÄÓ¦¸ÃÊÇrestart£¬¶ÔÓ¦µÄÊÇesc¼ü
+							return 0;
+						}
 					}
+
 				}
-				DrawScore(White_num, 0);
-				DrawScore(Black_num, 1);
-
 			}
 
-			if (RxBuffer == 0x76) { // 0x1CÕâ¸öÖµ¶ÔÓ¦µÄÓ¦¸ÃÊÇrestart£¬¶ÔÓ¦µÄÊÇesc¼ü
-				return 0;
-				/*for (i = 0; i < 8; i++) {
-				 for (j = 0; j < 8; j++) {
-				 board_state[i][j] = 2;
-				 }
-				 }
-				 x_cur = 5;
-				 y_cur = 5;
-				 turn = 1;
-				 DrawBoard();
-				 DrawChess(3, 3, 1);
-				 board_state[3][3] = 1;
-				 DrawChess(3, 4, 0);
-				 board_state[3][4] = 0;
-				 DrawChess(4, 3, 0);
-				 board_state[4][3] = 0;
-				 DrawChess(4, 4, 1);
-				 board_state[4][4] = 1;
-				 DrawChess(x_cur, y_cur, 3);
-				 Black_num = 2;
-				 White_num = 2;
-				 FindAvailable(turn);
-				 DrawAvailable();
-				 xil_printf("\r\nGame Restart!\r\n"); // ÒÔÉÏ²½Öè°ÑÆåÅÌµÄ×´Ì¬Êı×éboard_state[][]ÓÖ½øĞĞÁËÒ»´Î³õÊ¼»¯*/
-			}
 		}
 	}
 }

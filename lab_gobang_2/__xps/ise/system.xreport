@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-12-16T00:02:07</DateModified>
+  <DateModified>2015-12-17T23:11:31</DateModified>
   <ModuleName>system</ModuleName>
-  <SummaryTimeStamp>2015-12-16T00:02:07</SummaryTimeStamp>
-  <SavedFilePath>F:/xps/Othello-28/lab_gobang_2/__xps/ise/system.xreport</SavedFilePath>
+  <SummaryTimeStamp>2015-12-17T23:11:31</SummaryTimeStamp>
+  <SavedFilePath>F:/xps_sdk/Othello-28/Othello-28/lab_gobang_2/__xps/ise/system.xreport</SavedFilePath>
   <FilterFile>filter.filter</FilterFile>
-  <SavedFilterFilePath>F:/xps/Othello-28/lab_gobang_2/__xps/ise</SavedFilterFilePath>
+  <SavedFilterFilePath>F:/xps_sdk/Othello-28/Othello-28/lab_gobang_2/__xps/ise</SavedFilterFilePath>
   <DateInitialized>2012-12-01T11:17:59</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
