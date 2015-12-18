@@ -1,3 +1,4 @@
+//AI都可悔棋
 #include "xparameters.h"
 #include "xgpio.h"
 #include "xutil.h"
@@ -11,48 +12,51 @@ int Board_size = 8;
 int Black_num;
 int White_num;
 int board_state[8][8];
-//int *p1[2];
+int *p1[60];
 int stack[50];
 int depth;
 const int INFINITE = 99999;
-//void push(int *x) {
-//	if(depth % 2 == 0) {
-//		if(p1[0] != NULL) free(p1[0]);
-//		p1[0] = x;
-//	}
-//	else if(depth % 2 == 1) {
-//		if(p1[1] != NULL) free(p1[1]);
-//		p1[1] = x;
-//	}
-//	depth = (depth + 1) % 2;
-//	p1[depth] = x;
-//	depth++;
-//}
+int myflag;
 
 const int EVAL_SCORES[64] = { 500, -150, 30, 10, 10, 30, -150, 500, -150, -250,
 		0, 0, 0, 0, -250, -150, 30, 0, 1, 2, 2, 1, 0, 30, 10, 0, 2, 16, 16, 2,
 		0, 10, 10, 0, 2, 16, 16, 2, 0, 10, 30, 0, 1, 2, 2, 1, 0, 30, -150,
 		-250, 0, 0, 0, 0, -250, -150, 500, -150, 30, 10, 10, 30, -150, 500 };
+const int LIBERTY_SCORE = 8;
+const int BONUS_SCORE = 30;
 
-//int* pop() {
-//	depth = 1 - depth;
-//	return p1[depth];
-//}
-
-void lpush(int x) {
-	if (depth >= 50)
+void push(int *x) {
+	if (depth > 59)
 		return;
-	stack[depth] = x;
+	p1[depth] = x;
 	depth++;
 }
 
-int lpop() {
-	if (depth <= 0)
-		return -1;
+int* pop() {
+	if (depth < 1)
+		return NULL;
+	int *r;
 	depth--;
-	return stack[depth];
+	r = p1[depth];
+	p1[depth] = NULL;
+	return r;
 }
-int find_best( turn) { //仅仅按照EVAL_SCORES的值选择，选择最大的那个
+
+void lpush(int s[], int x) {
+	if (s[0] >= 50)
+		return;
+	s[s[0]] = x;
+	s[0]++;
+}
+
+int lpop(int s[]) {
+	if (s[0] <= 1)
+		return -1;
+	s[0]--;
+	return s[s[0]];
+}
+
+int find_best1( turn) { //仅仅按照EVAL_SCORES的值选择，选择最大的那个
 	int quality = -INFINITE;
 	int best_pos = -1;
 	int temp_pos = -1;
@@ -70,7 +74,220 @@ int find_best( turn) { //仅仅按照EVAL_SCORES的值选择，选择最大的那个
 	}
 	return best_pos;
 }
+int find_best2(int turn, int ifResult) {
+	int quality = -INFINITE;//best quality
+	int best_pos = -1;
+	int temp_pos = -1;
+	int temp_qua = -INFINITE;
+	int a, b;
+	for (a = 0; a < Board_size; a++) {
+		for (b = 0; b < Board_size; b++) {
+			if (board_state[a][b] == 4) {
+				temp_pos = a * Board_size + b;
+				temp_qua = quality_of_pos(temp_pos, turn);
+				if (temp_qua >= quality) {
+					quality = temp_qua;
+					best_pos = temp_pos;
+				}
+			}
+		}
+	}
+	if (ifResult)
+		return quality;
+	else
+		return best_pos;
+}
 
+int find_best3( turn) {
+	int quality = -INFINITE;//best quality
+	int best_pos = -1;
+	int temp_pos = -1;
+	int temp_qua = -INFINITE;
+	int a, b;
+	int avail_pos[50];//all the available positions
+	int avail_count = 0;//count of available positions
+
+	// find all the available positions
+	for (a = 0; a < Board_size; a++) {
+		for (b = 0; b < Board_size; b++) {
+			if (board_state[a][b] == 4) {
+				temp_pos = a * Board_size + b;
+				avail_pos[avail_count] = temp_pos;
+				avail_count++;
+			}
+		}
+	}
+
+	//from all the available positions, pick up the best one according to the quality
+	for (a = 0; a < avail_count; a++) {
+		temp_pos = avail_pos[a];
+		temp_qua = quality_of_pos2(temp_pos, turn);
+		if (temp_qua >= quality) {
+			quality = temp_qua;
+			best_pos = temp_pos;
+		}
+	}
+	//best_pos  = 0;
+	//if(best_pos<0) DrawChess(0,0,1);
+	return best_pos;
+}
+
+int quality_of_pos( pos, turn) {
+	board_state[pos / Board_size][pos % Board_size] = turn;
+
+	//int result = 0;
+	flip(pos / Board_size, pos % Board_size, turn, 0);
+	if (turn == 0)
+		White_num++;
+	else
+		Black_num++;
+	int result = quality_status(turn);
+	//board_state[pos/Board_size][pos%Board_size] = 4;
+	undo(turn, 0);
+	return result;
+}
+
+int quality_of_pos2(pos,turn){//first step is taken, turn is white
+	int a,b,temp_pos, temp_qua;// the same as these in find_best3
+	board_state[pos/Board_size][pos%Board_size] = turn; //change the board_state
+	flip(pos/Board_size, pos%Board_size, turn,0); //flip the board
+	if(turn==0) White_num++;
+	else Black_num++;//change the number
+	//first step is taken, turn is white
+	//如果有时间的话，建议把这三步放在同一个函数里，参数为pos_x, pos_y, turn, ifDraw
+
+
+	turn = 1 - turn;// to take the second step, turn is black
+	if (FindAvailable(turn, 1)) {
+		temp_pos = find_best2(turn,0);
+		board_state[temp_pos/Board_size][temp_pos%Board_size] = turn;
+		flip(temp_pos/Board_size, temp_pos%Board_size, turn,0);
+		if(turn==0) White_num++;
+		else Black_num++;
+		//take the second step, black;
+
+		FindAvailable(1-turn, 1);
+		temp_qua = find_best2(1-turn,1);
+		//find the best result when the third step, white, is taken;
+
+		undo(turn,0);
+		//undo the second step, black
+	}
+	turn = 1 - turn;//turn from black to white
+	undo(turn);// undo the first step, white
+	return temp_qua;
+}
+
+int quality_status( turn) {
+	int result = 0;
+	int temp_state = 0;
+	int empty_count = 0;
+	int temp_x = -1;
+	int temp_y = -1;
+	int turn_count = 0;
+	int turn_bar_count = 0;
+	int a, b, c, d;
+	int index1[6] = { 0, 1, 8, 9, 1, 1 };
+	int index2[6] = { 7, 6, 14, 15, -1, 1 };
+	int index3[6] = { 56, 48, 49, 57, 1, -1 };
+	int index4[6] = { 63, 54, 55, 62, -1, -1 };
+	int pos;
+	for (a = 0; a < Board_size; a++) {
+		for (b = 0; b < Board_size; b++) {
+			temp_state = board_state[a][b];
+			pos = a * Board_size + b;
+			if (temp_state == 2 || temp_state == 4)
+				continue;
+			empty_count = 0;
+			for (c = -1; c < 1; c++) {
+				for (d = -1; d < 1; d++) {
+					temp_x = a + c;
+					temp_y = b + d;
+					if (temp_x >= 0 && temp_x < Board_size && temp_y >= 0
+							&& temp_y < Board_size
+							&& board_state[temp_x][temp_y] == 0) {
+						empty_count++;
+					}
+				}
+			}
+			if (temp_state == turn) {
+				turn_count++;
+				result += EVAL_SCORES[pos];
+				result -= empty_count * LIBERTY_SCORE;
+			} else {
+				turn_bar_count++;
+				result -= EVAL_SCORES[pos];
+				result += empty_count * LIBERTY_SCORE;
+			}
+			if (turn_count == 0) {
+				return -INFINITE;
+			}
+			if (turn_bar_count == 0) {
+				return INFINITE;
+			}
+			if (turn_count + turn_bar_count == Board_size * Board_size) {
+				if (turn_count > turn_bar_count) {
+					return INFINITE;
+				} else {
+					if (turn_bar_count > turn_count) {
+						return -INFINITE;
+					}
+				}
+			}
+
+		}
+	}
+
+	result += bonus_of_state(index1, turn);
+	result += bonus_of_state(index2, turn);
+	result += bonus_of_state(index3, turn);
+	result += bonus_of_state(index4, turn);
+
+	return result;
+}
+int bonus_of_state(int *t, int turn) {
+	int corner = t[0];
+	int corner_state = board_state[corner];
+	int cur_state;
+	int temp_state;
+	int result = 0;
+	int temp_pos;
+	int a;
+	if (corner_state != 2 && corner_state != 4) {
+		for (a = 1; a <= 3; ++a) {
+			temp_state = board_state[t[a]];
+			if (temp_state == 4 || temp_state == 2)
+				continue;
+			if (temp_state == turn)
+				result -= EVAL_SCORES[t[a]];
+			else
+				result += EVAL_SCORES[t[a]];
+		}
+		temp_pos = t[0];
+		for (a = 0; a < Board_size - 2; a++) {
+			temp_pos += t[4];
+			temp_state = board_state[temp_pos];
+			if (temp_state != corner_state)
+				break;
+			if (corner_state == turn)
+				result += BONUS_SCORE;
+			else
+				result -= BONUS_SCORE;
+		}
+		temp_pos = t[0];
+		for (a = 0; a < Board_size - 2; a++) {
+			temp_pos += t[5] * Board_size;
+			temp_state = board_state[temp_pos];
+			if (corner_state != temp_state)
+				break;
+			if (corner_state == turn)
+				result += BONUS_SCORE;
+			else
+				result -= BONUS_SCORE;
+		}
+	}
+	return result;
+}
 // 在下面的程序中，我们要分清x_cor, y_cor和x_pos, y_pos的区别。
 // 其中，x_pos和y_pos是board上的参数，是非常正常的一个int数。代表了棋子所在的某一行某一列
 // 而x_cor和y_cor则是x_pos和y_pos经过位运算转换过来的一个data数，是给VGA绘图使用的
@@ -303,11 +520,20 @@ int FindAvailable(int turn, int CheckOrFind) { // 找出可以落子的位置，画出需调用
 // 估计在main函数之中，每一次下子完都会调用这个函数，来判断是否有一方获得了胜利（我猜测的）
 int check_win() { //0白赢，1黑赢，2平局,-1没有人赢,
 	if (Black_num == 0)//黑子数为0
+	{
+		//DrawChess(0,0,0);
 		return 0;
+	}
+
 	if (White_num == 0)//白子数为0
+	{
+		//DrawChess(1,0,1);
 		return 1;
+	}
+
 	if ((FindAvailable(0, 0) == 0 && FindAvailable(1, 0) == 0)//双方都无子可下
 			|| ((Black_num + White_num) == Board_size * Board_size)) {
+		//DrawChess(2,0,1);
 		if (Black_num > White_num)
 			return 1;
 		if (Black_num < White_num)
@@ -317,12 +543,12 @@ int check_win() { //0白赢，1黑赢，2平局,-1没有人赢,
 	}
 	return -1;
 }
-void flip(int x_pos, int y_pos, int turn) { //仅实现翻转功能
+void flip(int x_pos, int y_pos, int turn, int ifDraw) { //仅实现翻转功能
 	int i, j;
 	int flip_flag, flip_flag2, bk_flag;
-	//int *posS = (int*) malloc(sizeof(int) * 50);
-	//posS[0] = 1;
-	depth = 0;
+	int *posS = (int*) malloc(sizeof(int) * 25);
+	posS[0] = 1;
+	//depth = 0;
 	flip_flag = -1;
 	if ((x_pos + 1 < Board_size) && (board_state[x_pos + 1][y_pos]
 			== (1 - turn)))
@@ -339,8 +565,9 @@ void flip(int x_pos, int y_pos, int turn) { //仅实现翻转功能
 	if (flip_flag != -1)
 		for (i = x_pos + 1; i < flip_flag; i++) {
 			board_state[i][y_pos] = turn;
-			DrawChess(i, y_pos, turn);//画与turn的颜色覆盖
-			lpush(i * Board_size + y_pos);
+			if (ifDraw)
+				DrawChess(i, y_pos, turn);//画与turn的颜色覆盖
+			lpush(posS, i * Board_size + y_pos);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -363,8 +590,9 @@ void flip(int x_pos, int y_pos, int turn) { //仅实现翻转功能
 	if (flip_flag != -1)
 		for (i = x_pos - 1; i > flip_flag; i--) {
 			board_state[i][y_pos] = turn;
-			DrawChess(i, y_pos, turn);//画与turn的颜色覆盖
-			lpush(i * Board_size + y_pos);
+			if (ifDraw)
+				DrawChess(i, y_pos, turn);//画与turn的颜色覆盖
+			lpush(posS, i * Board_size + y_pos);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -388,8 +616,9 @@ void flip(int x_pos, int y_pos, int turn) { //仅实现翻转功能
 	if (flip_flag != -1)
 		for (i = y_pos + 1; i < flip_flag; i++) {
 			board_state[x_pos][i] = turn;
-			DrawChess(x_pos, i, turn);
-			lpush(x_pos * Board_size + i);
+			if (ifDraw)
+				DrawChess(x_pos, i, turn);
+			lpush(posS, x_pos * Board_size + i);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -411,8 +640,9 @@ void flip(int x_pos, int y_pos, int turn) { //仅实现翻转功能
 	if (flip_flag != -1)
 		for (i = y_pos - 1; i > flip_flag; i--) {
 			board_state[x_pos][i] = turn;
-			DrawChess(x_pos, i, turn);
-			lpush(x_pos * Board_size + i);
+			if (ifDraw)
+				DrawChess(x_pos, i, turn);
+			lpush(posS, x_pos * Board_size + i);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -438,8 +668,9 @@ void flip(int x_pos, int y_pos, int turn) { //仅实现翻转功能
 	if (flip_flag != -1)
 		for (i = x_pos + 1, j = y_pos + 1; i < flip_flag && j < flip_flag2; i++, j++) {
 			board_state[i][j] = turn;
-			DrawChess(i, j, turn);
-			lpush(i * Board_size + j);
+			if (ifDraw)
+				DrawChess(i, j, turn);
+			lpush(posS, i * Board_size + j);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -464,8 +695,9 @@ void flip(int x_pos, int y_pos, int turn) { //仅实现翻转功能
 	if (flip_flag != -1)
 		for (i = x_pos - 1, j = y_pos - 1; i > flip_flag && j > flip_flag2; i--, j--) {
 			board_state[i][j] = turn;
-			DrawChess(i, j, turn);
-			lpush(i * Board_size + j);
+			if (ifDraw)
+				DrawChess(i, j, turn);
+			lpush(posS, i * Board_size + j);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -491,8 +723,9 @@ void flip(int x_pos, int y_pos, int turn) { //仅实现翻转功能
 	if (flip_flag != -1)
 		for (i = x_pos + 1, j = y_pos - 1; i < flip_flag && j > flip_flag2; i++, j--) {
 			board_state[i][j] = turn;
-			DrawChess(i, j, turn);
-			lpush(i * Board_size + j);
+			if (ifDraw)
+				DrawChess(i, j, turn);
+			lpush(posS, i * Board_size + j);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -517,8 +750,9 @@ void flip(int x_pos, int y_pos, int turn) { //仅实现翻转功能
 	if (flip_flag != -1)
 		for (i = x_pos - 1, j = y_pos + 1; i > flip_flag && j < flip_flag2; i--, j++) {
 			board_state[i][j] = turn;
-			DrawChess(i, j, turn);
-			lpush(i * Board_size + j);
+			if (ifDraw)
+				DrawChess(i, j, turn);
+			lpush(posS, i * Board_size + j);
 			if (turn == 0) {
 				Black_num--;
 				White_num++;
@@ -527,25 +761,31 @@ void flip(int x_pos, int y_pos, int turn) { //仅实现翻转功能
 				White_num--;
 			}
 		}
-	lpush(x_pos * Board_size + y_pos);
-	//push(posS);
+	lpush(posS, x_pos * Board_size + y_pos);
+	push(posS);
 }
-void undo(int turn) {
+void undo(int turn, int ifDraw) {
+	int *p = pop();
+	if (p == NULL)
+		return;
 	int pos;
-	pos = lpop();
+	pos = lpop(p);
+
 	board_state[pos / Board_size][pos % Board_size] = 4;
-	DrawChess(pos / Board_size, pos % Board_size, 2);
+	if (ifDraw)
+		DrawChess(pos / Board_size, pos % Board_size, 2);
 	if (turn == 1) {
 		Black_num--;
 	} else {
 		White_num--;
 	}
 	while (1) {
-		pos = lpop();
+		pos = lpop(p);
 		if (pos == -1)
 			break;
 		board_state[pos / Board_size][pos % Board_size] = 1 - turn;
-		DrawChess(pos / Board_size, pos % Board_size, 1 - turn);
+		if (ifDraw)
+			DrawChess(pos / Board_size, pos % Board_size, 1 - turn);
 		if (turn == 1) {
 			Black_num--;
 			White_num++;
@@ -554,8 +794,10 @@ void undo(int turn) {
 			White_num--;
 		}
 	}
+	free(p);
 }
 void Draw_win( win_status) {
+	//DrawChess(3,0,1);
 	int color;
 	DrawBoard();
 	if (win_status == 1)
@@ -592,7 +834,11 @@ int main(void) {
 	int x_cur = 5, y_cur = 5; // 这个是定义了一个x，y的初始坐标吧
 	int turn = 1; // 定义了一个初始的棋子颜色（难道是下子时移动的光标？）
 	int regret = 0;
+	int a = 0;
+	p1[0] = NULL;
+	p1[1] = NULL;
 	depth = 0;
+	myflag = 0;
 
 	xil_printf("-- Game Starts! --\r\n"); // 这个应该是在某一个地方输出一段话，方便debug
 
@@ -690,8 +936,30 @@ int main(void) {
 						}
 
 						if (RxBuffer == 0x5A) { // 0x5A这个值对应的应该是确定键，也就是enter键
-							if (win_status != -1)
-								return 0;
+							if (win_status != -1) {
+								Mode = 0;
+								win_status = -1;
+								x_cur = 5, y_cur = 5; // 这个是定义了一个x，y的初始坐标吧
+								turn = 1; // 定义了一个初始的棋子颜色（难道是下子时移动的光标？）
+								regret = 0;
+								int a = 0;
+								p1[0] = NULL;
+								p1[1] = NULL;
+								depth = 0;
+								myflag = 0;
+
+								xil_printf("-- Game Starts! --\r\n"); // 这个应该是在某一个地方输出一段话，方便debug
+								for (i = 0; i < 8; i++) {
+									for (j = 0; j < 8; j++) {
+										board_state[i][j] = 2; // 将board_state[][]这个二维数组里面的所有旗子初始类型都定义为2，也就是无子
+									}
+								}
+								DrawBoard();
+								DrawMenu();
+								DrawStatus(0);
+								break;
+							}
+							// return 0;
 							if (board_state[x_cur][y_cur] == 4) {
 								regret = 0;
 								EraseLittleChess();
@@ -702,61 +970,65 @@ int main(void) {
 									Black_num++;
 								}
 								board_state[x_cur][y_cur] = turn;
-								flip(x_cur, y_cur, turn);
+								flip(x_cur, y_cur, turn, 1);
 								win_status = check_win();
 								if (win_status != -1) { // 若有一方胜利了，本轮游戏结束
 									DrawScore(White_num, 0);
 									DrawScore(Black_num, 1);
+
 									Draw_win(win_status);//画出显示胜利的棋盘形状
 									//						xil_printf("\r\nPlayer %x wins!\r\n", turn + 1);
 									//						return 0;
 
 								} else {
 									if (Mode == 4) { //若为人人对战模式，换一方下
+
 										turn = 1 - turn; // 轮换黑白次序
+
 										if (!FindAvailable(turn, 1)) {//一方五子可下时换另一方下
 											turn = 1 - turn;
 											FindAvailable(turn, 1);
 										}
 										DrawAvailable(turn);
-									} else
+									} else {
 										//若为人机对战模式，由电脑下
+
 										while (1) {
-											turn = 1 - turn; // 轮换黑白次序
-											//human = 1 - human;//由机器下
-											//EraseLittleChess();
-											if (!FindAvailable(turn, 1)) {//若机器无子可下
-												turn = 1 - turn; // 轮换黑白次序
-												//human = 1 - human;//由人下
+
+											if (!FindAvailable(0, 1)) {//若机器无子可下
+												turn = 1;
 												break;//由于check_win显示未分胜负，所以人一定有子可下，跳出循环，交给键盘
 											}
 											int temp_result;
-											temp_result = find_best(turn);
+											if (Mode == 1)
+												temp_result = find_best1(0);
+											else if (Mode == 2)
+												temp_result = find_best2(0, 0);
+											else if (Mode == 3)
+												temp_result = find_best3(0);
+
 											x_cur = temp_result / 8;
 											y_cur = temp_result % 8;
-											board_state[x_cur][y_cur] = turn;
-											DrawChess(x_cur, y_cur, turn);
-											if (turn == 0) {
-												White_num++;
-											} else {
-												Black_num++;
-											}
-											flip(x_cur, y_cur, turn);
+											board_state[x_cur][y_cur] = 0;
+											DrawChess(x_cur, y_cur, 0);
+											White_num++;
+											flip(x_cur, y_cur, 0, 1);
 											win_status = check_win();
+											//break;
+
 											if (win_status != -1) { // 若有一方胜利了，本轮游戏结束
 												Draw_win(win_status);//画出显示胜利的棋盘形状
 												//						xil_printf("\r\nPlayer %x wins!\r\n", turn + 1);
 												//						return 0;
 
 											} else {
-												turn = 1 - turn;//换另一方
-												//human = 1 - human;//由人下
-												//EraseLittleChess();
-												if (FindAvailable(turn, 1))
+												if (FindAvailable(1, 1)) {
 													break; //若人有子可下，跳出循环，交给键盘
+												}
 											}
 
 										}
+									}
 								}
 							}
 							DrawScore(White_num, 0);
@@ -764,19 +1036,47 @@ int main(void) {
 
 						}
 
-						if (RxBuffer == 0x2D && win_status == -1 && Mode == 4   // 0x76这个值对应的应该是悔棋，对应的是R键
-								&& regret == 0) {
+						if (RxBuffer == 0x2D && win_status == -1 && Mode == 4) {
 
 							turn = 1 - turn;
-							undo(turn);
+							undo(turn, 1);
 							FindAvailable(turn, 1);
 							DrawScore(White_num, 0); // 初始化显示出白棋的分数
 							DrawScore(Black_num, 1); // 初始化显示出黑棋的分数
-							regret = 1;
+							regret++;
+						}
+						if (RxBuffer == 0x2D && win_status == -1 && Mode != 4) {
+							undo(0, 1);
+							undo(1, 1);
+							FindAvailable(1, 1);
+							DrawScore(White_num, 0); // 初始化显示出白棋的分数
+							DrawScore(Black_num, 1); // 初始化显示出黑棋的分数
+							regret++;
 						}
 
 						if (RxBuffer == 0x76) { // 0x76这个值对应的应该是restart，对应的是esc键
-							return 0;
+							// return 0;
+							Mode = 0;
+							win_status = -1;
+							x_cur = 5, y_cur = 5; // 这个是定义了一个x，y的初始坐标吧
+							turn = 1; // 定义了一个初始的棋子颜色（难道是下子时移动的光标？）
+							regret = 0;
+							int a = 0;
+							p1[0] = NULL;
+							p1[1] = NULL;
+							depth = 0;
+							myflag = 0;
+
+							xil_printf("-- Game Starts! --\r\n"); // 这个应该是在某一个地方输出一段话，方便debug
+							for (i = 0; i < 8; i++) {
+								for (j = 0; j < 8; j++) {
+									board_state[i][j] = 2; // 将board_state[][]这个二维数组里面的所有旗子初始类型都定义为2，也就是无子
+								}
+							}
+							DrawBoard();
+							DrawMenu();
+							DrawStatus(0);
+							break;
 						}
 					}
 
