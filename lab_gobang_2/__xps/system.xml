@@ -1,7 +1,7 @@
 
-<EDKSYSTEM EDKVERSION="14.2" EDWVERSION="1.2" TIMESTAMP="Thu Dec 17 23:11:29 2015">
+<EDKSYSTEM EDKVERSION="14.2" EDWVERSION="1.2" TIMESTAMP="Fri Dec 18 22:28:19 2015">
 
-  <SYSTEMINFO ARCH="spartan6" DEVICE="xc6slx16" PACKAGE="csg324" PART="xc6slx16csg324-3" SOURCE="F:/xps_sdk/Othello-28/Othello-28/lab_gobang_2/system.xmp" SPEEDGRADE="-3"/>
+  <SYSTEMINFO ARCH="spartan6" DEVICE="xc6slx16" PACKAGE="csg324" PART="xc6slx16csg324-3" SOURCE="F:/xps_sdk/Othello-0.2-release/Othello-0.2-release/lab_gobang_2/system.xmp" SPEEDGRADE="-3"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" MHS_INDEX="0" NAME="fpga_0_RS232_Uart_1_RX_pin" SIGNAME="fpga_0_RS232_Uart_1_RX_pin">
