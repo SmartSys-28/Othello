@@ -147,30 +147,34 @@ int quality_of_pos( pos, turn) {
 	return result;
 }
 
-int quality_of_pos2(pos,turn){//first step is taken, turn is white
-	int a,b,temp_pos, temp_qua;// the same as these in find_best3
-	board_state[pos/Board_size][pos%Board_size] = turn; //change the board_state
-	flip(pos/Board_size, pos%Board_size, turn,0); //flip the board
-	if(turn==0) White_num++;
-	else Black_num++;//change the number
+int quality_of_pos2( pos, turn) {//first step is taken, turn is white
+	int a, b, temp_pos, temp_qua;// the same as these in find_best3
+	board_state[pos / Board_size][pos % Board_size] = turn; //change the board_state
+	flip(pos / Board_size, pos % Board_size, turn, 0); //flip the board
+	if (turn == 0)
+		White_num++;
+	else
+		Black_num++;//change the number
 	//first step is taken, turn is white
 	//如果有时间的话，建议把这三步放在同一个函数里，参数为pos_x, pos_y, turn, ifDraw
 
 
 	turn = 1 - turn;// to take the second step, turn is black
 	if (FindAvailable(turn, 1)) {
-		temp_pos = find_best2(turn,0);
-		board_state[temp_pos/Board_size][temp_pos%Board_size] = turn;
-		flip(temp_pos/Board_size, temp_pos%Board_size, turn,0);
-		if(turn==0) White_num++;
-		else Black_num++;
+		temp_pos = find_best2(turn, 0);
+		board_state[temp_pos / Board_size][temp_pos % Board_size] = turn;
+		flip(temp_pos / Board_size, temp_pos % Board_size, turn, 0);
+		if (turn == 0)
+			White_num++;
+		else
+			Black_num++;
 		//take the second step, black;
 
-		FindAvailable(1-turn, 1);
-		temp_qua = find_best2(1-turn,1);
+		FindAvailable(1 - turn, 1);
+		temp_qua = find_best2(1 - turn, 1);
 		//find the best result when the third step, white, is taken;
 
-		undo(turn,0);
+		undo(turn, 0);
 		//undo the second step, black
 	}
 	turn = 1 - turn;//turn from black to white
@@ -810,7 +814,7 @@ void Draw_win( win_status) {
 	DrawChess(5, 4, color);
 	DrawChess(6, 2, color);
 	if (win_status == 2)
-		color = 1 - color; //如果是平手翻转颜色
+		color = 1 - color; // 如果是平手翻转颜色
 	DrawChess(1, 3, color);
 	DrawChess(2, 5, color);
 	DrawChess(3, 3, color);
@@ -937,12 +941,14 @@ int main(void) {
 
 						if (RxBuffer == 0x5A) { // 0x5A这个值对应的应该是确定键，也就是enter键
 							if (win_status != -1) {
+								for (a = 0; a < depth; a++)
+									free(p1[a]);
 								Mode = 0;
 								win_status = -1;
 								x_cur = 5, y_cur = 5; // 这个是定义了一个x，y的初始坐标吧
 								turn = 1; // 定义了一个初始的棋子颜色（难道是下子时移动的光标？）
 								regret = 0;
-								int a = 0;
+								a = 0;
 								p1[0] = NULL;
 								p1[1] = NULL;
 								depth = 0;
@@ -1056,12 +1062,14 @@ int main(void) {
 
 						if (RxBuffer == 0x76) { // 0x76这个值对应的应该是restart，对应的是esc键
 							// return 0;
+							for (a = 0; a < depth; a++)
+								free(p1[a]);
 							Mode = 0;
 							win_status = -1;
 							x_cur = 5, y_cur = 5; // 这个是定义了一个x，y的初始坐标吧
 							turn = 1; // 定义了一个初始的棋子颜色（难道是下子时移动的光标？）
 							regret = 0;
-							int a = 0;
+							a = 0;
 							p1[0] = NULL;
 							p1[1] = NULL;
 							depth = 0;
