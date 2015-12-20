@@ -94,3 +94,118 @@ Done writing filter settings to:
 	F:\xps_sdk\Othello-0.2-release\Othello-0.2-release\lab_gobang_2\etc\system.filters
 Done writing Tab View settings to:
 	F:\xps_sdk\Othello-0.2-release\Othello-0.2-release\lab_gobang_2\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Sun Dec 20 13:27:40 2015
+ make -f system.make netlist started...
+make: Nothing to be done for `netlist'.
+Done!
+
+********************************************************************************
+At Local date and time: Sun Dec 20 13:27:44 2015
+ make -f system.make bits started...
+make: Nothing to be done for `bits'.
+Done!
+
+********************************************************************************
+At Local date and time: Sun Dec 20 13:27:51 2015
+ make -f system.make exporttosdk started...
+make: Nothing to be done for `exporttosdk'.
+Done!
+
+********************************************************************************
+At Local date and time: Sun Dec 20 13:27:52 2015
+ xsdk.exe -hwspec F:\xps_sdk\Othello-0.2-release\Othello-0.2-release\lab_gobang_2\SDK\SDK_Export\Othello-master\lab_gobang_2\SDK\SDK_Export\hw\system.xml started...
+Xilinx Software Development Kit
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	F:\xps_sdk\Othello-0.2-release\Othello-0.2-release\lab_gobang_2\SDK\SDK_Export\Othello-master\lab_gobang_2\etc\system.filters
+Done writing Tab View settings to:
+	F:\xps_sdk\Othello-0.2-release\Othello-0.2-release\lab_gobang_2\SDK\SDK_Export\Othello-master\lab_gobang_2\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Sun Dec 20 14:10:39 2015
+ make -f system.make netlist started...
+make: Nothing to be done for `netlist'.
+Done!
+
+********************************************************************************
+At Local date and time: Sun Dec 20 14:10:42 2015
+ make -f system.make bits started...
+make: Nothing to be done for `bits'.
+Done!
+
+********************************************************************************
+At Local date and time: Sun Dec 20 14:10:47 2015
+ make -f system.make exporttosdk started...
+make: Nothing to be done for `exporttosdk'.
+Done!
+
+********************************************************************************
+At Local date and time: Sun Dec 20 14:10:48 2015
+ xsdk.exe -hwspec F:\xps_sdk\Othello-master\lab_gobang_2\SDK\SDK_Export\hw\system.xml started...
+Xilinx Software Development Kit
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Done!
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+
+********************************************************************************
+At Local date and time: Sun Dec 20 20:08:29 2015
+ make -f system.make exporttosdk started...
+make: Nothing to be done for `exporttosdk'.
+Done!
+
+********************************************************************************
+At Local date and time: Sun Dec 20 20:08:30 2015
+ xsdk.exe -hwspec F:\xps_sdk\Othello-master\lab_gobang_2\SDK\SDK_Export\hw\system.xml started...
+Xilinx Software Development Kit
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Done!
+
+********************************************************************************
+At Local date and time: Sun Dec 20 20:09:25 2015
+ make -f system.make exporttosdk started...
+make: Nothing to be done for `exporttosdk'.
+Done!
+
+********************************************************************************
+At Local date and time: Sun Dec 20 20:09:25 2015
+ xsdk.exe -hwspec F:\xps_sdk\Othello-master\lab_gobang_2\SDK\SDK_Export\hw\system.xml started...
+Xilinx Software Development Kit
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Done!
+
+********************************************************************************
+At Local date and time: Sun Dec 20 20:10:14 2015
+ make -f system.make netlist started...
+make: Nothing to be done for `netlist'.
+Done!
+
+********************************************************************************
+At Local date and time: Sun Dec 20 20:10:17 2015
+ make -f system.make bits started...
+make: Nothing to be done for `bits'.
+Done!
+Overriding Xilinx file <TextEditor.cfg> with local file <E:/Xilinx/14.2/ISE_DS/EDK/data/TextEditor.cfg>
+Writing filter settings....
+Done writing filter settings to:
+	F:\xps_sdk\Othello-master\lab_gobang_2\etc\system.filters
+Done writing Tab View settings to:
+	F:\xps_sdk\Othello-master\lab_gobang_2\etc\system.gui

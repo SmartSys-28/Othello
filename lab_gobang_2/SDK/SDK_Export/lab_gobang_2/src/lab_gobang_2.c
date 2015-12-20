@@ -535,7 +535,7 @@ int check_win() { //0白赢，1黑赢，2平局,-1没有人赢,
 		return 1;
 	}
 
-	if ((FindAvailable(0, 0) == 0 && FindAvailable(1, 0) == 0)//双方都无子可下
+	if (((!FindAvailable(0, 0)) && (!FindAvailable(1, 0)))//双方都无子可下
 			|| ((Black_num + White_num) == Board_size * Board_size)) {
 		//DrawChess(2,0,1);
 		if (Black_num > White_num)
@@ -890,7 +890,7 @@ int main(void) {
 				Black_num = 2;
 				White_num = 2;
 				FindAvailable(turn, 1);
-				DrawAvailable(turn);
+				//DrawAvailable(turn);
 				DrawChess(x_cur, y_cur, 3); // 画出初始的旗子所在处的颜色，其中3这个参数代表的颜色应该是移动的光标的颜色
 				DrawScore(2, 0); // 初始化显示出白棋的分数
 				DrawScore(2, 1); // 初始化显示出黑棋的分数
@@ -991,11 +991,11 @@ int main(void) {
 
 										turn = 1 - turn; // 轮换黑白次序
 
-										if (!FindAvailable(turn, 1)) {//一方五子可下时换另一方下
+										if (!FindAvailable(turn, 0)) {//一方无子可下时换另一方下
 											turn = 1 - turn;
-											FindAvailable(turn, 1);
+
 										}
-										DrawAvailable(turn);
+										FindAvailable(turn, 1);
 									} else {
 										//若为人机对战模式，由电脑下
 
@@ -1003,6 +1003,7 @@ int main(void) {
 
 											if (!FindAvailable(0, 1)) {//若机器无子可下
 												turn = 1;
+												FindAvailable(turn, 1);
 												break;//由于check_win显示未分胜负，所以人一定有子可下，跳出循环，交给键盘
 											}
 											int temp_result;
@@ -1017,6 +1018,7 @@ int main(void) {
 											y_cur = temp_result % 8;
 											board_state[x_cur][y_cur] = 0;
 											DrawChess(x_cur, y_cur, 0);
+											EraseLittleChess();
 											White_num++;
 											flip(x_cur, y_cur, 0, 1);
 											win_status = check_win();
@@ -1024,9 +1026,7 @@ int main(void) {
 
 											if (win_status != -1) { // 若有一方胜利了，本轮游戏结束
 												Draw_win(win_status);//画出显示胜利的棋盘形状
-												//						xil_printf("\r\nPlayer %x wins!\r\n", turn + 1);
-												//						return 0;
-
+												break;
 											} else {
 												if (FindAvailable(1, 1)) {
 													break; //若人有子可下，跳出循环，交给键盘
@@ -1047,16 +1047,34 @@ int main(void) {
 							turn = 1 - turn;
 							undo(turn, 1);
 							FindAvailable(turn, 1);
-							DrawScore(White_num, 0); // 初始化显示出白棋的分数
-							DrawScore(Black_num, 1); // 初始化显示出黑棋的分数
+							White_num = 0;
+							Black_num = 0;
+							for (i = 0; i < Board_size; i++) //0白1黑2无子3光标4可以下
+								for (j = 0; j < Board_size; j++) {
+									if (board_state[i][j] == 0)
+										White_num++;
+									else if (board_state[i][j] == 1)
+										Black_num++;
+								}
+							DrawScore(White_num, 0); // 显示出白棋的分数
+							DrawScore(Black_num, 1); // 显示出黑棋的分数
 							regret++;
 						}
 						if (RxBuffer == 0x2D && win_status == -1 && Mode != 4) {
 							undo(0, 1);
 							undo(1, 1);
 							FindAvailable(1, 1);
-							DrawScore(White_num, 0); // 初始化显示出白棋的分数
-							DrawScore(Black_num, 1); // 初始化显示出黑棋的分数
+							White_num = 0;
+							Black_num = 0;
+							for (i = 0; i < Board_size; i++) //0白1黑2无子3光标4可以下
+								for (j = 0; j < Board_size; j++) {
+									if (board_state[i][j] == 0)
+										White_num++;
+									else if (board_state[i][j] == 1)
+										Black_num++;
+								}
+							DrawScore(White_num, 0); // 显示出白棋的分数
+							DrawScore(Black_num, 1); // 显示出黑棋的分数
 							regret++;
 						}
 
