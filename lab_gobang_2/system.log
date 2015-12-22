@@ -209,3 +209,39 @@ Done writing filter settings to:
 	F:\xps_sdk\Othello-master\lab_gobang_2\etc\system.filters
 Done writing Tab View settings to:
 	F:\xps_sdk\Othello-master\lab_gobang_2\etc\system.gui
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Overriding Xilinx file <TextEditor.cfg> with local file <E:/Xilinx/14.2/ISE_DS/EDK/data/TextEditor.cfg>
+
+********************************************************************************
+At Local date and time: Tue Dec 22 17:59:15 2015
+ make -f system.make netlist started...
+make: Nothing to be done for `netlist'.
+Done!
+
+********************************************************************************
+At Local date and time: Tue Dec 22 17:59:18 2015
+ make -f system.make bits started...
+make: Nothing to be done for `bits'.
+Done!
+
+********************************************************************************
+At Local date and time: Tue Dec 22 17:59:24 2015
+ make -f system.make exporttosdk started...
+make: Nothing to be done for `exporttosdk'.
+Done!
+
+********************************************************************************
+At Local date and time: Tue Dec 22 17:59:25 2015
+ xsdk.exe -hwspec F:\xps_sdk\Othello-master\lab_gobang_2\SDK\SDK_Export\hw\system.xml started...
+Xilinx Software Development Kit
+Xilinx EDK 14.2 Build EDK_P.28xd
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	F:\xps_sdk\Othello-master\lab_gobang_2\etc\system.filters
+Done writing Tab View settings to:
+	F:\xps_sdk\Othello-master\lab_gobang_2\etc\system.gui
